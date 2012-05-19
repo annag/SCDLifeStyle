@@ -1,0 +1,281 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BF21AF8F1567B66A00B86DAE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF21AF8E1567B66A00B86DAE /* UIKit.framework */; };
+		BF21AF911567B66A00B86DAE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF21AF901567B66A00B86DAE /* Foundation.framework */; };
+		BF21AF931567B66A00B86DAE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF21AF921567B66A00B86DAE /* CoreGraphics.framework */; };
+		BF21AF991567B66A00B86DAE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF21AF971567B66A00B86DAE /* InfoPlist.strings */; };
+		BF21AF9B1567B66A00B86DAE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF21AF9A1567B66A00B86DAE /* main.m */; };
+		BF21AF9F1567B66A00B86DAE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF21AF9E1567B66A00B86DAE /* AppDelegate.m */; };
+		BF21AFA21567B66A00B86DAE /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF21AFA01567B66A00B86DAE /* MainStoryboard.storyboard */; };
+		BF21AFA51567B66A00B86DAE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF21AFA41567B66A00B86DAE /* ViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BF21AF8A1567B66A00B86DAE /* SCDLifeStyle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCDLifeStyle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF21AF8E1567B66A00B86DAE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BF21AF901567B66A00B86DAE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BF21AF921567B66A00B86DAE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		BF21AF961567B66A00B86DAE /* SCDLifeStyle-Info.plist */ = {isa = PBXFileReference; path = "SCDLifeStyle-Info.plist"; sourceTree = "<group>"; };
+		BF21AF981567B66A00B86DAE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BF21AF9A1567B66A00B86DAE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BF21AF9C1567B66A00B86DAE /* SCDLifeStyle-Prefix.pch */ = {isa = PBXFileReference; path = "SCDLifeStyle-Prefix.pch"; sourceTree = "<group>"; };
+		BF21AF9D1567B66A00B86DAE /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		BF21AF9E1567B66A00B86DAE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BF21AFA11567B66A00B86DAE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		BF21AFA31567B66A00B86DAE /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		BF21AFA41567B66A00B86DAE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BF21AF871567B66A00B86DAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF21AF8F1567B66A00B86DAE /* UIKit.framework in Frameworks */,
+				BF21AF911567B66A00B86DAE /* Foundation.framework in Frameworks */,
+				BF21AF931567B66A00B86DAE /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BF21AF7F1567B66A00B86DAE = {
+			isa = PBXGroup;
+			children = (
+				BF21AF941567B66A00B86DAE /* SCDLifeStyle */,
+				BF21AF8D1567B66A00B86DAE /* Frameworks */,
+				BF21AF8B1567B66A00B86DAE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BF21AF8B1567B66A00B86DAE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF21AF8A1567B66A00B86DAE /* SCDLifeStyle.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BF21AF8D1567B66A00B86DAE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF21AF8E1567B66A00B86DAE /* UIKit.framework */,
+				BF21AF901567B66A00B86DAE /* Foundation.framework */,
+				BF21AF921567B66A00B86DAE /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF21AF941567B66A00B86DAE /* SCDLifeStyle */ = {
+			isa = PBXGroup;
+			children = (
+				BF21AF9D1567B66A00B86DAE /* AppDelegate.h */,
+				BF21AF9E1567B66A00B86DAE /* AppDelegate.m */,
+				BF21AFA01567B66A00B86DAE /* MainStoryboard.storyboard */,
+				BF21AFA31567B66A00B86DAE /* ViewController.h */,
+				BF21AFA41567B66A00B86DAE /* ViewController.m */,
+				BF21AF951567B66A00B86DAE /* Supporting Files */,
+			);
+			path = SCDLifeStyle;
+			sourceTree = "<group>";
+		};
+		BF21AF951567B66A00B86DAE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BF21AF961567B66A00B86DAE /* SCDLifeStyle-Info.plist */,
+				BF21AF971567B66A00B86DAE /* InfoPlist.strings */,
+				BF21AF9A1567B66A00B86DAE /* main.m */,
+				BF21AF9C1567B66A00B86DAE /* SCDLifeStyle-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BF21AF891567B66A00B86DAE /* SCDLifeStyle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF21AFA81567B66A00B86DAE /* Build configuration list for PBXNativeTarget "SCDLifeStyle" */;
+			buildPhases = (
+				BF21AF861567B66A00B86DAE /* Sources */,
+				BF21AF871567B66A00B86DAE /* Frameworks */,
+				BF21AF881567B66A00B86DAE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SCDLifeStyle;
+			productName = SCDLifeStyle;
+			productReference = BF21AF8A1567B66A00B86DAE /* SCDLifeStyle.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BF21AF811567B66A00B86DAE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = BF21AF841567B66A00B86DAE /* Build configuration list for PBXProject "SCDLifeStyle" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BF21AF7F1567B66A00B86DAE;
+			productRefGroup = BF21AF8B1567B66A00B86DAE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BF21AF891567B66A00B86DAE /* SCDLifeStyle */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BF21AF881567B66A00B86DAE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF21AF991567B66A00B86DAE /* InfoPlist.strings in Resources */,
+				BF21AFA21567B66A00B86DAE /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BF21AF861567B66A00B86DAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF21AF9B1567B66A00B86DAE /* main.m in Sources */,
+				BF21AF9F1567B66A00B86DAE /* AppDelegate.m in Sources */,
+				BF21AFA51567B66A00B86DAE /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BF21AF971567B66A00B86DAE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF21AF981567B66A00B86DAE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BF21AFA01567B66A00B86DAE /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF21AFA11567B66A00B86DAE /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BF21AFA61567B66A00B86DAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BF21AFA71567B66A00B86DAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BF21AFA91567B66A00B86DAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SCDLifeStyle/SCDLifeStyle-Prefix.pch";
+				INFOPLIST_FILE = "SCDLifeStyle/SCDLifeStyle-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		BF21AFAA1567B66A00B86DAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SCDLifeStyle/SCDLifeStyle-Prefix.pch";
+				INFOPLIST_FILE = "SCDLifeStyle/SCDLifeStyle-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BF21AF841567B66A00B86DAE /* Build configuration list for PBXProject "SCDLifeStyle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF21AFA61567B66A00B86DAE /* Debug */,
+				BF21AFA71567B66A00B86DAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF21AFA81567B66A00B86DAE /* Build configuration list for PBXNativeTarget "SCDLifeStyle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF21AFA91567B66A00B86DAE /* Debug */,
+				BF21AFAA1567B66A00B86DAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BF21AF811567B66A00B86DAE /* Project object */;
+}
