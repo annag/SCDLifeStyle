@@ -57,6 +57,7 @@
 		BF21AFBA1567C6AD00B86DAE /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF21AFB91567C6AD00B86DAE /* BaseViewController.m */; };
 		BF21AFBD1567C6F100B86DAE /* AddDayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF21AFBC1567C6F100B86DAE /* AddDayViewController.m */; };
 		BF21AFC11567D1E600B86DAE /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = BF21AFC01567D1E600B86DAE /* Util.m */; };
+		BF21AFCA156942FD00B86DAE /* Bar.m in Sources */ = {isa = PBXBuildFile; fileRef = BF21AFC9156942FD00B86DAE /* Bar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -121,6 +122,8 @@
 		BF21AFBC1567C6F100B86DAE /* AddDayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddDayViewController.m; sourceTree = "<group>"; };
 		BF21AFBF1567D1E600B86DAE /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
 		BF21AFC01567D1E600B86DAE /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
+		BF21AFC8156942FD00B86DAE /* Bar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar.h; sourceTree = "<group>"; };
+		BF21AFC9156942FD00B86DAE /* Bar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +213,7 @@
 		BF21AF941567B66A00B86DAE /* SCDLifeStyle */ = {
 			isa = PBXGroup;
 			children = (
+				BF21AFC6156942C600B86DAE /* Components */,
 				95B4967C156911210011D457 /* assets */,
 				BF21AFBE1567D1C500B86DAE /* Util */,
 				BF21AFAC1567BBAB00B86DAE /* Data */,
@@ -267,6 +271,15 @@
 				BF21AFC01567D1E600B86DAE /* Util.m */,
 			);
 			name = Util;
+			sourceTree = "<group>";
+		};
+		BF21AFC6156942C600B86DAE /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				BF21AFC8156942FD00B86DAE /* Bar.h */,
+				BF21AFC9156942FD00B86DAE /* Bar.m */,
+			);
+			name = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -375,6 +388,7 @@
 				BF21AFBD1567C6F100B86DAE /* AddDayViewController.m in Sources */,
 				BF21AFC11567D1E600B86DAE /* Util.m in Sources */,
 				95B4967A15690DD00011D457 /* ChallengesViewController.m in Sources */,
+				BF21AFCA156942FD00B86DAE /* Bar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
