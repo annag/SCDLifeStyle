@@ -7,8 +7,19 @@
 //
 
 #import "BaseViewController.h"
+#import "Bar.h"
 
 @interface MainViewController : BaseViewController
+
+@property(nonatomic,strong) IBOutlet UIView *top1;
+@property(nonatomic,strong) IBOutlet UIView *top2;
+@property(nonatomic,strong) IBOutlet UIView *top3;
+@property(nonatomic,strong) IBOutlet UIView *top4;
+
+@property(nonatomic,strong) IBOutlet Bar *relaxedBar;
+@property(nonatomic,strong) IBOutlet Bar *stoolBar;
+@property(nonatomic,strong) IBOutlet Bar *activityBar;
+@property(nonatomic,strong) IBOutlet Bar *sleepBar;
 
 - (IBAction)onAddDay:(id)sender;
 

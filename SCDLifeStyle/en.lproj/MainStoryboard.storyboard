@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="iIg-Jq-qMK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="GOZ-2P-LUC">
     <dependencies>
         <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
@@ -12,28 +12,13 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
                 <viewController id="2" customClass="MainViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="44" width="320" height="436"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="home_bg1.png" id="xLV-Xy-4Uv">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" id="OHv-vO-jur">
-                                <rect key="frame" x="137" y="192" width="29" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
-                                <state key="normal">
-                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="onAddDay:" destination="2" eventType="touchUpInside" id="trK-ap-PZ8"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="l7i-UK-gkl">
                                 <rect key="frame" x="9" y="435" width="52" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -85,48 +70,71 @@
                                     <segue destination="LCb-By-th5" kind="push" id="Wvu-Zb-tjt"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="home_sleep_bar.png" id="KTb-lN-vYO">
-                                <rect key="frame" x="228" y="227" width="60" height="124"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="home_sleep_bar.png" id="KTb-lN-vYO" customClass="Bar">
+                                <rect key="frame" x="229" y="60" width="59" height="289"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="home_sleep_bar_top.png" id="G3a-eK-Gax">
-                                <rect key="frame" x="228" y="195" width="60" height="32"/>
+                                <rect key="frame" x="229" y="40" width="59" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="home_stool_bar.png" id="gVY-e4-QRS">
-                                <rect key="frame" x="92" y="221" width="58" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="home_stool_bar.png" id="gVY-e4-QRS" customClass="Bar">
+                                <rect key="frame" x="92" y="60" width="59" height="289"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="home_stool_bar_top.png" id="0Lr-aN-xsU">
-                                <rect key="frame" x="92" y="195" width="58" height="29"/>
+                                <rect key="frame" x="92" y="40" width="59" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="home_stress_bar.png" id="Tpo-Aj-itz">
-                                <rect key="frame" x="25" y="221" width="59" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="home_stress_bar.png" id="Tpo-Aj-itz" customClass="Bar">
+                                <rect key="frame" x="25" y="60" width="59" height="289"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="home_stress_bar_top.png" id="IXC-6D-k7F">
-                                <rect key="frame" x="25" y="190" width="60" height="32"/>
+                                <rect key="frame" x="25" y="40" width="59" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="home_activity_bar.png" id="EUm-D5-pSm">
-                                <rect key="frame" x="157" y="221" width="63" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="home_activity_bar.png" id="EUm-D5-pSm" customClass="Bar">
+                                <rect key="frame" x="157" y="60" width="59" height="289"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="home_activity_bar_top.png" id="Wno-UI-Fow">
-                                <rect key="frame" x="157" y="188" width="63" height="34"/>
+                                <rect key="frame" x="157" y="40" width="59" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" id="OHv-vO-jur">
+                                <rect key="frame" x="137" y="192" width="29" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onAddDay:" destination="2" eventType="touchUpInside" id="trK-ap-PZ8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.94048852940000005" blue="0.1918529457" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="psl-wO-h5O"/>
                     <connections>
+                        <outlet property="activityBar" destination="EUm-D5-pSm" id="lp1-BG-i5q"/>
+                        <outlet property="relaxedBar" destination="Tpo-Aj-itz" id="bjx-hd-iYX"/>
+                        <outlet property="sleepBar" destination="KTb-lN-vYO" id="Y58-iz-6zy"/>
+                        <outlet property="stoolBar" destination="gVY-e4-QRS" id="mkH-Od-jH5"/>
+                        <outlet property="top1" destination="IXC-6D-k7F" id="8WG-D7-cmO"/>
+                        <outlet property="top2" destination="0Lr-aN-xsU" id="5Ma-qP-Pna"/>
+                        <outlet property="top3" destination="Wno-UI-Fow" id="6tq-ho-GRx"/>
+                        <outlet property="top4" destination="G3a-eK-Gax" id="csA-1A-HXG"/>
                         <segue destination="7ce-p8-cRQ" kind="modal" identifier="AddDay" id="1HY-tn-wee"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="892" y="38"/>
+            <point key="canvasLocation" x="1418" y="38"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="B7S-Ua-X8d">
@@ -163,7 +171,7 @@
                     </view>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1872" y="433"/>
+            <point key="canvasLocation" x="2398" y="433"/>
         </scene>
         <!--Challenges View Controller-->
         <scene sceneID="mfN-H3-OEa">
@@ -171,11 +179,11 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xRs-eH-TY6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="LCb-By-th5" customClass="ChallengesViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="J3U-zT-fxJ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="44" width="320" height="436"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="iSX-gw-ZyQ">
-                                <rect key="frame" x="0.0" y="52" width="320" height="379"/>
+                                <rect key="frame" x="0.0" y="52" width="320" height="335"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -239,7 +247,7 @@
                     <navigationItem key="navigationItem" id="GHO-y0-JU5"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1428" y="433"/>
+            <point key="canvasLocation" x="1954" y="433"/>
         </scene>
         <!--Add Day View Controller-->
         <scene sceneID="atV-VV-1QY">
@@ -494,26 +502,25 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1444" y="-229"/>
+            <point key="canvasLocation" x="1970" y="-229"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="0LZ-yo-bAj">
+        <scene sceneID="yU9-fE-qQq">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ygi-Co-zpP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController navigationBarHidden="YES" id="iIg-Jq-qMK" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pJj-xm-WS3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="GOZ-2P-LUC" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <nil key="simulatedStatusBarMetrics"/>
-                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="UdV-sg-owa">
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="OQf-u4-RYG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="2" kind="relationship" relationship="rootViewController" id="z0i-Bv-7DU"/>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="v5t-Fk-c9b"/>
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="352" y="46"/>
+            <point key="canvasLocation" x="892" y="38"/>
         </scene>
     </scenes>
     <resources>
@@ -557,6 +564,9 @@
                 <relationship kind="outlet" name="stressControl" candidateClass="UISegmentedControl"/>
             </relationships>
         </class>
+        <class className="Bar" superclassName="UIImageView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/Bar.h"/>
+        </class>
         <class className="BaseViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BaseViewController.h"/>
         </class>
@@ -567,6 +577,14 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MainViewController.h"/>
             <relationships>
                 <relationship kind="action" name="onAddDay:"/>
+                <relationship kind="outlet" name="activityBar" candidateClass="Bar"/>
+                <relationship kind="outlet" name="relaxedBar" candidateClass="Bar"/>
+                <relationship kind="outlet" name="sleepBar" candidateClass="Bar"/>
+                <relationship kind="outlet" name="stoolBar" candidateClass="Bar"/>
+                <relationship kind="outlet" name="top1" candidateClass="UIView"/>
+                <relationship kind="outlet" name="top2" candidateClass="UIView"/>
+                <relationship kind="outlet" name="top3" candidateClass="UIView"/>
+                <relationship kind="outlet" name="top4" candidateClass="UIView"/>
             </relationships>
         </class>
     </classes>
