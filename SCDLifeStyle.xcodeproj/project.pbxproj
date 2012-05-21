@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		951881C2156A9955001B614B /* add_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 951881C0156A9955001B614B /* add_bg.png */; };
+		951881C3156A9955001B614B /* add_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 951881C1156A9955001B614B /* add_bg@2x.png */; };
 		95B4967A15690DD00011D457 /* ChallengesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B4967915690DD00011D457 /* ChallengesViewController.m */; };
 		95B4967F156911420011D457 /* home_bg1.png in Resources */ = {isa = PBXBuildFile; fileRef = 95B4967D156911420011D457 /* home_bg1.png */; };
 		95B49680156911420011D457 /* home_bg1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95B4967E156911420011D457 /* home_bg1@2x.png */; };
@@ -76,6 +78,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		951881C0156A9955001B614B /* add_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_bg.png; sourceTree = "<group>"; };
+		951881C1156A9955001B614B /* add_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add_bg@2x.png"; sourceTree = "<group>"; };
 		95B4967815690DD00011D457 /* ChallengesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChallengesViewController.h; sourceTree = "<group>"; };
 		95B4967915690DD00011D457 /* ChallengesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChallengesViewController.m; sourceTree = "<group>"; };
 		95B4967D156911420011D457 /* home_bg1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_bg1.png; sourceTree = "<group>"; };
@@ -210,6 +214,8 @@
 				95B496C4156923220011D457 /* header@2x.png */,
 				95B496C915692E450011D457 /* stressed0.png */,
 				95B496CA15692E450011D457 /* stressed0@2x.png */,
+				951881C0156A9955001B614B /* add_bg.png */,
+				951881C1156A9955001B614B /* add_bg@2x.png */,
 				95B496CD156936530011D457 /* stressed4.png */,
 				95B496CE156936530011D457 /* stressed4@2x.png */,
 				95B496CF156936530011D457 /* stressed3.png */,
@@ -428,6 +434,8 @@
 				95B496E41569C8670011D457 /* owl3.png in Resources */,
 				95B496E51569C8670011D457 /* owl2.png in Resources */,
 				95B496E61569C8670011D457 /* owl1.png in Resources */,
+				951881C2156A9955001B614B /* add_bg.png in Resources */,
+				951881C3156A9955001B614B /* add_bg@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
