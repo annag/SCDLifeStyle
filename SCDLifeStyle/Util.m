@@ -25,6 +25,14 @@
     return [Util dayIdFromDate:today];    
 }
 
++ (NSString*) todayPretty
+{
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy-MM-dd"];
+    NSString *dayId = [formatter stringFromDate:[NSDate date]];
+    return dayId;
+}
+
 
 
 @end
