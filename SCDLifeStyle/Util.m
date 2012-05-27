@@ -33,6 +33,13 @@
     return dayId;
 }
 
++ (NSString*) timePretty:(NSDate*)date
+{
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"HH-mm"];
+    NSString *dayId = [formatter stringFromDate:date];
+    return dayId;
+}
 
 
 @end

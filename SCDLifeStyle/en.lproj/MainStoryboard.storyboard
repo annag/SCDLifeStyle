@@ -261,7 +261,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="onDone:" destination="7ce-p8-cRQ" eventType="touchUpInside" id="70c-hq-eW8"/>
+                                                    <action selector="onCancel:" destination="7ce-p8-cRQ" eventType="touchUpInside" id="EVC-69-1kH"/>
                                                 </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bg_poo.png" id="jVg-eq-heO">
@@ -269,7 +269,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bezeled" selectedSegmentIndex="0" id="y5o-49-Erb">
-                                                <rect key="frame" x="5" y="149" width="310" height="44"/>
+                                                <rect key="frame" x="5" y="155" width="310" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <segments>
                                                     <segment title="1"/>
@@ -443,17 +443,17 @@
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2012-05-18" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="OH2-s7-Hd4">
-                                                <rect key="frame" x="103" y="15" width="105" height="21"/>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2012-05-18" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="OH2-s7-Hd4">
+                                                <rect key="frame" x="81" y="15" width="164" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="button_general_delete.png" id="TBo-re-8cs">
-                                                <rect key="frame" x="280" y="98" width="29" height="32"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
+                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="lbn-6w-LSb">
+                                                <rect key="frame" x="7" y="96" width="305" height="55"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            </scrollView>
                                         </subviews>
                                     </view>
                                 </subviews>
@@ -468,7 +468,9 @@
                         <outlet property="sleepLengthControl" destination="akR-fW-dDc" id="yUS-n5-p4X"/>
                         <outlet property="sleepQualityControl" destination="dmf-XL-IRP" id="R0P-hc-7Y6"/>
                         <outlet property="stoolControl" destination="y5o-49-Erb" id="4CV-Sd-RqW"/>
+                        <outlet property="stoolScrollView" destination="lbn-6w-LSb" id="4qh-rL-PZ7"/>
                         <outlet property="stressControl" destination="Xqk-OV-int" id="4pn-9t-R0K"/>
+                        <outlet property="topTitle" destination="OH2-s7-Hd4" id="xgQ-Ta-cQD"/>
                     </connections>
                 </viewController>
             </objects>
@@ -502,7 +504,6 @@
         <image name="active3.png" width="87" height="32"/>
         <image name="add_bg.png" width="320" height="650"/>
         <image name="bg_poo.png" width="309" height="111"/>
-        <image name="button_general_delete.png" width="29" height="32"/>
         <image name="home_activity_bar.png" width="62" height="292"/>
         <image name="home_activity_bar_top.png" width="62" height="20"/>
         <image name="home_bg1.png" width="320" height="490"/>
@@ -524,6 +525,48 @@
         <image name="stressed3.png" width="38" height="28"/>
         <image name="stressed4.png" width="38" height="29"/>
     </resources>
+    <classes>
+        <class className="AddDayViewController" superclassName="BaseViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddDayViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="onCancel:"/>
+                <relationship kind="action" name="onControlChanted:"/>
+                <relationship kind="action" name="onDone:"/>
+                <relationship kind="outlet" name="containerView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="excerciseControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="sleepLengthControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="sleepQualityControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="stoolControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="stoolScrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="stressControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="topTitle" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="Bar" superclassName="UIImageView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/Bar.h"/>
+        </class>
+        <class className="BaseViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BaseViewController.h"/>
+        </class>
+        <class className="ChallengesViewController" superclassName="BaseViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ChallengesViewController.h"/>
+        </class>
+        <class className="MainViewController" superclassName="BaseViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="onAddDay:"/>
+                <relationship kind="outlet" name="activityBar" candidateClass="Bar"/>
+                <relationship kind="outlet" name="relaxedBar" candidateClass="Bar"/>
+                <relationship kind="outlet" name="sleepBar" candidateClass="Bar"/>
+                <relationship kind="outlet" name="stoolBar" candidateClass="Bar"/>
+                <relationship kind="outlet" name="top1" candidateClass="UIView"/>
+                <relationship kind="outlet" name="top2" candidateClass="UIView"/>
+                <relationship kind="outlet" name="top3" candidateClass="UIView"/>
+                <relationship kind="outlet" name="top4" candidateClass="UIView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <nil key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
