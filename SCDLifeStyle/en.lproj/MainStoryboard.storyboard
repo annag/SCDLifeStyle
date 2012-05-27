@@ -264,6 +264,10 @@
                                                     <action selector="onDone:" destination="7ce-p8-cRQ" eventType="touchUpInside" id="70c-hq-eW8"/>
                                                 </connections>
                                             </button>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bg_poo.png" id="jVg-eq-heO">
+                                                <rect key="frame" x="5" y="93" width="310" height="99"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bezeled" selectedSegmentIndex="0" id="y5o-49-Erb">
                                                 <rect key="frame" x="5" y="149" width="310" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -446,26 +450,8 @@
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="11:24 am - Type 3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Khn-9M-9uK">
-                                                <rect key="frame" x="71" y="291" width="141" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="11:24 am - Type 3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="t7N-fJ-AXV">
-                                                <rect key="frame" x="71" y="313" width="141" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="poo1.png" id="T4n-vb-k8n">
-                                                <rect key="frame" x="36" y="297" width="29" height="14"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="poo3.png" id="iZa-qP-xdk">
-                                                <rect key="frame" x="36" y="319" width="29" height="14"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="button_general_delete.png" id="TBo-re-8cs">
+                                                <rect key="frame" x="280" y="98" width="29" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
                                         </subviews>
@@ -515,6 +501,8 @@
         <image name="active2.png" width="87" height="32"/>
         <image name="active3.png" width="87" height="32"/>
         <image name="add_bg.png" width="320" height="650"/>
+        <image name="bg_poo.png" width="309" height="111"/>
+        <image name="button_general_delete.png" width="29" height="32"/>
         <image name="home_activity_bar.png" width="62" height="292"/>
         <image name="home_activity_bar_top.png" width="62" height="20"/>
         <image name="home_bg1.png" width="320" height="490"/>
@@ -530,8 +518,6 @@
         <image name="owl3.png" width="44" height="44"/>
         <image name="owl4.png" width="39" height="43"/>
         <image name="owl5.png" width="47" height="42"/>
-        <image name="poo1.png" width="29" height="14"/>
-        <image name="poo3.png" width="29" height="15"/>
         <image name="stressed0.png" width="38" height="29"/>
         <image name="stressed1.png" width="38" height="28"/>
         <image name="stressed2.png" width="38" height="29"/>
