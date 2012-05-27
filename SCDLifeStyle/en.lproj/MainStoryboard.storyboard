@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="PaS-OG-Vcz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="PaS-OG-Vcz">
     <dependencies>
         <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
@@ -446,15 +446,39 @@
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="11:24 am - Type 3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Khn-9M-9uK">
+                                                <rect key="frame" x="71" y="291" width="141" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="11:24 am - Type 3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="t7N-fJ-AXV">
+                                                <rect key="frame" x="71" y="313" width="141" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="poo1.png" id="T4n-vb-k8n">
+                                                <rect key="frame" x="36" y="297" width="29" height="14"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="poo3.png" id="iZa-qP-xdk">
+                                                <rect key="frame" x="36" y="319" width="29" height="14"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
                                         </subviews>
                                     </view>
                                 </subviews>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.21442280150000001" blue="0.99749108949999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="containerView" destination="yVC-Tg-WqN" id="VcU-n1-sFS"/>
                         <outlet property="excerciseControl" destination="2Zv-8z-iCi" id="2ct-D9-10J"/>
+                        <outlet property="scrollView" destination="LGq-oA-ctg" id="XsB-lf-6cm"/>
                         <outlet property="sleepLengthControl" destination="akR-fW-dDc" id="yUS-n5-p4X"/>
                         <outlet property="sleepQualityControl" destination="dmf-XL-IRP" id="R0P-hc-7Y6"/>
                         <outlet property="stoolControl" destination="y5o-49-Erb" id="4CV-Sd-RqW"/>
@@ -506,6 +530,8 @@
         <image name="owl3.png" width="44" height="44"/>
         <image name="owl4.png" width="39" height="43"/>
         <image name="owl5.png" width="47" height="42"/>
+        <image name="poo1.png" width="29" height="14"/>
+        <image name="poo3.png" width="29" height="15"/>
         <image name="stressed0.png" width="38" height="29"/>
         <image name="stressed1.png" width="38" height="28"/>
         <image name="stressed2.png" width="38" height="29"/>
@@ -518,7 +544,9 @@
             <relationships>
                 <relationship kind="action" name="onControlChanted:"/>
                 <relationship kind="action" name="onDone:"/>
+                <relationship kind="outlet" name="containerView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="excerciseControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
                 <relationship kind="outlet" name="sleepLengthControl" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="sleepQualityControl" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="stoolControl" candidateClass="UISegmentedControl"/>

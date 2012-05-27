@@ -16,6 +16,7 @@
 @implementation AddDayViewController
 
 @synthesize stoolControl,excerciseControl,sleepLengthControl,sleepQualityControl,stressControl;
+@synthesize containerView, scrollView;
 
 
 - (void)viewDidLoad
@@ -24,6 +25,8 @@
 	
     NSString *todayId = [Util dayIdToday];
     NSLog(@"today id %@",todayId);
+    
+    [self.scrollView setContentSize:CGSizeMake(self.view.frame.size.width, self.containerView.frame.size.height)];
     
 }
 

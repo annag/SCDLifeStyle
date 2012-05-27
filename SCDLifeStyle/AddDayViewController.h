@@ -15,8 +15,13 @@
 @property(nonatomic,strong) IBOutlet UISegmentedControl *sleepLengthControl;
 @property(nonatomic,strong) IBOutlet UISegmentedControl *sleepQualityControl;
 @property(nonatomic,strong) IBOutlet UISegmentedControl *stressControl;
+@property(nonatomic,strong) IBOutlet UIScrollView *scrollView;
+@property(nonatomic,strong) IBOutlet UIView *containerView;
+
 
 - (IBAction) onDone:(id)sender;
 - (IBAction) onControlChanted:(id)sender;
+
+
 
 @end
