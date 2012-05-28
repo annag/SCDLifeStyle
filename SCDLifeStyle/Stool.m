@@ -2,17 +2,18 @@
 //  Stool.m
 //  SCDLifeStyle
 //
-//  Created by Juan Fluxa on 5/19/12.
+//  Created by Juan Fluxa on 5/27/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
 #import "Stool.h"
+#import "Day.h"
 
 
 @implementation Stool
 
 @dynamic index;
 @dynamic time;
-@dynamic day_id;
+@dynamic day;
 
 @end

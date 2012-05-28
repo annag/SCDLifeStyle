@@ -86,6 +86,10 @@
 		95B496E41569C8670011D457 /* owl3.png in Resources */ = {isa = PBXBuildFile; fileRef = 95B496DF1569C8670011D457 /* owl3.png */; };
 		95B496E51569C8670011D457 /* owl2.png in Resources */ = {isa = PBXBuildFile; fileRef = 95B496E01569C8670011D457 /* owl2.png */; };
 		95B496E61569C8670011D457 /* owl1.png in Resources */ = {isa = PBXBuildFile; fileRef = 95B496E11569C8670011D457 /* owl1.png */; };
+		BF16EA8115725117000F2B2C /* StoolView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF16EA8015725117000F2B2C /* StoolView.m */; };
+		BF16EA841572512E000F2B2C /* StoolView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF16EA831572512E000F2B2C /* StoolView.xib */; };
+		BF16EA8A15725BE8000F2B2C /* Stool.m in Sources */ = {isa = PBXBuildFile; fileRef = BF16EA8915725BE8000F2B2C /* Stool.m */; };
+		BF16EA8D15728A1D000F2B2C /* Day.m in Sources */ = {isa = PBXBuildFile; fileRef = BF16EA8C15728A1D000F2B2C /* Day.m */; };
 		BF21AF8F1567B66A00B86DAE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF21AF8E1567B66A00B86DAE /* UIKit.framework */; };
 		BF21AF911567B66A00B86DAE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF21AF901567B66A00B86DAE /* Foundation.framework */; };
 		BF21AF931567B66A00B86DAE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF21AF921567B66A00B86DAE /* CoreGraphics.framework */; };
@@ -95,8 +99,6 @@
 		BF21AFA21567B66A00B86DAE /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF21AFA01567B66A00B86DAE /* MainStoryboard.storyboard */; };
 		BF21AFA51567B66A00B86DAE /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF21AFA41567B66A00B86DAE /* MainViewController.m */; };
 		BF21AFAF1567BC0400B86DAE /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF21AFAD1567BC0400B86DAE /* DataModel.xcdatamodeld */; };
-		BF21AFB21567BFA600B86DAE /* Stool.m in Sources */ = {isa = PBXBuildFile; fileRef = BF21AFB11567BFA600B86DAE /* Stool.m */; };
-		BF21AFB51567BFCA00B86DAE /* Day.m in Sources */ = {isa = PBXBuildFile; fileRef = BF21AFB41567BFCA00B86DAE /* Day.m */; };
 		BF21AFB71567C0DF00B86DAE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF21AFB61567C0DF00B86DAE /* CoreData.framework */; };
 		BF21AFBA1567C6AD00B86DAE /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF21AFB91567C6AD00B86DAE /* BaseViewController.m */; };
 		BF21AFBD1567C6F100B86DAE /* AddDayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF21AFBC1567C6F100B86DAE /* AddDayViewController.m */; };
@@ -185,6 +187,13 @@
 		95B496DF1569C8670011D457 /* owl3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = owl3.png; sourceTree = "<group>"; };
 		95B496E01569C8670011D457 /* owl2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = owl2.png; sourceTree = "<group>"; };
 		95B496E11569C8670011D457 /* owl1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = owl1.png; sourceTree = "<group>"; };
+		BF16EA7F15725117000F2B2C /* StoolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoolView.h; sourceTree = "<group>"; };
+		BF16EA8015725117000F2B2C /* StoolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoolView.m; sourceTree = "<group>"; };
+		BF16EA831572512E000F2B2C /* StoolView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoolView.xib; sourceTree = "<group>"; };
+		BF16EA8815725BE8000F2B2C /* Stool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stool.h; sourceTree = "<group>"; };
+		BF16EA8915725BE8000F2B2C /* Stool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stool.m; sourceTree = "<group>"; };
+		BF16EA8B15728A1D000F2B2C /* Day.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Day.h; sourceTree = "<group>"; };
+		BF16EA8C15728A1D000F2B2C /* Day.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Day.m; sourceTree = "<group>"; };
 		BF21AF8A1567B66A00B86DAE /* SCDLifeStyle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCDLifeStyle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF21AF8E1567B66A00B86DAE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BF21AF901567B66A00B86DAE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -199,10 +208,6 @@
 		BF21AFA31567B66A00B86DAE /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		BF21AFA41567B66A00B86DAE /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		BF21AFAE1567BC0400B86DAE /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
-		BF21AFB01567BFA600B86DAE /* Stool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stool.h; sourceTree = "<group>"; };
-		BF21AFB11567BFA600B86DAE /* Stool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stool.m; sourceTree = "<group>"; };
-		BF21AFB31567BFCA00B86DAE /* Day.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Day.h; sourceTree = "<group>"; };
-		BF21AFB41567BFCA00B86DAE /* Day.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Day.m; sourceTree = "<group>"; };
 		BF21AFB61567C0DF00B86DAE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		BF21AFB81567C6AD00B86DAE /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		BF21AFB91567C6AD00B86DAE /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
@@ -388,10 +393,10 @@
 			isa = PBXGroup;
 			children = (
 				BF21AFAD1567BC0400B86DAE /* DataModel.xcdatamodeld */,
-				BF21AFB01567BFA600B86DAE /* Stool.h */,
-				BF21AFB11567BFA600B86DAE /* Stool.m */,
-				BF21AFB31567BFCA00B86DAE /* Day.h */,
-				BF21AFB41567BFCA00B86DAE /* Day.m */,
+				BF16EA8815725BE8000F2B2C /* Stool.h */,
+				BF16EA8915725BE8000F2B2C /* Stool.m */,
+				BF16EA8B15728A1D000F2B2C /* Day.h */,
+				BF16EA8C15728A1D000F2B2C /* Day.m */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -410,6 +415,9 @@
 			children = (
 				BF21AFC8156942FD00B86DAE /* Bar.h */,
 				BF21AFC9156942FD00B86DAE /* Bar.m */,
+				BF16EA7F15725117000F2B2C /* StoolView.h */,
+				BF16EA8015725117000F2B2C /* StoolView.m */,
+				BF16EA831572512E000F2B2C /* StoolView.xib */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -544,6 +552,7 @@
 				952F47501572705000C54DDE /* challang_bg@2x.png in Resources */,
 				952F475715728A4100C54DDE /* head.png in Resources */,
 				952F475815728A4100C54DDE /* head@2x.png in Resources */,
+				BF16EA841572512E000F2B2C /* StoolView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -558,13 +567,14 @@
 				BF21AF9F1567B66A00B86DAE /* AppDelegate.m in Sources */,
 				BF21AFA51567B66A00B86DAE /* MainViewController.m in Sources */,
 				BF21AFAF1567BC0400B86DAE /* DataModel.xcdatamodeld in Sources */,
-				BF21AFB21567BFA600B86DAE /* Stool.m in Sources */,
-				BF21AFB51567BFCA00B86DAE /* Day.m in Sources */,
 				BF21AFBA1567C6AD00B86DAE /* BaseViewController.m in Sources */,
 				BF21AFBD1567C6F100B86DAE /* AddDayViewController.m in Sources */,
 				BF21AFC11567D1E600B86DAE /* Util.m in Sources */,
 				95B4967A15690DD00011D457 /* ChallengesViewController.m in Sources */,
 				BF21AFCA156942FD00B86DAE /* Bar.m in Sources */,
+				BF16EA8115725117000F2B2C /* StoolView.m in Sources */,
+				BF16EA8A15725BE8000F2B2C /* Stool.m in Sources */,
+				BF16EA8D15728A1D000F2B2C /* Day.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

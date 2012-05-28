@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="PaS-OG-Vcz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="PaS-OG-Vcz">
     <dependencies>
         <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
@@ -407,7 +407,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="onDone:" destination="7ce-p8-cRQ" eventType="touchUpInside" id="70c-hq-eW8"/>
+                                                    <action selector="onCancel:" destination="7ce-p8-cRQ" eventType="touchUpInside" id="EVC-69-1kH"/>
                                                 </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bg_poo.png" id="jVg-eq-heO">
@@ -415,7 +415,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bezeled" selectedSegmentIndex="0" id="y5o-49-Erb">
-                                                <rect key="frame" x="5" y="149" width="310" height="44"/>
+                                                <rect key="frame" x="5" y="155" width="310" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <segments>
                                                     <segment title="1"/>
@@ -589,17 +589,17 @@
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2012-05-18" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="OH2-s7-Hd4">
-                                                <rect key="frame" x="103" y="15" width="105" height="21"/>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2012-05-18" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="OH2-s7-Hd4">
+                                                <rect key="frame" x="81" y="15" width="164" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="button_general_delete.png" id="TBo-re-8cs">
-                                                <rect key="frame" x="280" y="98" width="29" height="32"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
+                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="lbn-6w-LSb">
+                                                <rect key="frame" x="7" y="96" width="305" height="55"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            </scrollView>
                                         </subviews>
                                     </view>
                                 </subviews>
@@ -614,11 +614,13 @@
                         <outlet property="sleepLengthControl" destination="akR-fW-dDc" id="yUS-n5-p4X"/>
                         <outlet property="sleepQualityControl" destination="dmf-XL-IRP" id="R0P-hc-7Y6"/>
                         <outlet property="stoolControl" destination="y5o-49-Erb" id="4CV-Sd-RqW"/>
+                        <outlet property="stoolScrollView" destination="lbn-6w-LSb" id="4qh-rL-PZ7"/>
                         <outlet property="stressControl" destination="Xqk-OV-int" id="4pn-9t-R0K"/>
+                        <outlet property="topTitle" destination="OH2-s7-Hd4" id="xgQ-Ta-cQD"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="2666" y="-379"/>
+            <point key="canvasLocation" x="2598" y="-349"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="8kt-or-4A1">
@@ -679,6 +681,7 @@
         <class className="AddDayViewController" superclassName="BaseViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AddDayViewController.h"/>
             <relationships>
+                <relationship kind="action" name="onCancel:"/>
                 <relationship kind="action" name="onControlChanted:"/>
                 <relationship kind="action" name="onDone:"/>
                 <relationship kind="outlet" name="containerView" candidateClass="UIView"/>
@@ -687,7 +690,9 @@
                 <relationship kind="outlet" name="sleepLengthControl" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="sleepQualityControl" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="stoolControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="stoolScrollView" candidateClass="UIScrollView"/>
                 <relationship kind="outlet" name="stressControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="topTitle" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="Bar" superclassName="UIImageView">

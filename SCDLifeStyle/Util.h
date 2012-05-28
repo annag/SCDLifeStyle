@@ -12,5 +12,6 @@
 
 + (NSString*) dayIdFromDate:(NSDate*)date;
 + (NSString*) dayIdToday;
-
++ (NSString*) todayPretty;
++ (NSString*) timePretty:(NSDate*)date;
 @end

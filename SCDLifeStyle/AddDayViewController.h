@@ -10,6 +10,7 @@
 
 @interface AddDayViewController : BaseViewController
 
+@property(nonatomic,strong) IBOutlet UILabel *topTitle;
 @property(nonatomic,strong) IBOutlet UISegmentedControl *stoolControl;
 @property(nonatomic,strong) IBOutlet UISegmentedControl *excerciseControl;
 @property(nonatomic,strong) IBOutlet UISegmentedControl *sleepLengthControl;
@@ -17,9 +18,10 @@
 @property(nonatomic,strong) IBOutlet UISegmentedControl *stressControl;
 @property(nonatomic,strong) IBOutlet UIScrollView *scrollView;
 @property(nonatomic,strong) IBOutlet UIView *containerView;
-
+@property(nonatomic,strong) IBOutlet UIScrollView *stoolScrollView;
 
 - (IBAction) onDone:(id)sender;
+- (IBAction) onCancel:(id)sender;
 - (IBAction) onControlChanted:(id)sender;
 
 
