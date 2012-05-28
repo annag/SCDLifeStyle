@@ -3,14 +3,14 @@
     <entity name="Day" representedClassName="Day" syncable="YES">
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="day_id" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="excercise" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="sleep_length" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="sleep_quality" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="stress" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="excercise" optional="YES" attributeType="Integer 16" syncable="YES"/>
+        <attribute name="sleep_length" optional="YES" attributeType="Integer 16" syncable="YES"/>
+        <attribute name="sleep_quality" optional="YES" attributeType="Integer 16" syncable="YES"/>
+        <attribute name="stress" optional="YES" attributeType="Integer 16" syncable="YES"/>
         <relationship name="stool" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Stool" inverseName="day" inverseEntity="Stool" syncable="YES"/>
     </entity>
     <entity name="Stool" representedClassName="Stool" syncable="YES">
-        <attribute name="index" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="index" optional="YES" attributeType="Integer 16" minValueString="0" maxValueString="6" syncable="YES"/>
         <attribute name="time" optional="YES" attributeType="Date" syncable="YES"/>
         <relationship name="day" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Day" inverseName="stool" inverseEntity="Day" syncable="YES"/>
     </entity>

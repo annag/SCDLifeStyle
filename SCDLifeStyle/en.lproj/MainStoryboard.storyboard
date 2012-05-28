@@ -414,7 +414,7 @@
                                                 <rect key="frame" x="5" y="93" width="310" height="99"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bezeled" selectedSegmentIndex="0" id="y5o-49-Erb">
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bezeled" id="y5o-49-Erb">
                                                 <rect key="frame" x="5" y="155" width="310" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <segments>
@@ -431,7 +431,7 @@
                                                     <action selector="onControlChanted:" destination="7ce-p8-cRQ" eventType="valueChanged" id="CuX-Gu-0TW"/>
                                                 </connections>
                                             </segmentedControl>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bezeled" selectedSegmentIndex="1" id="2Zv-8z-iCi">
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bezeled" id="2Zv-8z-iCi">
                                                 <rect key="frame" x="5" y="240" width="310" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <segments>
@@ -452,7 +452,7 @@
                                                 <color key="textColor" red="0.87778401312825105" green="1" blue="0.90833800984618829" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bezeled" selectedSegmentIndex="0" id="akR-fW-dDc">
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bezeled" id="akR-fW-dDc">
                                                 <rect key="frame" x="5" y="465" width="310" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <segments>
@@ -482,7 +482,7 @@
                                                 <color key="textColor" red="0.76804575027091437" green="0.90257487120806512" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bezeled" selectedSegmentIndex="0" id="dmf-XL-IRP">
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bezeled" id="dmf-XL-IRP">
                                                 <rect key="frame" x="5" y="563" width="310" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <segments>
@@ -504,7 +504,7 @@
                                                 <color key="textColor" red="0.98618643007827211" green="1" blue="0.85082659291858553" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bezeled" selectedSegmentIndex="0" id="Xqk-OV-int">
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bezeled" id="Xqk-OV-int">
                                                 <rect key="frame" x="5" y="357" width="310" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <segments>
@@ -650,7 +650,6 @@
         <image name="active3.png" width="87" height="32"/>
         <image name="add_bg.png" width="320" height="650"/>
         <image name="bg_poo.png" width="309" height="111"/>
-        <image name="button_general_delete.png" width="29" height="32"/>
         <image name="challang_bg.png" width="320" height="490"/>
         <image name="challange_bg.png" width="320" height="480"/>
         <image name="challange_cell.png" width="320" height="63"/>
