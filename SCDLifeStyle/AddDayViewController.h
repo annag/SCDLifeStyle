@@ -10,6 +10,7 @@
 
 @interface AddDayViewController : BaseViewController
 
+@property(nonatomic,strong) NSDate *selectedDate;
 @property(nonatomic,strong) IBOutlet UILabel *topTitle;
 @property(nonatomic,strong) IBOutlet UISegmentedControl *stoolControl;
 @property(nonatomic,strong) IBOutlet UISegmentedControl *excerciseControl;

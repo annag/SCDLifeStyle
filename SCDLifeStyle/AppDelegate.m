@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Util.h"
 
 @implementation AppDelegate
 
@@ -17,7 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    [Util instance].managedObjectContext = [self managedObjectContext];
     return YES;
 }
 							

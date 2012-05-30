@@ -19,6 +19,7 @@
 
 @implementation AddDayViewController
 
+@synthesize selectedDate;
 @synthesize topTitle;
 @synthesize stoolControl,excerciseControl,sleepLengthControl,sleepQualityControl,stressControl;
 @synthesize containerView, scrollView, stoolScrollView;
@@ -29,25 +30,22 @@
 {
     [super viewDidLoad];
 	
-    NSString *todayId = [Util dayIdToday];
-    NSLog(@"today id %@",todayId);
+    if (self.selectedDate == nil) {
+        self.selectedDate = [NSDate date];
+    }
     
     [self.scrollView setContentSize:CGSizeMake(self.view.frame.size.width, self.containerView.frame.size.height)];
     
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"day_id == %@",[Util dayIdToday]];
-    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Day"];
-    [request setPredicate:predicate];
-    NSError *error = nil;
-    NSArray *a = [self.managedObjectContext executeFetchRequest:request error:&error];
-    if ([a count] > 0 && error == nil) 
+    Day *day = [[Util instance] getDayFromDate:self.selectedDate];
+    if (day != nil) 
     {
-        self.dayObject = (Day*)[a objectAtIndex:0];
+        self.dayObject = day;
     }
     else 
     {
         self.dayObject = [NSEntityDescription insertNewObjectForEntityForName:@"Day" 
                                                        inManagedObjectContext:self.managedObjectContext];
-        self.dayObject.day_id = [Util dayIdToday];
+        self.dayObject.day_id = [Util dayIdFromDate:self.selectedDate];
     }
     
     [self render];
