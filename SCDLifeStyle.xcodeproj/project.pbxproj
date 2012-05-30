@@ -98,6 +98,8 @@
 		95B496E41569C8670011D457 /* owl3.png in Resources */ = {isa = PBXBuildFile; fileRef = 95B496DF1569C8670011D457 /* owl3.png */; };
 		95B496E51569C8670011D457 /* owl2.png in Resources */ = {isa = PBXBuildFile; fileRef = 95B496E01569C8670011D457 /* owl2.png */; };
 		95B496E61569C8670011D457 /* owl1.png in Resources */ = {isa = PBXBuildFile; fileRef = 95B496E11569C8670011D457 /* owl1.png */; };
+		BF009CBA1576676F003700FB /* GraphTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF009CB91576676F003700FB /* GraphTabViewController.m */; };
+		BF009CBD15766797003700FB /* GraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF009CBC15766797003700FB /* GraphViewController.m */; };
 		BF16EA8115725117000F2B2C /* StoolView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF16EA8015725117000F2B2C /* StoolView.m */; };
 		BF16EA841572512E000F2B2C /* StoolView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF16EA831572512E000F2B2C /* StoolView.xib */; };
 		BF21AF8F1567B66A00B86DAE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF21AF8E1567B66A00B86DAE /* UIKit.framework */; };
@@ -244,6 +246,10 @@
 		95B496DF1569C8670011D457 /* owl3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = owl3.png; sourceTree = "<group>"; };
 		95B496E01569C8670011D457 /* owl2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = owl2.png; sourceTree = "<group>"; };
 		95B496E11569C8670011D457 /* owl1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = owl1.png; sourceTree = "<group>"; };
+		BF009CB81576676F003700FB /* GraphTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphTabViewController.h; sourceTree = "<group>"; };
+		BF009CB91576676F003700FB /* GraphTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphTabViewController.m; sourceTree = "<group>"; };
+		BF009CBB15766797003700FB /* GraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphViewController.h; sourceTree = "<group>"; };
+		BF009CBC15766797003700FB /* GraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphViewController.m; sourceTree = "<group>"; };
 		BF16EA7F15725117000F2B2C /* StoolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoolView.h; sourceTree = "<group>"; };
 		BF16EA8015725117000F2B2C /* StoolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoolView.m; sourceTree = "<group>"; };
 		BF16EA831572512E000F2B2C /* StoolView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoolView.xib; sourceTree = "<group>"; };
@@ -477,6 +483,10 @@
 				BF21C4931573D2F700C5F65D /* TrackViewController.m */,
 				BFAF1A27157618BA008F6211 /* AddChallengeViewController.h */,
 				BFAF1A28157618BA008F6211 /* AddChallengeViewController.m */,
+				BF009CB81576676F003700FB /* GraphTabViewController.h */,
+				BF009CB91576676F003700FB /* GraphTabViewController.m */,
+				BF009CBB15766797003700FB /* GraphViewController.h */,
+				BF009CBC15766797003700FB /* GraphViewController.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -728,6 +738,8 @@
 				BFAF1A2615760E9B008F6211 /* Note.m in Sources */,
 				BFAF1A29157618BA008F6211 /* AddChallengeViewController.m in Sources */,
 				BFAF1A34157638DB008F6211 /* ChallengeCell.m in Sources */,
+				BF009CBA1576676F003700FB /* GraphTabViewController.m in Sources */,
+				BF009CBD15766797003700FB /* GraphViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

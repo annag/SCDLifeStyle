@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="PaS-OG-Vcz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="PaS-OG-Vcz">
     <dependencies>
         <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
@@ -86,13 +86,13 @@
             </objects>
             <point key="canvasLocation" x="2078" y="-355"/>
         </scene>
-        <!--View Controller - Graph-->
+        <!--Graph Tab View Controller - Graph-->
         <scene sceneID="fgK-wW-XNU">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rm5-4u-f0D" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="1fA-3u-gyY" sceneMemberID="viewController">
+                <viewController id="1fA-3u-gyY" customClass="GraphTabViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M74-f2-cIH">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="271"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Graph" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Lc2-hG-0XC">
@@ -104,13 +104,48 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Graph" id="Zr3-Vu-Dce"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <connections>
+                        <segue destination="bWT-cU-kFw" kind="modal" identifier="Graph" id="4bV-PB-7Os"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="2078" y="250"/>
+        </scene>
+        <!--Graph View Controller-->
+        <scene sceneID="MME-Rh-0p0">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PlN-Tq-xOK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="bWT-cU-kFw" customClass="GraphViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GD3-NK-X4V">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="AuO-xf-y7Q">
+                                <rect key="frame" x="402" y="8" width="72" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onClose:" destination="bWT-cU-kFw" eventType="touchUpInside" id="W9R-XU-F9j"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2611" y="300"/>
         </scene>
         <!--Track View Controller - Track-->
         <scene sceneID="ZA1-QJ-JBj">
@@ -650,7 +685,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="2706" y="-53"/>
+            <point key="canvasLocation" x="3174" y="-279"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="8kt-or-4A1">
@@ -749,6 +784,15 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ChallengesViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="GraphTabViewController" superclassName="BaseViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GraphTabViewController.h"/>
+        </class>
+        <class className="GraphViewController" superclassName="BaseViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GraphViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="onClose:"/>
             </relationships>
         </class>
         <class className="MainViewController" superclassName="BaseViewController">
