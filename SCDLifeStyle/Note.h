@@ -1,5 +1,5 @@
 //
-//  Stool.h
+//  Note.h
 //  SCDLifeStyle
 //
 //  Created by Juan Fluxa on 5/30/12.
@@ -10,9 +10,9 @@
 #import <CoreData/CoreData.h>
 
 
-@interface Stool : NSManagedObject
+@interface Note : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * type;
-@property (nonatomic, retain) NSDate * time;
+@property (nonatomic, retain) NSString * text;
+@property (nonatomic, retain) NSDate * added;
 
 @end

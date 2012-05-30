@@ -19,7 +19,7 @@
 {
     _stool = stool;
     
-    int stoolType = [stool.index intValue]+1;
+    int stoolType = [stool.type intValue]+1;
     UIImage *img = [UIImage imageNamed:[NSString stringWithFormat:@"poo%d.png",stoolType]];
     self.imageView.image = img;
     self.titleLabel.text = [NSString stringWithFormat:@"Time: %@ - Type %d",[Util timePretty:stool.time],stoolType];

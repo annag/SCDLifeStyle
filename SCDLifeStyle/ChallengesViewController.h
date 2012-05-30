@@ -10,4 +10,7 @@
 
 @interface ChallengesViewController : BaseViewController
 
+@property(nonatomic,strong) IBOutlet UITableView *tableView;
+
+
 @end

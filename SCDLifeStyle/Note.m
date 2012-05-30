@@ -1,17 +1,17 @@
 //
-//  Stool.m
+//  Note.m
 //  SCDLifeStyle
 //
 //  Created by Juan Fluxa on 5/30/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "Stool.h"
+#import "Note.h"
 
 
-@implementation Stool
+@implementation Note
 
-@dynamic type;
-@dynamic time;
+@dynamic text;
+@dynamic added;
 
 @end

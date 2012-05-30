@@ -26,8 +26,8 @@
 {
     [super viewDidLoad];
     
-    [self.view setBackgroundColor:[UIColor blackColor]];
-    self.monthView.frame = CGRectMake(0, 0, self.monthView.frame.size.width, self.monthView.frame.size.height);
+    //[self.view setBackgroundColor:[UIColor blackColor]];
+    self.monthView.frame = CGRectMake(0, 53, self.monthView.frame.size.width, self.monthView.frame.size.height);
 }
 
 - (void) viewDidAppear:(BOOL)animated

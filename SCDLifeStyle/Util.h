@@ -24,4 +24,6 @@
 
 //public
 - (Day*) getDayFromDate:(NSDate*)date;
+- (NSArray*) getChallenges;
+
 @end
