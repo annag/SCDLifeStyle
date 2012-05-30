@@ -111,7 +111,36 @@
 		BF21AFBD1567C6F100B86DAE /* AddDayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF21AFBC1567C6F100B86DAE /* AddDayViewController.m */; };
 		BF21AFC11567D1E600B86DAE /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = BF21AFC01567D1E600B86DAE /* Util.m */; };
 		BF21AFCA156942FD00B86DAE /* Bar.m in Sources */ = {isa = PBXBuildFile; fileRef = BF21AFC9156942FD00B86DAE /* Bar.m */; };
+		BF21C4941573D2F700C5F65D /* TrackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF21C4931573D2F700C5F65D /* TrackViewController.m */; };
+		BF21C53B1573E07600C5F65D /* TapkuLibrary.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BF21C5341573E07600C5F65D /* TapkuLibrary.bundle */; };
+		BF21C5451573E0B000C5F65D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF21C5441573E0B000C5F65D /* MapKit.framework */; };
+		BF21C5471573E0BA00C5F65D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF21C5461573E0BA00C5F65D /* QuartzCore.framework */; };
+		BF21C5491573E0CD00C5F65D /* libTapkuLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF21C5481573E0CD00C5F65D /* libTapkuLibrary.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BF21C53E1573E07700C5F65D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF21C5351573E07600C5F65D /* TapkuLibrary.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = TapkuLibrary;
+		};
+		BF21C5401573E07700C5F65D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF21C5351573E07600C5F65D /* TapkuLibrary.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3B45DDF1134C736600D24C1A;
+			remoteInfo = LogicTests;
+		};
+		BF21C5421573E09B00C5F65D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF21C5351573E07600C5F65D /* TapkuLibrary.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = TapkuLibrary;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		951881C0156A9955001B614B /* add_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_bg.png; sourceTree = "<group>"; };
@@ -231,6 +260,13 @@
 		BF21AFC01567D1E600B86DAE /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
 		BF21AFC8156942FD00B86DAE /* Bar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar.h; sourceTree = "<group>"; };
 		BF21AFC9156942FD00B86DAE /* Bar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar.m; sourceTree = "<group>"; };
+		BF21C4921573D2F700C5F65D /* TrackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackViewController.h; sourceTree = "<group>"; };
+		BF21C4931573D2F700C5F65D /* TrackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackViewController.m; sourceTree = "<group>"; };
+		BF21C5341573E07600C5F65D /* TapkuLibrary.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TapkuLibrary.bundle; path = TapkuLibrary/src/TapkuLibrary.bundle; sourceTree = "<group>"; };
+		BF21C5351573E07600C5F65D /* TapkuLibrary.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TapkuLibrary.xcodeproj; path = TapkuLibrary/src/TapkuLibrary.xcodeproj; sourceTree = "<group>"; };
+		BF21C5441573E0B000C5F65D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		BF21C5461573E0BA00C5F65D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		BF21C5481573E0CD00C5F65D /* libTapkuLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTapkuLibrary.a; path = TapkuLibrary/src/libTapkuLibrary.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +274,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF21C5491573E0CD00C5F65D /* libTapkuLibrary.a in Frameworks */,
+				BF21C5471573E0BA00C5F65D /* QuartzCore.framework in Frameworks */,
+				BF21C5451573E0B000C5F65D /* MapKit.framework in Frameworks */,
 				BF21AFB71567C0DF00B86DAE /* CoreData.framework in Frameworks */,
 				BF21AF8F1567B66A00B86DAE /* UIKit.framework in Frameworks */,
 				BF21AF911567B66A00B86DAE /* Foundation.framework in Frameworks */,
@@ -340,6 +379,9 @@
 		BF21AF7F1567B66A00B86DAE = {
 			isa = PBXGroup;
 			children = (
+				BF21C5481573E0CD00C5F65D /* libTapkuLibrary.a */,
+				BF21C5461573E0BA00C5F65D /* QuartzCore.framework */,
+				BF21C5441573E0B000C5F65D /* MapKit.framework */,
 				BF21AF941567B66A00B86DAE /* SCDLifeStyle */,
 				BF21AF8D1567B66A00B86DAE /* Frameworks */,
 				BF21AF8B1567B66A00B86DAE /* Products */,
@@ -357,6 +399,8 @@
 		BF21AF8D1567B66A00B86DAE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BF21C5341573E07600C5F65D /* TapkuLibrary.bundle */,
+				BF21C5351573E07600C5F65D /* TapkuLibrary.xcodeproj */,
 				BF21AFB61567C0DF00B86DAE /* CoreData.framework */,
 				BF21AF8E1567B66A00B86DAE /* UIKit.framework */,
 				BF21AF901567B66A00B86DAE /* Foundation.framework */,
@@ -403,6 +447,8 @@
 				BF21AFBC1567C6F100B86DAE /* AddDayViewController.m */,
 				95B4967815690DD00011D457 /* ChallengesViewController.h */,
 				95B4967915690DD00011D457 /* ChallengesViewController.m */,
+				BF21C4921573D2F700C5F65D /* TrackViewController.h */,
+				BF21C4931573D2F700C5F65D /* TrackViewController.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -443,6 +489,15 @@
 			name = Components;
 			sourceTree = "<group>";
 		};
+		BF21C5361573E07600C5F65D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF21C53F1573E07700C5F65D /* libTapkuLibrary.a */,
+				BF21C5411573E07700C5F65D /* LogicTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -457,6 +512,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				BF21C5431573E09B00C5F65D /* PBXTargetDependency */,
 			);
 			name = SCDLifeStyle;
 			productName = SCDLifeStyle;
@@ -481,12 +537,35 @@
 			mainGroup = BF21AF7F1567B66A00B86DAE;
 			productRefGroup = BF21AF8B1567B66A00B86DAE /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = BF21C5361573E07600C5F65D /* Products */;
+					ProjectRef = BF21C5351573E07600C5F65D /* TapkuLibrary.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				BF21AF891567B66A00B86DAE /* SCDLifeStyle */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		BF21C53F1573E07700C5F65D /* libTapkuLibrary.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libTapkuLibrary.a;
+			remoteRef = BF21C53E1573E07700C5F65D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BF21C5411573E07700C5F65D /* LogicTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = LogicTests.octest;
+			remoteRef = BF21C5401573E07700C5F65D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		BF21AF881567B66A00B86DAE /* Resources */ = {
@@ -581,6 +660,7 @@
 				9585B3B51575D913006260DC /* cell_chall.png in Resources */,
 				9585B3B61575D913006260DC /* cell_chall@2x.png in Resources */,
 				9585B3B81575DCE7006260DC /* ChallengeHeader.xib in Resources */,
+				BF21C53B1573E07600C5F65D /* TapkuLibrary.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -603,10 +683,19 @@
 				BF16EA8115725117000F2B2C /* StoolView.m in Sources */,
 				BF16EA8A15725BE8000F2B2C /* Stool.m in Sources */,
 				BF16EA8D15728A1D000F2B2C /* Day.m in Sources */,
+				BF21C4941573D2F700C5F65D /* TrackViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BF21C5431573E09B00C5F65D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TapkuLibrary;
+			targetProxy = BF21C5421573E09B00C5F65D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		BF21AF971567B66A00B86DAE /* InfoPlist.strings */ = {
@@ -676,9 +765,24 @@
 		BF21AFA91567B66A00B86DAE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SCDLifeStyle/SCDLifeStyle-Prefix.pch";
+				HEADER_SEARCH_PATHS = TapkuLibrary/src;
 				INFOPLIST_FILE = "SCDLifeStyle/SCDLifeStyle-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/SCDLifeStyle\"",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/TapkuLibrary/src\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -687,9 +791,24 @@
 		BF21AFAA1567B66A00B86DAE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SCDLifeStyle/SCDLifeStyle-Prefix.pch";
+				HEADER_SEARCH_PATHS = TapkuLibrary/src;
 				INFOPLIST_FILE = "SCDLifeStyle/SCDLifeStyle-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/SCDLifeStyle\"",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/TapkuLibrary/src\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

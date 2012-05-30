@@ -11,7 +11,7 @@
 #import "Day.h"
 #import "StoolView.h"
 
-@interface AddDayViewController ()
+@interface AddDayViewController () <StoolViewDelegate>
 
 @property(nonatomic,strong) Day *dayObject;
 
@@ -79,10 +79,13 @@
         [v removeFromSuperview];
     }
     float posY = 0;
-    for(Stool *stool in self.dayObject.stool)
+    NSSortDescriptor *sortDesc = [NSSortDescriptor sortDescriptorWithKey:@"time" ascending:NO];
+    NSArray *sortedStool = [self.dayObject.stool sortedArrayUsingDescriptors:[NSArray arrayWithObject:sortDesc]];
+    for(Stool *stool in sortedStool)
     {
         StoolView *sv = [[[NSBundle mainBundle] loadNibNamed:@"StoolView" owner:self options:nil] objectAtIndex:0];
         [sv setStool:stool];
+        sv.delegate = self;
         sv.frame = CGRectMake(0, posY, sv.frame.size.width, sv.frame.size.height);
         [self.stoolScrollView addSubview:sv];
         
@@ -140,6 +143,13 @@
         [self render];
     }
     
+}
+
+#pragma mark StoolDelegate
+- (void) onStoolViewDelete:(Stool *)stool
+{
+    [self.dayObject removeStoolObject:stool];
+    [self render];
 }
 
 @end
