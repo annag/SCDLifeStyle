@@ -92,7 +92,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rm5-4u-f0D" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="1fA-3u-gyY" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M74-f2-cIH">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="271"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Graph" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Lc2-hG-0XC">
@@ -104,8 +104,10 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Graph" id="Zr3-Vu-Dce"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="2078" y="250"/>
