@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1171" systemVersion="11E53" minimumToolsVersion="Xcode 4.1" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Challenge" representedClassName="Challenge" syncable="YES">
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="duration" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="end_date" optional="YES" attributeType="Date" defaultDateTimeInterval="0" defaultValueString="nil" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="start_date" optional="YES" attributeType="Date" defaultDateTimeInterval="0" defaultValueString="nil" syncable="YES"/>
+        <attribute name="started" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <relationship name="note" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Note" syncable="YES"/>
+    </entity>
     <entity name="Day" representedClassName="Day" syncable="YES">
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="day_id" optional="YES" attributeType="String" syncable="YES"/>
@@ -7,15 +16,20 @@
         <attribute name="sleep_length" optional="YES" attributeType="Integer 16" syncable="YES"/>
         <attribute name="sleep_quality" optional="YES" attributeType="Integer 16" syncable="YES"/>
         <attribute name="stress" optional="YES" attributeType="Integer 16" syncable="YES"/>
-        <relationship name="stool" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Stool" inverseName="day" inverseEntity="Stool" syncable="YES"/>
+        <relationship name="stool" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Stool" syncable="YES"/>
+    </entity>
+    <entity name="Note" representedClassName="Note" syncable="YES">
+        <attribute name="added" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Stool" representedClassName="Stool" syncable="YES">
-        <attribute name="index" optional="YES" attributeType="Integer 16" minValueString="0" maxValueString="6" syncable="YES"/>
         <attribute name="time" optional="YES" attributeType="Date" syncable="YES"/>
-        <relationship name="day" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Day" inverseName="stool" inverseEntity="Day" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 16" minValueString="0" maxValueString="6" syncable="YES"/>
     </entity>
     <elements>
         <element name="Day" positionX="2403" positionY="1881" width="128" height="150"/>
         <element name="Stool" positionX="2385" positionY="2208" width="137" height="90"/>
+        <element name="Challenge" positionX="358" positionY="345" width="128" height="150"/>
+        <element name="Note" positionX="601" positionY="369" width="128" height="75"/>
     </elements>
 </model>

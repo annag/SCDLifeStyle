@@ -86,4 +86,15 @@ static Util *instance = nil;
     return nil;
 }
 
+- (NSArray*) getChallenges
+{
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Challenge"];
+    NSError *error = nil;
+    NSArray *challenges = [self.managedObjectContext executeFetchRequest:request error:&error];
+    if (error == nil) {
+        return challenges;
+    }
+    return [NSArray array];
+}
+
 @end

@@ -133,7 +133,7 @@
     {
         Stool *stool = [NSEntityDescription insertNewObjectForEntityForName:@"Stool" 
                                                       inManagedObjectContext:self.managedObjectContext];
-        stool.index = selectedIndex;
+        stool.type = selectedIndex;
         stool.time = [NSDate date];
         //stool.day = self.dayObject;
         [self.dayObject addStoolObject:stool];
