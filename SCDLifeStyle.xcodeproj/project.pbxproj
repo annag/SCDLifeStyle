@@ -115,7 +115,7 @@
 		BF21C53B1573E07600C5F65D /* TapkuLibrary.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BF21C5341573E07600C5F65D /* TapkuLibrary.bundle */; };
 		BF21C5451573E0B000C5F65D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF21C5441573E0B000C5F65D /* MapKit.framework */; };
 		BF21C5471573E0BA00C5F65D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF21C5461573E0BA00C5F65D /* QuartzCore.framework */; };
-		BF21C5491573E0CD00C5F65D /* libTapkuLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF21C5481573E0CD00C5F65D /* libTapkuLibrary.a */; };
+		BF4D5CFC1575F46400076C9A /* libTapkuLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF21C5481573E0CD00C5F65D /* libTapkuLibrary.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -274,7 +274,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF21C5491573E0CD00C5F65D /* libTapkuLibrary.a in Frameworks */,
+				BF4D5CFC1575F46400076C9A /* libTapkuLibrary.a in Frameworks */,
 				BF21C5471573E0BA00C5F65D /* QuartzCore.framework in Frameworks */,
 				BF21C5451573E0B000C5F65D /* MapKit.framework in Frameworks */,
 				BF21AFB71567C0DF00B86DAE /* CoreData.framework in Frameworks */,
