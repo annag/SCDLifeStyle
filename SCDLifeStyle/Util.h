@@ -27,6 +27,7 @@
 - (Day*) getDayFromDate:(NSDate*)date;
 - (NSArray*) getChallenges;
 
+// Challenge requests
 - (NSDate*) endDateForChallenge:(Challenge*)challenge;
 - (int)getDaysRemainingForChallenge:(Challenge*)challenge;
 - (int)getCurrentDayForChallenge:(Challenge*)challenge;
@@ -38,4 +39,11 @@
 - (float)getAverageStyleTypeOfChallenge:(Challenge*)challenge;
 
 - (BOOL)challengeDidFinish:(Challenge*)challenge;
+
+// Home view requests
+- (int) getTodaysStressPercentage;
+- (int) getTodaysSleepPercentage;
+- (int) getTodaysExcersisePercentage;
+- (int) getTodaysStoolPercentage;
+
 @end
