@@ -548,7 +548,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <view opaque="NO" contentMode="scaleToFill" id="yVC-Tg-WqN">
-                                        <rect key="frame" x="0.0" y="0.0" width="321" height="650"/>
+                                        <rect key="frame" x="0.0" y="-200" width="321" height="650"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="add_bg.png" id="svf-Es-gbf">
@@ -865,89 +865,6 @@
         <image name="stressed4.png" width="38" height="29"/>
         <image name="submit_btn.png" width="302" height="39"/>
     </resources>
-    <classes>
-        <class className="AddChallengeViewController" superclassName="BaseViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddChallengeViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="onAddChallenge:"/>
-                <relationship kind="action" name="onCancel:"/>
-                <relationship kind="outlet" name="descTV" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="durationTF" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="nameTF" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="AddDayViewController" superclassName="BaseViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddDayViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="onCancel:"/>
-                <relationship kind="action" name="onControlChanted:"/>
-                <relationship kind="action" name="onDone:"/>
-                <relationship kind="outlet" name="containerView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="excerciseControl" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="sleepLengthControl" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="sleepQualityControl" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="stoolControl" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="stoolScrollView" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="stressControl" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="topTitle" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="Bar" superclassName="UIImageView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/Bar.h"/>
-        </class>
-        <class className="BaseViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BaseViewController.h"/>
-        </class>
-        <class className="ChallengeCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ChallengeCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="title" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="ChallengeDetailViewController" superclassName="BaseViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ChallengeDetailViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="actionButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
-            </relationships>
-        </class>
-        <class className="ChallengesViewController" superclassName="BaseViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ChallengesViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="GraphTabViewController" superclassName="BaseViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GraphTabViewController.h"/>
-        </class>
-        <class className="GraphViewController" superclassName="BaseViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GraphViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="onClose:"/>
-            </relationships>
-        </class>
-        <class className="MainViewController" superclassName="BaseViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="onAddDay:"/>
-                <relationship kind="outlet" name="activityBar" candidateClass="Bar"/>
-                <relationship kind="outlet" name="relaxedBar" candidateClass="Bar"/>
-                <relationship kind="outlet" name="sleepBar" candidateClass="Bar"/>
-                <relationship kind="outlet" name="stoolBar" candidateClass="Bar"/>
-                <relationship kind="outlet" name="top1" candidateClass="UIView"/>
-                <relationship kind="outlet" name="top2" candidateClass="UIView"/>
-                <relationship kind="outlet" name="top3" candidateClass="UIView"/>
-                <relationship kind="outlet" name="top4" candidateClass="UIView"/>
-            </relationships>
-        </class>
-        <class className="TKCalendarMonthViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TKCalendarMonthViewController.h"/>
-        </class>
-        <class className="TrackViewController" superclassName="TKCalendarMonthViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TrackViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <nil key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

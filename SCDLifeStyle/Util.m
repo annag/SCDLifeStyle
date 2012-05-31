@@ -7,6 +7,7 @@
 //
 
 #import "Util.h"
+#import "NSDate+SCDCategory.h"
 
 static Util *instance = nil;
 
@@ -95,6 +96,47 @@ static Util *instance = nil;
         return challenges;
     }
     return [NSArray array];
+}
+
+- (NSDate*) endDateForChallenge:(Challenge*)challenge
+{
+    return [challenge.start_date dateByAddingDays:challenge.duration.intValue];
+}
+
+- (int)getDaysRemainingForChallenge:(Challenge*)challenge{
+
+    return [challenge.start_date daysBetweenDate:challenge.end_date];
+}
+
+- (int)getCurrentDayForChallenge:(Challenge*)challenge{
+
+     return [challenge.start_date daysBetweenDate:[NSDate date]];
+}
+
+- (float)getAverageStoolFrequencyOfLast14Days{
+
+    return 3.5;
+}
+
+- (float)getAverageStoolFrequencyOfChallenge:(Challenge*)challenge
+{
+    return 4.5;
+}
+
+- (float)getAverageStyleTypeOfLast14Days{
+
+    return 5.5;
+}
+
+- (float)getAverageStyleTypeOfChallenge:(Challenge*)challenge{
+    
+    return 6.5;
+}
+
+- (BOOL)challengeDidFinish:(Challenge*)challenge{
+    
+    int daysremaining = [self getDaysRemainingForChallenge:challenge];
+    return (daysremaining <0);
 }
 
 @end
