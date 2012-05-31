@@ -15,7 +15,13 @@
 
 @property(nonatomic,strong) IBOutlet UIScrollView *scrollView;
 @property(nonatomic,strong) IBOutlet UIButton *actionButton;
+@property(nonatomic,strong) IBOutlet UIView *container;
+@property(nonatomic,strong) IBOutlet UITextView *noteTV;
+
 
 - (IBAction)onClose:(id)sender;
+
+- (IBAction)onCancelNote:(id)sender;
+- (IBAction)onAddNote:(id)sender;
 
 @end
