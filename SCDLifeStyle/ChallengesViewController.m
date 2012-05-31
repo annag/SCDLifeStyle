@@ -27,10 +27,15 @@
 {
     [super viewDidLoad];
     
-    self.dataArray = [[Util instance] getChallenges];
-    [self.tableView reloadData];
+    
 }
 
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    self.dataArray = [[Util instance] getChallenges];
+    [self.tableView reloadData];
+
+}
 
 #pragma mark UITableView
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -46,6 +51,11 @@
     cell.tag = indexPath.row;
     
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 63;
 }
 
 @end
