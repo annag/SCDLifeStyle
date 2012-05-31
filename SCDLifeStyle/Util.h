@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Day.h"
 #import "Stool.h"
+#import "Challenge.h"
 
 @interface Util : NSObject
 
@@ -26,4 +27,15 @@
 - (Day*) getDayFromDate:(NSDate*)date;
 - (NSArray*) getChallenges;
 
+- (NSDate*) endDateForChallenge:(Challenge*)challenge;
+- (int)getDaysRemainingForChallenge:(Challenge*)challenge;
+- (int)getCurrentDayForChallenge:(Challenge*)challenge;
+
+- (float)getAverageStoolFrequencyOfLast14Days;
+- (float)getAverageStoolFrequencyOfChallenge:(Challenge*)challenge;
+
+- (float)getAverageStyleTypeOfLast14Days;
+- (float)getAverageStyleTypeOfChallenge:(Challenge*)challenge;
+
+- (BOOL)challengeDidFinish:(Challenge*)challenge;
 @end
