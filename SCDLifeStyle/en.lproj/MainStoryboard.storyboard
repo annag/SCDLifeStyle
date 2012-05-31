@@ -128,7 +128,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="u5x-6l-hal">
-                                <rect key="frame" x="6" y="290" width="65" height="29"/>
+                                <rect key="frame" x="6" y="282" width="65" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                 <state key="normal" title="Exercise" backgroundImage="green_btn.png">
@@ -143,7 +143,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hW3-nT-duJ">
-                                <rect key="frame" x="79" y="290" width="65" height="29"/>
+                                <rect key="frame" x="76" y="282" width="65" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                 <state key="normal" title="Challenge" backgroundImage="red_btn.png">
@@ -158,7 +158,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ANy-2u-TU2">
-                                <rect key="frame" x="149" y="290" width="65" height="29"/>
+                                <rect key="frame" x="146" y="282" width="65" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                 <state key="normal" title="Stress" backgroundImage="purple_btn.png">
@@ -173,7 +173,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="iRW-AN-pWt">
-                                <rect key="frame" x="219" y="290" width="65" height="29"/>
+                                <rect key="frame" x="219" y="282" width="65" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                 <state key="normal" title="Sleep" backgroundImage="blue_btn.png">
@@ -188,7 +188,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7SE-fI-6C7">
-                                <rect key="frame" x="392" y="289" width="42" height="31"/>
+                                <rect key="frame" x="391" y="281" width="42" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" backgroundImage="minus_uns.png">
@@ -216,7 +216,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kOO-31-y0t">
-                                <rect key="frame" x="432" y="289" width="42" height="31"/>
+                                <rect key="frame" x="432" y="281" width="42" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" backgroundImage="plus_uns.png">
