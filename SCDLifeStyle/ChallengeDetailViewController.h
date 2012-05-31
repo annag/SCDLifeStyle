@@ -15,4 +15,7 @@
 
 @property(nonatomic,strong) IBOutlet UIScrollView *scrollView;
 @property(nonatomic,strong) IBOutlet UIButton *actionButton;
+
+- (IBAction)onClose:(id)sender;
+
 @end

@@ -8,6 +8,12 @@
 
 #import "ChallengeNote.h"
 
+@interface ChallengeNote ()
+{
+    
+}
+@end
+
 @implementation ChallengeNote
 
 @synthesize timeLabel,titleLabel,textLabel;
@@ -16,12 +22,17 @@
 {
     if ((self = [super initWithCoder:aDecoder])) 
     {
-        //clean labels at start
-        self.titleLabel.text = @"";
-        self.textLabel.text = @"";
-        self.timeLabel.text = @"";
+                
     }
     return self;
+}
+
+
+- (void) clean
+{
+    [self.titleLabel setText:@""];
+    [self.textLabel setText:@""];
+    [self.timeLabel setText:@""];
 }
 
 @end

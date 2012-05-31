@@ -10,6 +10,7 @@
 #import "Util.h"
 #import "ChallengeCell.h"
 #import "Challenge.h"
+#import "ChallengeDetailViewController.h"
 
 @interface ChallengesViewController () <UITableViewDataSource,UITableViewDelegate>
 
@@ -37,6 +38,15 @@
 
 }
 
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"ChallengeDetail"]) 
+    {
+        ChallengeDetailViewController *chdvc = [segue destinationViewController];
+        chdvc.challenge = sender;
+    }
+}
+
 #pragma mark UITableView
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -56,6 +66,12 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 63;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    Challenge *challenge = [self.dataArray objectAtIndex:indexPath.row];
+    [self performSegueWithIdentifier:@"ChallengeDetail" sender:challenge];
 }
 
 @end
