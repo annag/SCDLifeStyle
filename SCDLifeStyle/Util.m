@@ -98,6 +98,10 @@ static Util *instance = nil;
     return [NSArray array];
 }
 
+///******************************************************************************///
+// Challenge requests
+///******************************************************************************///
+
 - (NSDate*) endDateForChallenge:(Challenge*)challenge
 {
     return [challenge.start_date dateByAddingDays:challenge.duration.intValue];
@@ -139,4 +143,26 @@ static Util *instance = nil;
     return (daysremaining <0);
 }
 
+///******************************************************************************///
+// Home view requests
+///******************************************************************************///
+- (int) getTodaysStressPercentage{
+
+    return 0;
+}
+
+- (int) getTodaysSleepPercentage{
+
+    return 0;
+}
+
+- (int) getTodaysExcersisePercentage{
+
+    return 0;
+}
+
+- (int) getTodaysStoolPercentage{
+    
+    return 0;
+}
 @end
