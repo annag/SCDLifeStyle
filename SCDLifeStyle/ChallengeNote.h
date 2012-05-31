@@ -14,4 +14,6 @@
 @property(nonatomic,strong) IBOutlet UILabel *textLabel;
 @property(nonatomic,strong) IBOutlet UILabel *timeLabel;
 
+- (void) clean;
+
 @end

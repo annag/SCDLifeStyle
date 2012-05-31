@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="PaS-OG-Vcz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="PaS-OG-Vcz">
     <dependencies>
         <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
@@ -274,66 +274,103 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cF7-a1-nlt" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="54J-df-pcj" customClass="ChallengeDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dig-gS-75Q">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="challang_bg.png" id="pZR-PO-xfK">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                            <view contentMode="scaleToFill" id="1sD-14-cKj" userLabel="container">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="960"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Challenges" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" id="hna-wJ-bA7">
-                                <rect key="frame" x="95" y="19" width="131" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="VGa-Uk-DYz">
-                                <rect key="frame" x="10" y="12" width="60" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="back" backgroundImage="nav_button.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="tsz-Y8-opu">
-                                <rect key="frame" x="250" y="12" width="60" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="edit" backgroundImage="nav_button.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <scrollView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" id="yIx-Rw-nUD">
-                                <rect key="frame" x="10" y="60" width="300" height="320"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gbr-Ni-RSp">
-                                <rect key="frame" x="10" y="386" width="302" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" backgroundImage="submit_btn.png">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="challang_bg.png" id="pZR-PO-xfK">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Challenges" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" id="hna-wJ-bA7">
+                                        <rect key="frame" x="95" y="12" width="131" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="VGa-Uk-DYz">
+                                        <rect key="frame" x="249" y="13" width="60" height="28"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="close" backgroundImage="nav_button.png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onClose:" destination="54J-df-pcj" eventType="touchUpInside" id="8Co-F8-Tnw"/>
+                                        </connections>
+                                    </button>
+                                    <scrollView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" id="yIx-Rw-nUD">
+                                        <rect key="frame" x="10" y="56" width="300" height="370"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </scrollView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gbr-Ni-RSp">
+                                        <rect key="frame" x="9" y="432" width="302" height="39"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <state key="normal" backgroundImage="submit_btn.png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="OSD-Lp-lt9">
+                                        <rect key="frame" x="10" y="488" width="302" height="39"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <state key="normal" title="CANCEL" backgroundImage="submit_btn.png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onCancelNote:" destination="54J-df-pcj" eventType="touchUpInside" id="pgn-hE-Lmt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="onk-ee-Rc6">
+                                        <rect key="frame" x="9" y="671" width="302" height="39"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <state key="normal" title="ADD" backgroundImage="submit_btn.png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onAddNote:" destination="54J-df-pcj" eventType="touchUpInside" id="Pt5-5M-Yxg"/>
+                                        </connections>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="sYa-Os-YeP">
+                                        <rect key="frame" x="11" y="535" width="300" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.55054772418478259" green="0.10195328225644125" blue="0.10195328225644125" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="eoq-98-l9e"/>
                     <connections>
                         <outlet property="actionButton" destination="gbr-Ni-RSp" id="IH8-ic-qWZ"/>
+                        <outlet property="container" destination="1sD-14-cKj" id="hnP-Fb-n7f"/>
+                        <outlet property="noteTV" destination="sYa-Os-YeP" id="tPj-n1-gNr"/>
                         <outlet property="scrollView" destination="yIx-Rw-nUD" id="Dxl-PT-m5B"/>
                     </connections>
                 </viewController>
@@ -357,11 +394,11 @@
                                 <rect key="frame" x="0.0" y="52" width="320" height="330"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ChallengeCell" rowHeight="63" id="KcL-Ax-LXQ" customClass="ChallengeCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="ChallengeCell" rowHeight="63" id="KcL-Ax-LXQ" customClass="ChallengeCell">
                                         <rect key="frame" x="0.0" y="22" width="320" height="63"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="62"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="62"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="challange_cell.png" id="6q1-fm-xBI">
@@ -417,7 +454,7 @@
                     <navigationItem key="navigationItem" id="GHO-y0-JU5"/>
                     <connections>
                         <outlet property="tableView" destination="iSX-gw-ZyQ" id="ERH-Og-fH6"/>
-                        <segue destination="54J-df-pcj" kind="push" identifier="ChallengeDetail" id="Sct-yl-kn5"/>
+                        <segue destination="54J-df-pcj" kind="modal" identifier="ChallengeDetail" id="Sct-yl-kn5"/>
                     </connections>
                 </viewController>
             </objects>
@@ -865,6 +902,94 @@
         <image name="stressed4.png" width="38" height="29"/>
         <image name="submit_btn.png" width="302" height="39"/>
     </resources>
+    <classes>
+        <class className="AddChallengeViewController" superclassName="BaseViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddChallengeViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="onAddChallenge:"/>
+                <relationship kind="action" name="onCancel:"/>
+                <relationship kind="outlet" name="descTV" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="durationTF" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="nameTF" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="AddDayViewController" superclassName="BaseViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddDayViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="onCancel:"/>
+                <relationship kind="action" name="onControlChanted:"/>
+                <relationship kind="action" name="onDone:"/>
+                <relationship kind="outlet" name="containerView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="excerciseControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="sleepLengthControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="sleepQualityControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="stoolControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="stoolScrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="stressControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="topTitle" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="Bar" superclassName="UIImageView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/Bar.h"/>
+        </class>
+        <class className="BaseViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BaseViewController.h"/>
+        </class>
+        <class className="ChallengeCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ChallengeCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="title" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="ChallengeDetailViewController" superclassName="BaseViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ChallengeDetailViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="onAddNote:"/>
+                <relationship kind="action" name="onCancelNote:"/>
+                <relationship kind="action" name="onClose:"/>
+                <relationship kind="outlet" name="actionButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="container" candidateClass="UIView"/>
+                <relationship kind="outlet" name="noteTV" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
+        <class className="ChallengesViewController" superclassName="BaseViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ChallengesViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="GraphTabViewController" superclassName="BaseViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GraphTabViewController.h"/>
+        </class>
+        <class className="GraphViewController" superclassName="BaseViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GraphViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="onClose:"/>
+            </relationships>
+        </class>
+        <class className="MainViewController" superclassName="BaseViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="onAddDay:"/>
+                <relationship kind="outlet" name="activityBar" candidateClass="Bar"/>
+                <relationship kind="outlet" name="relaxedBar" candidateClass="Bar"/>
+                <relationship kind="outlet" name="sleepBar" candidateClass="Bar"/>
+                <relationship kind="outlet" name="stoolBar" candidateClass="Bar"/>
+                <relationship kind="outlet" name="top1" candidateClass="UIView"/>
+                <relationship kind="outlet" name="top2" candidateClass="UIView"/>
+                <relationship kind="outlet" name="top3" candidateClass="UIView"/>
+                <relationship kind="outlet" name="top4" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="TKCalendarMonthViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TKCalendarMonthViewController.h"/>
+        </class>
+        <class className="TrackViewController" superclassName="TKCalendarMonthViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TrackViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <nil key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
