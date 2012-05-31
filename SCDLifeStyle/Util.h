@@ -35,15 +35,15 @@
 - (float)getAverageStoolFrequencyOfLast14Days;
 - (float)getAverageStoolFrequencyOfChallenge:(Challenge*)challenge;
 
-- (float)getAverageStyleTypeOfLast14Days;
-- (float)getAverageStyleTypeOfChallenge:(Challenge*)challenge;
+- (float)getAverageStoolTypeOfLast14Days;
+- (float)getAverageStoolTypeOfChallenge:(Challenge*)challenge;
 
 - (BOOL)challengeDidFinish:(Challenge*)challenge;
 
 // Home view requests
-- (int) getTodaysStressPercentage;
-- (int) getTodaysSleepPercentage;
-- (int) getTodaysExcersisePercentage;
-- (int) getTodaysStoolPercentage;
+- (float) getTodaysStressPercentage;
+- (float) getTodaysSleepPercentage;
+- (float) getTodaysExcersisePercentage;
+- (float) getTodaysStoolPercentage;
 
 @end

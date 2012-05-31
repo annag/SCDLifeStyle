@@ -548,7 +548,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <view opaque="NO" contentMode="scaleToFill" id="yVC-Tg-WqN">
-                                        <rect key="frame" x="0.0" y="-200" width="321" height="650"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="321" height="650"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="add_bg.png" id="svf-Es-gbf">

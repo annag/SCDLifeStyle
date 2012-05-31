@@ -19,6 +19,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [Util instance].managedObjectContext = [self managedObjectContext];
+    
+    [[Util instance] getAverageStoolFrequencyOfLast14Days];
+    
     return YES;
 }
 							
