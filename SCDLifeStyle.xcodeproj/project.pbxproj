@@ -66,11 +66,11 @@
 		954237031576699100CE1551 /* green_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 954236EB1576699100CE1551 /* green_btn@2x.png */; };
 		9542370615766DA000CE1551 /* close_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 9542370415766DA000CE1551 /* close_btn.png */; };
 		9542370715766DA000CE1551 /* close_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9542370515766DA000CE1551 /* close_btn@2x.png */; };
-		958371141575EAD600553A73 /* ChallengeCellBottom.xib in Resources */ = {isa = PBXBuildFile; fileRef = 958371131575EAD600553A73 /* ChallengeCellBottom.xib */; };
+		958371141575EAD600553A73 /* ChallengeNoteBottom.xib in Resources */ = {isa = PBXBuildFile; fileRef = 958371131575EAD600553A73 /* ChallengeNoteBottom.xib */; };
 		958371171575EB3D00553A73 /* cell_bottom_chall.png in Resources */ = {isa = PBXBuildFile; fileRef = 958371151575EB3D00553A73 /* cell_bottom_chall.png */; };
 		958371181575EB3D00553A73 /* cell_bottom_chall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 958371161575EB3D00553A73 /* cell_bottom_chall@2x.png */; };
-		9585B3AB1573D5F7006260DC /* ChallengeSegmentHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9585B3AA1573D5F7006260DC /* ChallengeSegmentHeader.xib */; };
-		9585B3AE1573D780006260DC /* ChallengeNoteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9585B3AD1573D780006260DC /* ChallengeNoteCell.xib */; };
+		9585B3AB1573D5F7006260DC /* ChallengeSegment.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9585B3AA1573D5F7006260DC /* ChallengeSegment.xib */; };
+		9585B3AE1573D780006260DC /* ChallengeNote.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9585B3AD1573D780006260DC /* ChallengeNote.xib */; };
 		9585B3B11573DC44006260DC /* cell.png in Resources */ = {isa = PBXBuildFile; fileRef = 9585B3AF1573DC44006260DC /* cell.png */; };
 		9585B3B21573DC44006260DC /* cell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9585B3B01573DC44006260DC /* cell@2x.png */; };
 		9585B3B51575D913006260DC /* cell_chall.png in Resources */ = {isa = PBXBuildFile; fileRef = 9585B3B31575D913006260DC /* cell_chall.png */; };
@@ -155,6 +155,11 @@
 		BFAF1A2615760E9B008F6211 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAF1A2515760E9B008F6211 /* Note.m */; };
 		BFAF1A29157618BA008F6211 /* AddChallengeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAF1A28157618BA008F6211 /* AddChallengeViewController.m */; };
 		BFAF1A34157638DB008F6211 /* ChallengeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAF1A33157638DB008F6211 /* ChallengeCell.m */; };
+		BFE74DCE1577107B0047A83E /* ChallengeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE74DCD1577107B0047A83E /* ChallengeDetailViewController.m */; };
+		BFE74DD1157711F60047A83E /* ChallengeHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE74DD0157711F60047A83E /* ChallengeHeader.m */; };
+		BFE74DD4157712790047A83E /* ChallengeNote.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE74DD3157712790047A83E /* ChallengeNote.m */; };
+		BFE74DD7157715880047A83E /* ChallengeSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE74DD6157715880047A83E /* ChallengeSegment.m */; };
+		BFE74DDA15771EAE0047A83E /* UIColor+SCDColors.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE74DD915771EAE0047A83E /* UIColor+SCDColors.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -241,11 +246,11 @@
 		954236EB1576699100CE1551 /* green_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "green_btn@2x.png"; sourceTree = "<group>"; };
 		9542370415766DA000CE1551 /* close_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close_btn.png; sourceTree = "<group>"; };
 		9542370515766DA000CE1551 /* close_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close_btn@2x.png"; sourceTree = "<group>"; };
-		958371131575EAD600553A73 /* ChallengeCellBottom.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChallengeCellBottom.xib; sourceTree = "<group>"; };
+		958371131575EAD600553A73 /* ChallengeNoteBottom.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChallengeNoteBottom.xib; sourceTree = "<group>"; };
 		958371151575EB3D00553A73 /* cell_bottom_chall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_bottom_chall.png; sourceTree = "<group>"; };
 		958371161575EB3D00553A73 /* cell_bottom_chall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cell_bottom_chall@2x.png"; sourceTree = "<group>"; };
-		9585B3AA1573D5F7006260DC /* ChallengeSegmentHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChallengeSegmentHeader.xib; sourceTree = "<group>"; };
-		9585B3AD1573D780006260DC /* ChallengeNoteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChallengeNoteCell.xib; sourceTree = "<group>"; };
+		9585B3AA1573D5F7006260DC /* ChallengeSegment.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChallengeSegment.xib; sourceTree = "<group>"; };
+		9585B3AD1573D780006260DC /* ChallengeNote.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChallengeNote.xib; sourceTree = "<group>"; };
 		9585B3AF1573DC44006260DC /* cell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell.png; sourceTree = "<group>"; };
 		9585B3B01573DC44006260DC /* cell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cell@2x.png"; sourceTree = "<group>"; };
 		9585B3B31575D913006260DC /* cell_chall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_chall.png; sourceTree = "<group>"; };
@@ -351,6 +356,16 @@
 		BFAF1A28157618BA008F6211 /* AddChallengeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddChallengeViewController.m; sourceTree = "<group>"; };
 		BFAF1A32157638DB008F6211 /* ChallengeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChallengeCell.h; sourceTree = "<group>"; };
 		BFAF1A33157638DB008F6211 /* ChallengeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChallengeCell.m; sourceTree = "<group>"; };
+		BFE74DCC1577107B0047A83E /* ChallengeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChallengeDetailViewController.h; sourceTree = "<group>"; };
+		BFE74DCD1577107B0047A83E /* ChallengeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChallengeDetailViewController.m; sourceTree = "<group>"; };
+		BFE74DCF157711F60047A83E /* ChallengeHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChallengeHeader.h; sourceTree = "<group>"; };
+		BFE74DD0157711F60047A83E /* ChallengeHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChallengeHeader.m; sourceTree = "<group>"; };
+		BFE74DD2157712790047A83E /* ChallengeNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChallengeNote.h; sourceTree = "<group>"; };
+		BFE74DD3157712790047A83E /* ChallengeNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChallengeNote.m; sourceTree = "<group>"; };
+		BFE74DD5157715880047A83E /* ChallengeSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChallengeSegment.h; sourceTree = "<group>"; };
+		BFE74DD6157715880047A83E /* ChallengeSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChallengeSegment.m; sourceTree = "<group>"; };
+		BFE74DD815771EAE0047A83E /* UIColor+SCDColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SCDColors.h"; sourceTree = "<group>"; };
+		BFE74DD915771EAE0047A83E /* UIColor+SCDColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SCDColors.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -579,6 +594,8 @@
 				BF009CB91576676F003700FB /* GraphTabViewController.m */,
 				BF009CBB15766797003700FB /* GraphViewController.h */,
 				BF009CBC15766797003700FB /* GraphViewController.m */,
+				BFE74DCC1577107B0047A83E /* ChallengeDetailViewController.h */,
+				BFE74DCD1577107B0047A83E /* ChallengeDetailViewController.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -604,6 +621,8 @@
 			children = (
 				BF21AFBF1567D1E600B86DAE /* Util.h */,
 				BF21AFC01567D1E600B86DAE /* Util.m */,
+				BFE74DD815771EAE0047A83E /* UIColor+SCDColors.h */,
+				BFE74DD915771EAE0047A83E /* UIColor+SCDColors.m */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -616,10 +635,16 @@
 				BF16EA7F15725117000F2B2C /* StoolView.h */,
 				BF16EA8015725117000F2B2C /* StoolView.m */,
 				BF16EA831572512E000F2B2C /* StoolView.xib */,
-				9585B3AA1573D5F7006260DC /* ChallengeSegmentHeader.xib */,
+				BFE74DD5157715880047A83E /* ChallengeSegment.h */,
+				BFE74DD6157715880047A83E /* ChallengeSegment.m */,
+				9585B3AA1573D5F7006260DC /* ChallengeSegment.xib */,
+				BFE74DCF157711F60047A83E /* ChallengeHeader.h */,
+				BFE74DD0157711F60047A83E /* ChallengeHeader.m */,
 				9585B3B71575DCE7006260DC /* ChallengeHeader.xib */,
-				9585B3AD1573D780006260DC /* ChallengeNoteCell.xib */,
-				958371131575EAD600553A73 /* ChallengeCellBottom.xib */,
+				BFE74DD2157712790047A83E /* ChallengeNote.h */,
+				BFE74DD3157712790047A83E /* ChallengeNote.m */,
+				9585B3AD1573D780006260DC /* ChallengeNote.xib */,
+				958371131575EAD600553A73 /* ChallengeNoteBottom.xib */,
 				BFAF1A32157638DB008F6211 /* ChallengeCell.h */,
 				BFAF1A33157638DB008F6211 /* ChallengeCell.m */,
 			);
@@ -790,8 +815,8 @@
 				952F475715728A4100C54DDE /* head.png in Resources */,
 				952F475815728A4100C54DDE /* head@2x.png in Resources */,
 				BF16EA841572512E000F2B2C /* StoolView.xib in Resources */,
-				9585B3AB1573D5F7006260DC /* ChallengeSegmentHeader.xib in Resources */,
-				9585B3AE1573D780006260DC /* ChallengeNoteCell.xib in Resources */,
+				9585B3AB1573D5F7006260DC /* ChallengeSegment.xib in Resources */,
+				9585B3AE1573D780006260DC /* ChallengeNote.xib in Resources */,
 				9585B3B11573DC44006260DC /* cell.png in Resources */,
 				9585B3B21573DC44006260DC /* cell@2x.png in Resources */,
 				9585B3B51575D913006260DC /* cell_chall.png in Resources */,
@@ -800,7 +825,7 @@
 				BF21C53B1573E07600C5F65D /* TapkuLibrary.bundle in Resources */,
 				950775571575E379000D7F0B /* submit_btn.png in Resources */,
 				950775581575E379000D7F0B /* submit_btn@2x.png in Resources */,
-				958371141575EAD600553A73 /* ChallengeCellBottom.xib in Resources */,
+				958371141575EAD600553A73 /* ChallengeNoteBottom.xib in Resources */,
 				958371171575EB3D00553A73 /* cell_bottom_chall.png in Resources */,
 				958371181575EB3D00553A73 /* cell_bottom_chall@2x.png in Resources */,
 				954236D21576698700CE1551 /* graph_bg_guides.png in Resources */,
@@ -860,6 +885,11 @@
 				BFAF1A34157638DB008F6211 /* ChallengeCell.m in Sources */,
 				BF009CBA1576676F003700FB /* GraphTabViewController.m in Sources */,
 				BF009CBD15766797003700FB /* GraphViewController.m in Sources */,
+				BFE74DCE1577107B0047A83E /* ChallengeDetailViewController.m in Sources */,
+				BFE74DD1157711F60047A83E /* ChallengeHeader.m in Sources */,
+				BFE74DD4157712790047A83E /* ChallengeNote.m in Sources */,
+				BFE74DD7157715880047A83E /* ChallengeSegment.m in Sources */,
+				BFE74DDA15771EAE0047A83E /* UIColor+SCDColors.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
