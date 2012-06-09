@@ -37,7 +37,8 @@
         challenge.name = self.nameTF.text;
         challenge.desc = self.descTV.text;
         challenge.duration = [NSNumber numberWithInteger:[self.durationTF.text intValue]];
-        challenge.started = NO;
+        challenge.started = [NSNumber numberWithBool:NO];
+        challenge.finished = [NSNumber numberWithBool:NO];
         
         //save day object
         NSError *error = nil;

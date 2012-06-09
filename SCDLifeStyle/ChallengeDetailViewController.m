@@ -68,7 +68,7 @@
         
         if (self.challenge.finished.boolValue) 
         {
-            chh.labelB.text = @"- finished -";
+            chh.labelB.text = @"-finished-";
         }
         else 
         {

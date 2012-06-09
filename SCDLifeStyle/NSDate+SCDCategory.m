@@ -103,7 +103,16 @@
 	return [dateFormatter stringFromDate:self];
 }
 
-
+- (BOOL) isBetweenDate:(NSDate*)beginDate andDate:(NSDate*)endDate
+{
+    if ([self compare:beginDate] == NSOrderedAscending)
+        return NO;
+    
+    if ([self compare:endDate] == NSOrderedDescending) 
+        return NO;
+    
+    return YES;
+}
 
 - (SCDDateInformation) dateInformationWithTimeZone:(NSTimeZone*)tz{
 	

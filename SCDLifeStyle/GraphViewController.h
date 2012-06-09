@@ -21,5 +21,6 @@
 - (IBAction)onZoomSelect:(id)sender;
 - (IBAction)onPrevious:(id)sender;
 - (IBAction)onNext:(id)sender;
+- (IBAction)onChallenge:(id)sender;
 
 @end

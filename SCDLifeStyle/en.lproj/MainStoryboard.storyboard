@@ -151,7 +151,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hW3-nT-duJ" customClass="UIButtonDict">
-                                <rect key="frame" x="171" y="279" width="65" height="40"/>
+                                <rect key="frame" x="321" y="279" width="65" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                 <state key="normal" title="Challenge" backgroundImage="red_btn.png">
@@ -164,9 +164,12 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onChallenge:" destination="bWT-cU-kFw" eventType="touchUpInside" id="nku-N9-AKa"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ANy-2u-TU2" customClass="UIButtonDict">
-                                <rect key="frame" x="302" y="279" width="65" height="40"/>
+                                <rect key="frame" x="172" y="279" width="65" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                 <state key="normal" title="Stress" backgroundImage="purple_btn.png">
@@ -1050,6 +1053,7 @@
         <class className="GraphViewController" superclassName="BaseViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GraphViewController.h"/>
             <relationships>
+                <relationship kind="action" name="onChallenge:"/>
                 <relationship kind="action" name="onClose:"/>
                 <relationship kind="action" name="onGraphSelect:"/>
                 <relationship kind="action" name="onNext:"/>

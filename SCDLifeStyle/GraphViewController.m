@@ -20,6 +20,8 @@
 @property(nonatomic,strong) NSNumber *zoomLevel;
 @property(nonatomic,strong) NSNumber *selectedGraph;
 @property(nonatomic,strong) NSDate *startFromDate;
+@property(nonatomic,assign) BOOL showChallenges;
+
 
 @end
 
@@ -29,6 +31,7 @@
 @synthesize zoomLevel;
 @synthesize selectedGraph;
 @synthesize startFromDate;
+@synthesize showChallenges;
 
 
 
@@ -40,6 +43,7 @@
     self.zoomLevel = [NSNumber numberWithFloat:1.0f];
     self.zoomMinusButton.selected = YES;
     self.startFromDate = [NSDate date];
+    self.showChallenges = NO;
     //self.zoomMinusButton.enabled = NO;
     
     [self updateGraphData];
@@ -98,6 +102,12 @@
     [self updateGraphData];
 }
 
+- (IBAction)onChallenge:(id)sender
+{
+    self.showChallenges = !((UIButton*)sender).selected;
+    [(UIButton*)sender setSelected:self.showChallenges];
+    [self updateGraphData];
+}
                
 - (int) getSpanDays
 {
@@ -112,7 +122,10 @@
     
     NSMutableArray *dateArray = [NSMutableArray array];
     NSMutableArray *daysArray = [NSMutableArray array];
+    NSMutableArray *chArray = [NSMutableArray array];
     
+    NSArray *activeChallenges = [[Util instance] getActiveChallengesFromDate:[self.startFromDate dateByAddingDays:-spanDays] 
+                                                                             toDate:self.startFromDate];
     for (int i=0; i<spanDays; i++) 
     {
         NSDate *d = self.startFromDate;
@@ -131,11 +144,27 @@
         {
             [daysArray addObject:[NSNull null]];
         }
+        
+        //challenges
+        if (self.showChallenges) 
+        {
+            BOOL dayHasChallenge = NO;
+            for (Challenge *challenge in activeChallenges) 
+            {
+                if ([d isBetweenDate:challenge.start_date andDate:challenge.end_date]) 
+                {
+                    dayHasChallenge = YES;
+                }
+            }
+            [chArray addObject:[NSNumber numberWithBool:dayHasChallenge]];
+        }
+        
     }
     
     NSArray *dataArray = [NSArray arrayWithObjects:
                           dateArray, 
-                          daysArray, 
+                          daysArray,
+                          chArray,
                           self.zoomLevel, 
                           self.selectedGraph, 
                           nil];

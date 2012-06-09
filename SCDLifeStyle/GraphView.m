@@ -21,6 +21,7 @@
 #define DATE_LINE_EACH 7 //days
 #define DATE_LINE_H1 140.0f
 #define DATE_LINE_H2 210.0f
+#define CHALLENGE_H 220.0f
 
 
 @implementation GraphView
@@ -48,8 +49,11 @@
         
         NSArray *dates = [self.data objectAtIndex:0];
         NSArray *days = [self.data objectAtIndex:1];
-        NSNumber *zoom = [self.data objectAtIndex:2];
-        NSNumber *type = [self.data objectAtIndex:3];
+        NSArray *ch = [self.data objectAtIndex:2];
+        NSNumber *zoom = [self.data objectAtIndex:3];
+        NSNumber *type = [self.data objectAtIndex:4];
+        
+        BOOL showChallenges = [ch count] > 0;
     
         float barW = BAR_W*zoom.floatValue;
         float barGap = BAR_GAP*zoom.floatValue;
@@ -141,7 +145,17 @@
                 
             }
             
-            
+            //challenges
+            if (showChallenges) 
+            {
+                NSNumber *challenge = [ch objectAtIndex:i];
+                if (challenge.boolValue) 
+                {
+                    CGContextSetFillColorWithColor(c, [UIColor challengeColor].CGColor);
+                    CGContextFillRect(c, CGRectMake(posX, posY, barW+barGap, -CHALLENGE_H));
+                }
+            }
+
             posX -= barW + barGap;
         }
     }

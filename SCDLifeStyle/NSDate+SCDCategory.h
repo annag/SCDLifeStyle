@@ -43,6 +43,7 @@ typedef struct SCDDateInformation SCDDateInformation;
  */
 - (BOOL) isToday;
 
+- (BOOL) isBetweenDate:(NSDate*)beginDate andDate:(NSDate*)endDate;
 
 - (NSDate *) dateByAddingDays:(NSUInteger)days;
 + (NSDate *) dateWithDatePart:(NSDate *)aDate andTimePart:(NSDate *)aTime;
@@ -56,6 +57,5 @@ typedef struct SCDDateInformation SCDDateInformation;
 + (NSDate*) dateFromDateInformation:(SCDDateInformation)info;
 + (NSDate*) dateFromDateInformation:(SCDDateInformation)info timeZone:(NSTimeZone*)tz;
 + (NSString*) dateInformationDescriptionWithInformation:(SCDDateInformation)info;
-
 
 @end

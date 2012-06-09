@@ -127,6 +127,20 @@ static Util *instance = nil;
     return [NSArray array];
 }
 
+- (NSArray*) getActiveChallengesFromDate:(NSDate*)fromDate toDate:(NSDate*)toDate
+{
+    NSMutableArray *a = [NSMutableArray array];
+    NSArray *challenges = [self getChallenges];
+    for (Challenge *ch in challenges) 
+    {
+        if (ch.started.boolValue && [ch.start_date isBetweenDate:fromDate andDate:toDate]) 
+        {
+            [a addObject:ch];
+        }
+    }
+    return a;
+}
+
 - (void) updateChallenges
 {
     NSDate *today = [NSDate date];
@@ -322,11 +336,6 @@ static Util *instance = nil;
     return round(stoolTypeSum/stoolAmount);
 }
 
-- (BOOL)challengeDidFinish:(Challenge*)challenge{
-    
-    int daysremaining = [self getDaysRemainingForChallenge:challenge];
-    return (daysremaining <0);
-}
 
 ///******************************************************************************///
 // Home view requests
