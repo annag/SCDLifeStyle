@@ -7,18 +7,36 @@
 //
 
 #import "GraphViewController.h"
+#import "UIColor+SCDColors.h"
+#import "NSDate+SCDCategory.h"
+#import "Util.h"
+#import "Day.h"
+
+//ALL VALUES AT ZOOM LEVEL 1.0
+#define BAR_W 10
+#define BAR_GAP 1
+#define SPAN_DAYS 10 //num days to show on graph
+
+
 
 @interface GraphViewController ()
+
+@property(nonatomic,assign) float zoomLevel;
 
 @end
 
 @implementation GraphViewController
 
+@synthesize graphView;
+@synthesize zoomLevel;
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+	
+    [self setupGraphData];
+
 }
 
 
@@ -31,5 +49,45 @@
 {
     [self dismissModalViewControllerAnimated:YES];
 }
+
+#pragma mark render graph
+- (void) setupGraphData
+{
+    zoomLevel = 1.0f;
+    
+    int spanDays = SPAN_DAYS*zoomLevel;
+    
+    NSMutableArray *dateArray = [NSMutableArray array];
+    NSMutableArray *daysArray = [NSMutableArray array];
+    
+    for (int i=0; i<spanDays; i++) 
+    {
+        NSDate *d = [NSDate date];
+        
+        d = [d dateByAddingDays:-i];
+        
+        [dateArray addObject:d];
+        
+        Day *day = [[Util instance] getDayFromDate:d];
+        
+        if (day != nil) 
+        {
+            [daysArray addObject:day];
+        }
+        else 
+        {
+            [daysArray addObject:[NSNull null]];
+        }
+    }
+    
+    NSArray *dataArray = [NSArray arrayWithObjects:dateArray, daysArray, nil];
+    [self.graphView setData:dataArray];
+    
+    NSLog(@"data for graph ready");
+
+    
+}
+
+
 
 @end

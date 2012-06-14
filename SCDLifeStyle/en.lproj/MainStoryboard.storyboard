@@ -228,11 +228,18 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <view opaque="NO" contentMode="scaleToFill" id="4jK-3h-Lfl" userLabel="graph view" customClass="GraphView">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="224"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="graphView" destination="4jK-3h-Lfl" id="JdI-Et-iIa"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="2611" y="300"/>
@@ -963,10 +970,14 @@
         <class className="GraphTabViewController" superclassName="BaseViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GraphTabViewController.h"/>
         </class>
+        <class className="GraphView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GraphView.h"/>
+        </class>
         <class className="GraphViewController" superclassName="BaseViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GraphViewController.h"/>
             <relationships>
                 <relationship kind="action" name="onClose:"/>
+                <relationship kind="outlet" name="graphView" candidateClass="UIView"/>
             </relationships>
         </class>
         <class className="MainViewController" superclassName="BaseViewController">
