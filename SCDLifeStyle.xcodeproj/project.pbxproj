@@ -158,8 +158,8 @@
 		BF25CFA315787E5500BB01D6 /* Icon@2.png in Resources */ = {isa = PBXBuildFile; fileRef = BF25CFA215787E5500BB01D6 /* Icon@2.png */; };
 		BF25CFA515787E5800BB01D6 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BF25CFA415787E5800BB01D6 /* Icon.png */; };
 		BF3C9C051589ABFB00EAA4F3 /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3C9C041589ABFB00EAA4F3 /* GraphView.m */; };
-		BF3C9C081589DE9000EAA4F3 /* SCDGraphUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3C9C071589DE9000EAA4F3 /* SCDGraphUtil.m */; };
 		BF4D5CFC1575F46400076C9A /* libTapkuLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF21C5481573E0CD00C5F65D /* libTapkuLibrary.a */; };
+		BF88D39E1589E2DF00146507 /* UIButtonDict.m in Sources */ = {isa = PBXBuildFile; fileRef = BF88D39D1589E2DF00146507 /* UIButtonDict.m */; };
 		BFAF1A1D15760E9A008F6211 /* Day.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAF1A1C15760E9A008F6211 /* Day.m */; };
 		BFAF1A2015760E9B008F6211 /* Stool.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAF1A1F15760E9B008F6211 /* Stool.m */; };
 		BFAF1A2315760E9B008F6211 /* Challenge.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAF1A2215760E9B008F6211 /* Challenge.m */; };
@@ -367,8 +367,8 @@
 		BF25CFA415787E5800BB01D6 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		BF3C9C031589ABFB00EAA4F3 /* GraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphView.h; sourceTree = "<group>"; };
 		BF3C9C041589ABFB00EAA4F3 /* GraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphView.m; sourceTree = "<group>"; };
-		BF3C9C061589DE8F00EAA4F3 /* SCDGraphUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCDGraphUtil.h; sourceTree = "<group>"; };
-		BF3C9C071589DE9000EAA4F3 /* SCDGraphUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCDGraphUtil.m; sourceTree = "<group>"; };
+		BF88D39C1589E2DF00146507 /* UIButtonDict.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIButtonDict.h; sourceTree = "<group>"; };
+		BF88D39D1589E2DF00146507 /* UIButtonDict.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIButtonDict.m; sourceTree = "<group>"; };
 		BFAF1A1B15760E9A008F6211 /* Day.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Day.h; sourceTree = "<group>"; };
 		BFAF1A1C15760E9A008F6211 /* Day.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Day.m; sourceTree = "<group>"; };
 		BFAF1A1E15760E9B008F6211 /* Stool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stool.h; sourceTree = "<group>"; };
@@ -658,8 +658,6 @@
 				BFE74DD915771EAE0047A83E /* UIColor+SCDColors.m */,
 				954237221577398900CE1551 /* NSDate+SCDCategory.h */,
 				954237231577398900CE1551 /* NSDate+SCDCategory.m */,
-				BF3C9C061589DE8F00EAA4F3 /* SCDGraphUtil.h */,
-				BF3C9C071589DE9000EAA4F3 /* SCDGraphUtil.m */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -686,6 +684,8 @@
 				BFAF1A33157638DB008F6211 /* ChallengeCell.m */,
 				BF3C9C031589ABFB00EAA4F3 /* GraphView.h */,
 				BF3C9C041589ABFB00EAA4F3 /* GraphView.m */,
+				BF88D39C1589E2DF00146507 /* UIButtonDict.h */,
+				BF88D39D1589E2DF00146507 /* UIButtonDict.m */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -939,7 +939,7 @@
 				BFE74DDA15771EAE0047A83E /* UIColor+SCDColors.m in Sources */,
 				954237241577398900CE1551 /* NSDate+SCDCategory.m in Sources */,
 				BF3C9C051589ABFB00EAA4F3 /* GraphView.m in Sources */,
-				BF3C9C081589DE9000EAA4F3 /* SCDGraphUtil.m in Sources */,
+				BF88D39E1589E2DF00146507 /* UIButtonDict.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -127,8 +127,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="u5x-6l-hal">
-                                <rect key="frame" x="6" y="282" width="65" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="u5x-6l-hal" customClass="UIButtonDict">
+                                <rect key="frame" x="142" y="282" width="65" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                 <state key="normal" title="Exercise" backgroundImage="green_btn.png">
@@ -141,9 +141,17 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="graph_type">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onGraphSelect:" destination="bWT-cU-kFw" eventType="touchUpInside" id="gOI-io-mMZ"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hW3-nT-duJ">
-                                <rect key="frame" x="76" y="282" width="65" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hW3-nT-duJ" customClass="UIButtonDict">
+                                <rect key="frame" x="318" y="282" width="65" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                 <state key="normal" title="Challenge" backgroundImage="red_btn.png">
@@ -157,8 +165,8 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ANy-2u-TU2">
-                                <rect key="frame" x="146" y="282" width="65" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ANy-2u-TU2" customClass="UIButtonDict">
+                                <rect key="frame" x="73" y="282" width="65" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                 <state key="normal" title="Stress" backgroundImage="purple_btn.png">
@@ -171,9 +179,17 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="graph_type">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onGraphSelect:" destination="bWT-cU-kFw" eventType="touchUpInside" id="Wi0-C0-Cb8"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="iRW-AN-pWt">
-                                <rect key="frame" x="219" y="282" width="65" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="iRW-AN-pWt" customClass="UIButtonDict">
+                                <rect key="frame" x="6" y="282" width="65" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                 <state key="normal" title="Sleep" backgroundImage="blue_btn.png">
@@ -186,6 +202,14 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="graph_type">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onGraphSelect:" destination="bWT-cU-kFw" eventType="touchUpInside" id="YX7-OV-qRa"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7SE-fI-6C7">
                                 <rect key="frame" x="391" y="281" width="42" height="37"/>
@@ -977,6 +1001,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GraphViewController.h"/>
             <relationships>
                 <relationship kind="action" name="onClose:"/>
+                <relationship kind="action" name="onGraphSelect:"/>
                 <relationship kind="outlet" name="graphView" candidateClass="GraphView"/>
             </relationships>
         </class>
@@ -999,6 +1024,9 @@
         </class>
         <class className="TrackViewController" superclassName="TKCalendarMonthViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TrackViewController.h"/>
+        </class>
+        <class className="UIButtonDict" superclassName="UIButton">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIButtonDict.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

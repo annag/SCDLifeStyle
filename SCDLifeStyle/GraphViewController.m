@@ -11,15 +11,15 @@
 #import "NSDate+SCDCategory.h"
 #import "Util.h"
 #import "Day.h"
+#import "UIButtonDict.h"
 
 
 #define SPAN_DAYS 10 //num days to show on graph at zoom level 1.0
 
-
-
 @interface GraphViewController ()
 
 @property(nonatomic,assign) float zoomLevel;
+@property(nonatomic,strong) NSNumber *selectedGraph;
 
 @end
 
@@ -27,13 +27,15 @@
 
 @synthesize graphView;
 @synthesize zoomLevel;
+@synthesize selectedGraph;
 
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	
-    [self setupGraphData];
+    self.selectedGraph = [NSNumber numberWithInt:0];
+    [self updateGraphData];
 
 }
 
@@ -48,8 +50,15 @@
     [self dismissModalViewControllerAnimated:YES];
 }
 
+- (IBAction)onGraphSelect:(id)sender;
+{
+    UIButtonDict *bt = sender;
+    self.selectedGraph = [bt.dict objectForKey:@"graph_type"];
+    [self updateGraphData];
+}
+
 #pragma mark render graph
-- (void) setupGraphData
+- (void) updateGraphData
 {
     zoomLevel = 1.0f;
     
@@ -78,10 +87,15 @@
         }
     }
     
-    NSArray *dataArray = [NSArray arrayWithObjects:dateArray, daysArray, [NSNumber numberWithFloat:zoomLevel], nil];
+    NSArray *dataArray = [NSArray arrayWithObjects:
+                          dateArray, 
+                          daysArray, 
+                          [NSNumber numberWithFloat:zoomLevel], 
+                          self.selectedGraph, 
+                          nil];
+    
     [self.graphView setData:dataArray];
     
-    NSLog(@"data for graph ready");
 
     
 }

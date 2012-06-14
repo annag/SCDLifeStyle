@@ -14,5 +14,6 @@
 @property(nonatomic,strong) IBOutlet GraphView *graphView;
 
 - (IBAction)onClose:(id)sender;
+- (IBAction)onGraphSelect:(id)sender;
 
 @end

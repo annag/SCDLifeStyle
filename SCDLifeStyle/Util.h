@@ -10,6 +10,12 @@
 #import "Day.h"
 #import "Stool.h"
 #import "Challenge.h"
+#import "UIColor+SCDColors.h"
+
+#define SLEEP_TYPE      0
+#define STRESS_TYPE     1
+#define EXERCISE_TYPE   2
+#define STOOL_TYPE      3
 
 @interface Util : NSObject
 
@@ -46,4 +52,8 @@
 - (float) getTodaysExcersisePercentage;
 - (float) getTodaysStoolPercentage;
 
+
+//graph utils
++ (int)getHeightFor:(int)type andValue:(NSNumber*)value;
++ (UIColor *)getColorFor:(int)type andValue:(NSNumber*)value;
 @end
