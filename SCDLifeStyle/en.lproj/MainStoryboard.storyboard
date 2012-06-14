@@ -123,7 +123,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="graph_bg_guides.png" id="32t-T7-uIb">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="graph_bg.png" id="32t-T7-uIb">
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -237,7 +237,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="AuO-xf-y7Q">
-                                <rect key="frame" x="441" y="5" width="33" height="35"/>
+                                <rect key="frame" x="252" y="282" width="33" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="21"/>
                                 <state key="normal" title="X" backgroundImage="close_btn.png">
@@ -917,7 +917,7 @@
         <image name="challange_bg.png" width="320" height="480"/>
         <image name="challange_cell.png" width="320" height="63"/>
         <image name="close_btn.png" width="33" height="35"/>
-        <image name="graph_bg_guides.png" width="490" height="320"/>
+        <image name="graph_bg.png" width="490" height="320"/>
         <image name="green_btn.png" width="65" height="29"/>
         <image name="green_btn_pressed.png" width="65" height="29"/>
         <image name="home_activity_bar.png" width="62" height="292"/>
