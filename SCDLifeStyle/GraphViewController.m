@@ -11,23 +11,23 @@
 #import "NSDate+SCDCategory.h"
 #import "Util.h"
 #import "Day.h"
-#import "UIButtonDict.h"
 
 
-#define SPAN_DAYS 10 //num days to show on graph at zoom level 1.0
+#define SPAN_DAYS 30 //num days to show on graph at zoom level 1.0
 
 @interface GraphViewController ()
 
-@property(nonatomic,assign) float zoomLevel;
+@property(nonatomic,strong) NSNumber *zoomLevel;
 @property(nonatomic,strong) NSNumber *selectedGraph;
 
 @end
 
 @implementation GraphViewController
 
-@synthesize graphView;
+@synthesize graphView, zoomMinusButton, zoomPlusButton;
 @synthesize zoomLevel;
 @synthesize selectedGraph;
+
 
 
 - (void)viewDidLoad
@@ -35,6 +35,10 @@
     [super viewDidLoad];
 	
     self.selectedGraph = [NSNumber numberWithInt:0];
+    self.zoomLevel = [NSNumber numberWithFloat:1.0f];
+    self.zoomMinusButton.selected = YES;
+    //self.zoomMinusButton.enabled = NO;
+    
     [self updateGraphData];
 
 }
@@ -57,12 +61,28 @@
     [self updateGraphData];
 }
 
+- (IBAction)onZoomSelect:(id)sender
+{
+    UIButtonDict *bt = sender;
+    self.zoomLevel = [bt.dict objectForKey:@"zoom_level"];
+    
+    self.zoomMinusButton.selected = NO;
+    self.zoomPlusButton.selected = NO;
+    //self.zoomMinusButton.enabled = YES;
+    //self.zoomPlusButton.enabled = YES;
+    
+    bt.selected = YES;
+    //bt.enabled = NO;
+    
+    [self updateGraphData];
+
+}
+
 #pragma mark render graph
 - (void) updateGraphData
 {
-    zoomLevel = 1.0f;
     
-    int spanDays = SPAN_DAYS*zoomLevel;
+    int spanDays = SPAN_DAYS/self.zoomLevel.floatValue;
     
     NSMutableArray *dateArray = [NSMutableArray array];
     NSMutableArray *daysArray = [NSMutableArray array];
@@ -90,7 +110,7 @@
     NSArray *dataArray = [NSArray arrayWithObjects:
                           dateArray, 
                           daysArray, 
-                          [NSNumber numberWithFloat:zoomLevel], 
+                          self.zoomLevel, 
                           self.selectedGraph, 
                           nil];
     

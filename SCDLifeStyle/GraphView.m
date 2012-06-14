@@ -46,7 +46,7 @@
         NSNumber *zoom = [self.data objectAtIndex:2];
         NSNumber *type = [self.data objectAtIndex:3];
     
-        float posX = MARGIN_X;
+        float posX = self.frame.size.width - MARGIN_X*zoom.floatValue;
         float posY = self.frame.size.height;
         float barW = BAR_W*zoom.floatValue;
         int graphType = type.intValue;
@@ -91,7 +91,7 @@
                 
             }
             
-            posX += barW + BAR_GAP;
+            posX -= barW + BAR_GAP*zoom.floatValue;
         }
     }
 }

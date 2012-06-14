@@ -8,12 +8,16 @@
 
 #import "BaseViewController.h"
 #import "GraphView.h"
+#import "UIButtonDict.h"
 
 @interface GraphViewController : BaseViewController
 
 @property(nonatomic,strong) IBOutlet GraphView *graphView;
+@property(nonatomic,strong) IBOutlet UIButtonDict *zoomMinusButton;
+@property(nonatomic,strong) IBOutlet UIButtonDict *zoomPlusButton;
 
 - (IBAction)onClose:(id)sender;
 - (IBAction)onGraphSelect:(id)sender;
+- (IBAction)onZoomSelect:(id)sender;
 
 @end

@@ -211,7 +211,7 @@
                                     <action selector="onGraphSelect:" destination="bWT-cU-kFw" eventType="touchUpInside" id="YX7-OV-qRa"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7SE-fI-6C7">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7SE-fI-6C7" customClass="UIButtonDict">
                                 <rect key="frame" x="391" y="281" width="42" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -223,6 +223,14 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="zoom_level">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onZoomSelect:" destination="bWT-cU-kFw" eventType="touchUpInside" id="eB7-p6-t1o"/>
+                                </connections>
                             </button>
                             <view opaque="NO" contentMode="scaleToFill" id="4jK-3h-Lfl" userLabel="graph view" customClass="GraphView">
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="223"/>
@@ -243,7 +251,7 @@
                                     <action selector="onClose:" destination="bWT-cU-kFw" eventType="touchUpInside" id="W9R-XU-F9j"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kOO-31-y0t">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kOO-31-y0t" customClass="UIButtonDict">
                                 <rect key="frame" x="432" y="281" width="42" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -255,6 +263,14 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="zoom_level">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onZoomSelect:" destination="bWT-cU-kFw" eventType="touchUpInside" id="kpN-pc-4vU"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -263,6 +279,8 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="graphView" destination="4jK-3h-Lfl" id="JdI-Et-iIa"/>
+                        <outlet property="zoomMinusButton" destination="7SE-fI-6C7" id="QZm-9s-qqC"/>
+                        <outlet property="zoomPlusButton" destination="kOO-31-y0t" id="jjY-VQ-5vO"/>
                     </connections>
                 </viewController>
             </objects>
@@ -1002,7 +1020,10 @@
             <relationships>
                 <relationship kind="action" name="onClose:"/>
                 <relationship kind="action" name="onGraphSelect:"/>
+                <relationship kind="action" name="onZoomSelect:"/>
                 <relationship kind="outlet" name="graphView" candidateClass="GraphView"/>
+                <relationship kind="outlet" name="zoomMinusButton" candidateClass="UIButtonDict"/>
+                <relationship kind="outlet" name="zoomPlusButton" candidateClass="UIButtonDict"/>
             </relationships>
         </class>
         <class className="MainViewController" superclassName="BaseViewController">
