@@ -10,12 +10,15 @@
 #import "Day.h"
 #import <QuartzCore/QuartzCore.h>
 #import "Util.h"
+#import "NSDate+SCDCategory.h"
 
 //ALL VALUES AT ZOOM LEVEL 1.0
 #define BAR_W 10
 #define BAR_GAP 1
 
 #define MARGIN_X 28
+#define SHOW_DATE_EACH 9 //days
+#define DATE_LINE_H 180.0f
 
 
 @implementation GraphView
@@ -49,6 +52,7 @@
         float posX = self.frame.size.width - MARGIN_X*zoom.floatValue;
         float posY = self.frame.size.height;
         float barW = BAR_W*zoom.floatValue;
+        float barGap = BAR_GAP*zoom.floatValue;
         int graphType = type.intValue;
 
         int c = [dates count];
@@ -56,6 +60,32 @@
         {
             NSDate *date = [dates objectAtIndex:i];
             NSObject *dayO = [days objectAtIndex:i];
+            
+            CGContextRef c = UIGraphicsGetCurrentContext();
+            
+            //date
+            if (i == 0 || i%SHOW_DATE_EACH == 0) 
+            {
+                CGContextBeginPath(c);
+                CGContextSetLineWidth(c, 1.0f);
+                CGContextSetStrokeColorWithColor(c, [UIColor whiteColor].CGColor);
+                CGContextMoveToPoint(c, posX+barW+barGap, posY);
+                CGContextAddLineToPoint(c, posX+barW+barGap, self.frame.size.height-DATE_LINE_H);
+                CGContextClosePath(c);
+                CGContextDrawPath(c, kCGPathStroke);
+                
+                NSString *dateString;
+                if ([date isToday]) {
+                    dateString = @"Today";
+                }
+                else {
+                    dateString = [NSString stringWithFormat:@"%d %@", date.dateInformation.day, [date monthString]];
+                }
+                
+                CGContextSetFillColorWithColor(c, [UIColor whiteColor].CGColor);
+                [dateString drawInRect:CGRectMake(posX-40, 10, 100, 50) 
+                              withFont:[UIFont fontWithName:@"Helvetica" size:16]];
+            }
             
             if (dayO != [NSNull null]) 
             {
@@ -82,7 +112,6 @@
                     //we can graph
                     float barH = [Util getHeightFor:graphType andValue:barValue];
                     UIColor *color = [Util getColorFor:graphType andValue:barValue];
-                    CGContextRef c = UIGraphicsGetCurrentContext();
                     CGContextSetFillColorWithColor(c, color.CGColor);
                     CGContextFillRect(c, CGRectMake(posX, posY, barW, -barH));
                 }
@@ -91,7 +120,7 @@
                 
             }
             
-            posX -= barW + BAR_GAP*zoom.floatValue;
+            posX -= barW + barGap;
         }
     }
 }
