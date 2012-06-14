@@ -7,8 +7,11 @@
 //
 
 #import "BaseViewController.h"
+#import "GraphView.h"
 
 @interface GraphViewController : BaseViewController
+
+@property(nonatomic,strong) IBOutlet GraphView *graphView;
 
 - (IBAction)onClose:(id)sender;
 

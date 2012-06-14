@@ -155,6 +155,9 @@
 		BF21C53B1573E07600C5F65D /* TapkuLibrary.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BF21C5341573E07600C5F65D /* TapkuLibrary.bundle */; };
 		BF21C5451573E0B000C5F65D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF21C5441573E0B000C5F65D /* MapKit.framework */; };
 		BF21C5471573E0BA00C5F65D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF21C5461573E0BA00C5F65D /* QuartzCore.framework */; };
+		BF25CFA315787E5500BB01D6 /* Icon@2.png in Resources */ = {isa = PBXBuildFile; fileRef = BF25CFA215787E5500BB01D6 /* Icon@2.png */; };
+		BF25CFA515787E5800BB01D6 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BF25CFA415787E5800BB01D6 /* Icon.png */; };
+		BF3C9C051589ABFB00EAA4F3 /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3C9C041589ABFB00EAA4F3 /* GraphView.m */; };
 		BF4D5CFC1575F46400076C9A /* libTapkuLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF21C5481573E0CD00C5F65D /* libTapkuLibrary.a */; };
 		BFAF1A1D15760E9A008F6211 /* Day.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAF1A1C15760E9A008F6211 /* Day.m */; };
 		BFAF1A2015760E9B008F6211 /* Stool.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAF1A1F15760E9B008F6211 /* Stool.m */; };
@@ -359,6 +362,10 @@
 		BF21C5441573E0B000C5F65D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		BF21C5461573E0BA00C5F65D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		BF21C5481573E0CD00C5F65D /* libTapkuLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTapkuLibrary.a; path = TapkuLibrary/src/libTapkuLibrary.a; sourceTree = "<group>"; };
+		BF25CFA215787E5500BB01D6 /* Icon@2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2.png"; sourceTree = "<group>"; };
+		BF25CFA415787E5800BB01D6 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		BF3C9C031589ABFB00EAA4F3 /* GraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphView.h; sourceTree = "<group>"; };
+		BF3C9C041589ABFB00EAA4F3 /* GraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphView.m; sourceTree = "<group>"; };
 		BFAF1A1B15760E9A008F6211 /* Day.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Day.h; sourceTree = "<group>"; };
 		BFAF1A1C15760E9A008F6211 /* Day.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Day.m; sourceTree = "<group>"; };
 		BFAF1A1E15760E9B008F6211 /* Stool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stool.h; sourceTree = "<group>"; };
@@ -539,6 +546,8 @@
 		BF21AF7F1567B66A00B86DAE = {
 			isa = PBXGroup;
 			children = (
+				BF25CFA415787E5800BB01D6 /* Icon.png */,
+				BF25CFA215787E5500BB01D6 /* Icon@2.png */,
 				BF21C5481573E0CD00C5F65D /* libTapkuLibrary.a */,
 				BF21C5461573E0BA00C5F65D /* QuartzCore.framework */,
 				BF21C5441573E0B000C5F65D /* MapKit.framework */,
@@ -670,6 +679,8 @@
 				958371131575EAD600553A73 /* ChallengeNoteBottom.xib */,
 				BFAF1A32157638DB008F6211 /* ChallengeCell.h */,
 				BFAF1A33157638DB008F6211 /* ChallengeCell.m */,
+				BF3C9C031589ABFB00EAA4F3 /* GraphView.h */,
+				BF3C9C041589ABFB00EAA4F3 /* GraphView.m */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -885,6 +896,8 @@
 				9542371F15772A3D00CE1551 /* graph_event@2x.png in Resources */,
 				9542372015772A3D00CE1551 /* graph_stool.png in Resources */,
 				9542372115772A3D00CE1551 /* graph_stool@2x.png in Resources */,
+				BF25CFA315787E5500BB01D6 /* Icon@2.png in Resources */,
+				BF25CFA515787E5800BB01D6 /* Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -920,6 +933,7 @@
 				BFE74DD7157715880047A83E /* ChallengeSegment.m in Sources */,
 				BFE74DDA15771EAE0047A83E /* UIColor+SCDColors.m in Sources */,
 				954237241577398900CE1551 /* NSDate+SCDCategory.m in Sources */,
+				BF3C9C051589ABFB00EAA4F3 /* GraphView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1009,6 +1023,7 @@
 				GCC_PREFIX_HEADER = "SCDLifeStyle/SCDLifeStyle-Prefix.pch";
 				HEADER_SEARCH_PATHS = TapkuLibrary/src;
 				INFOPLIST_FILE = "SCDLifeStyle/SCDLifeStyle-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/SCDLifeStyle\"",
@@ -1035,6 +1050,7 @@
 				GCC_PREFIX_HEADER = "SCDLifeStyle/SCDLifeStyle-Prefix.pch";
 				HEADER_SEARCH_PATHS = TapkuLibrary/src;
 				INFOPLIST_FILE = "SCDLifeStyle/SCDLifeStyle-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/SCDLifeStyle\"",
