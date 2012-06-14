@@ -28,22 +28,22 @@
 
 + (UIColor *) randomColor;
 
-+ (UIColor *) stress5Color; // very dark purple
-+ (UIColor *) stress4Color; //dark purple
-+ (UIColor *) stress3Color; //middle dark purple
-+ (UIColor *) stress2Color; //middle light purple
-+ (UIColor *) stress1Color; //light purple
++ (UIColor *) stress5Color; // very dark purple     //relaxed
++ (UIColor *) stress4Color; //dark purple           //relaxed (slight stress)
++ (UIColor *) stress3Color; //middle dark purple    //stressed
++ (UIColor *) stress2Color; //middle light purple   //quite stressed
++ (UIColor *) stress1Color; //light purple          //extremely stressed
 
-+ (UIColor *) sleep5Color; //very dark teel
-+ (UIColor *) sleep4Color; //dark teel
-+ (UIColor *) sleep3Color; //middle dark teel
-+ (UIColor *) sleep2Color; //middle light teel
-+ (UIColor *) sleep1Color; //light teel
++ (UIColor *) sleep5Color; //very dark teel         //very good
++ (UIColor *) sleep4Color; //dark teel              //good
++ (UIColor *) sleep3Color; //middle dark teel       //soso
++ (UIColor *) sleep2Color; //middle light teel      //poor
++ (UIColor *) sleep1Color; //light teel             //very poor
 
-+ (UIColor *) exer4Color; //dark green
-+ (UIColor *) exer3Color; //middle dark green
-+ (UIColor *) exer2Color; //middle light green
-+ (UIColor *) exer1Color; //light green
++ (UIColor *) excer4Color; //dark green              //More! 
++ (UIColor *) excer3Color; //middle dark green       //Daily Goal
++ (UIColor *) excer2Color; //middle light green      //A little
++ (UIColor *) excer1Color; //light green             //Zero
 
 + (UIColor *) challangeColor; //yellow
 @end
