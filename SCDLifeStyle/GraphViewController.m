@@ -12,10 +12,8 @@
 #import "Util.h"
 #import "Day.h"
 
-//ALL VALUES AT ZOOM LEVEL 1.0
-#define BAR_W 10
-#define BAR_GAP 1
-#define SPAN_DAYS 10 //num days to show on graph
+
+#define SPAN_DAYS 10 //num days to show on graph at zoom level 1.0
 
 
 
@@ -80,7 +78,7 @@
         }
     }
     
-    NSArray *dataArray = [NSArray arrayWithObjects:dateArray, daysArray, nil];
+    NSArray *dataArray = [NSArray arrayWithObjects:dateArray, daysArray, [NSNumber numberWithFloat:zoomLevel], nil];
     [self.graphView setData:dataArray];
     
     NSLog(@"data for graph ready");
