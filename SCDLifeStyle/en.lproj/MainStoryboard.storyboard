@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="PaS-OG-Vcz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="PaS-OG-Vcz">
     <dependencies>
         <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
@@ -128,7 +128,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="u5x-6l-hal" customClass="UIButtonDict">
-                                <rect key="frame" x="142" y="282" width="65" height="35"/>
+                                <rect key="frame" x="237" y="279" width="65" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                 <state key="normal" title="Exercise" backgroundImage="green_btn.png">
@@ -151,7 +151,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hW3-nT-duJ" customClass="UIButtonDict">
-                                <rect key="frame" x="318" y="282" width="65" height="35"/>
+                                <rect key="frame" x="171" y="279" width="65" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                 <state key="normal" title="Challenge" backgroundImage="red_btn.png">
@@ -166,7 +166,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ANy-2u-TU2" customClass="UIButtonDict">
-                                <rect key="frame" x="73" y="282" width="65" height="35"/>
+                                <rect key="frame" x="302" y="279" width="65" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                 <state key="normal" title="Stress" backgroundImage="purple_btn.png">
@@ -189,7 +189,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="iRW-AN-pWt" customClass="UIButtonDict">
-                                <rect key="frame" x="6" y="282" width="65" height="35"/>
+                                <rect key="frame" x="106" y="279" width="65" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                 <state key="normal" title="Sleep" backgroundImage="blue_btn.png">
@@ -237,10 +237,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="AuO-xf-y7Q">
-                                <rect key="frame" x="252" y="282" width="33" height="35"/>
+                                <rect key="frame" x="0.0" y="279" width="49" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="21"/>
-                                <state key="normal" title="X" backgroundImage="close_btn.png">
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="19"/>
+                                <state key="normal" title="X" backgroundImage="quitbtn.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -911,15 +911,14 @@
         <image name="active3.png" width="87" height="32"/>
         <image name="add_bg.png" width="320" height="650"/>
         <image name="bg_poo.png" width="309" height="111"/>
-        <image name="blue_btn.png" width="65" height="29"/>
-        <image name="blue_btn_pressed.png" width="65" height="29"/>
+        <image name="blue_btn.png" width="63" height="43"/>
+        <image name="blue_btn_pressed.png" width="63" height="43"/>
         <image name="challang_bg.png" width="320" height="490"/>
         <image name="challange_bg.png" width="320" height="480"/>
         <image name="challange_cell.png" width="320" height="63"/>
-        <image name="close_btn.png" width="33" height="35"/>
         <image name="graph_bg.png" width="490" height="320"/>
-        <image name="green_btn.png" width="65" height="29"/>
-        <image name="green_btn_pressed.png" width="65" height="29"/>
+        <image name="green_btn.png" width="63" height="43"/>
+        <image name="green_btn_pressed.png" width="63" height="43"/>
         <image name="home_activity_bar.png" width="62" height="292"/>
         <image name="home_activity_bar_top.png" width="62" height="20"/>
         <image name="home_bg1.png" width="320" height="490"/>
@@ -940,10 +939,11 @@
         <image name="plus_btn.png" width="31" height="31"/>
         <image name="plus_sel.png" width="42" height="31"/>
         <image name="plus_uns.png" width="42" height="31"/>
-        <image name="purple_btn.png" width="65" height="29"/>
-        <image name="purple_btn_pressed.png" width="65" height="29"/>
-        <image name="red_btn.png" width="65" height="29"/>
-        <image name="red_btn_pressed.png" width="65" height="29"/>
+        <image name="purple_btn.png" width="67" height="43"/>
+        <image name="purple_btn_pressed.png" width="67" height="43"/>
+        <image name="quitbtn.png" width="49" height="43"/>
+        <image name="red_btn.png" width="63" height="43"/>
+        <image name="red_btn_pressed.png" width="63" height="43"/>
         <image name="stressed0.png" width="38" height="29"/>
         <image name="stressed1.png" width="38" height="28"/>
         <image name="stressed2.png" width="38" height="29"/>
