@@ -11,6 +11,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "Util.h"
 #import "NSDate+SCDCategory.h"
+#import "Stool.h"
 
 //ALL VALUES AT ZOOM LEVEL 1.0
 #define BAR_W 10
@@ -87,12 +88,15 @@
                               withFont:[UIFont fontWithName:@"Helvetica" size:16]];
             }
             
+            //GRAPH
             if (dayO != [NSNull null]) 
             {
                 Day *day = (Day*)dayO;
-                NSNumber *barValue;
                 
-                switch (graphType) {
+                //BARS
+                NSNumber *barValue;
+                switch (graphType) 
+                {
                     case SLEEP_TYPE:
                         barValue = day.sleep_quality;
                         break;
@@ -106,19 +110,26 @@
                         break;
                 }
                 
-                
+                //graph!
                 if (barValue != nil) 
                 {
-                    //we can graph
                     float barH = [Util getHeightFor:graphType andValue:barValue];
                     UIColor *color = [Util getColorFor:graphType andValue:barValue];
                     CGContextSetFillColorWithColor(c, color.CGColor);
                     CGContextFillRect(c, CGRectMake(posX, posY, barW, -barH));
                 }
                 
-                
+                //POO
+                UIImage *pooDot = [UIImage imageNamed:@"graph_stool.png"];
+                for (Stool *stool in day.stool) 
+                {
+                    int stoolPosY = [Util getHeightFor:STOOL_TYPE andValue:stool.type];
+                    [pooDot drawAtPoint:CGPointMake(posX, stoolPosY)];
+                    
+                }
                 
             }
+            
             
             posX -= barW + barGap;
         }
