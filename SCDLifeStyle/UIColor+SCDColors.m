@@ -96,7 +96,7 @@
 
 + (UIColor *) challengeColor //yellow alpha
 {
-    return [UIColor colorWithRed:255.0f/255.0f green:234.0f/255.0f blue:0/255.0f alpha:.35f];
+    return [UIColor colorWithRed:255.0f/255.0f green:234.0f/255.0f blue:0/255.0f alpha:.2f];
 }
 
 + (UIColor *) challengeStrokeColor //yellow
