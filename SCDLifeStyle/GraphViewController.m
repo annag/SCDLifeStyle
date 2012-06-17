@@ -13,12 +13,13 @@
 #import "Day.h"
 
 
-#define SPAN_DAYS 35 //num days to show on graph at zoom level 1.0
+#define SPAN_DAYS 38 //num days to show on graph at zoom level 1.0
 
 @interface GraphViewController ()
 
 @property(nonatomic,strong) NSNumber *zoomLevel;
 @property(nonatomic,strong) NSNumber *selectedGraph;
+@property(nonatomic,strong) NSDate *startFromDate;
 
 @end
 
@@ -27,6 +28,7 @@
 @synthesize graphView, zoomMinusButton, zoomPlusButton;
 @synthesize zoomLevel;
 @synthesize selectedGraph;
+@synthesize startFromDate;
 
 
 
@@ -37,6 +39,7 @@
     self.selectedGraph = [NSNumber numberWithInt:0];
     self.zoomLevel = [NSNumber numberWithFloat:1.0f];
     self.zoomMinusButton.selected = YES;
+    self.startFromDate = [NSDate date];
     //self.zoomMinusButton.enabled = NO;
     
     [self updateGraphData];
@@ -78,18 +81,41 @@
 
 }
 
+- (IBAction)onPrevious:(id)sender
+{
+    self.startFromDate = [self.startFromDate dateByAddingDays:-[self getSpanDays]];
+    [self updateGraphData];
+}
+
+- (IBAction)onNext:(id)sender
+{
+    if ([self.startFromDate isToday]) 
+    {
+        return;
+    }
+    
+    self.startFromDate = [self.startFromDate dateByAddingDays:[self getSpanDays]];
+    [self updateGraphData];
+}
+
+               
+- (int) getSpanDays
+{
+    return SPAN_DAYS/self.zoomLevel.floatValue;
+}
+                          
 #pragma mark render graph
 - (void) updateGraphData
 {
     
-    int spanDays = SPAN_DAYS/self.zoomLevel.floatValue;
+    int spanDays = [self getSpanDays];
     
     NSMutableArray *dateArray = [NSMutableArray array];
     NSMutableArray *daysArray = [NSMutableArray array];
     
     for (int i=0; i<spanDays; i++) 
     {
-        NSDate *d = [NSDate date];
+        NSDate *d = self.startFromDate;
         
         d = [d dateByAddingDays:-i];
         

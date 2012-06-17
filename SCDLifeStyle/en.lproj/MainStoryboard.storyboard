@@ -283,6 +283,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onPrevious:" destination="bWT-cU-kFw" eventType="touchUpInside" id="3K3-00-Bo8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="NYs-39-a27" userLabel="next">
                                 <rect key="frame" x="453" y="0.0" width="27" height="224"/>
@@ -295,6 +298,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onNext:" destination="bWT-cU-kFw" eventType="touchUpInside" id="psU-vq-hYl"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -1046,6 +1052,8 @@
             <relationships>
                 <relationship kind="action" name="onClose:"/>
                 <relationship kind="action" name="onGraphSelect:"/>
+                <relationship kind="action" name="onNext:"/>
+                <relationship kind="action" name="onPrevious:"/>
                 <relationship kind="action" name="onZoomSelect:"/>
                 <relationship kind="outlet" name="graphView" candidateClass="GraphView"/>
                 <relationship kind="outlet" name="zoomMinusButton" candidateClass="UIButtonDict"/>

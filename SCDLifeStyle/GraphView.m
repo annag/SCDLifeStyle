@@ -89,9 +89,11 @@
                 //draw date
                 if (dateString != nil) 
                 {
+                    UIFont *dateFont = [UIFont fontWithName:@"Helvetica" size:17];
+                    CGSize dateSize = [dateString sizeWithFont:dateFont];
                     CGContextSetFillColorWithColor(c, [UIColor whiteColor].CGColor);
-                    [dateString drawInRect:CGRectMake(posX-45, 10, 100, 50) 
-                                  withFont:[UIFont fontWithName:@"Helvetica" size:17]];
+                    [dateString drawInRect:CGRectMake(posX-dateSize.width, 10, 100, 50) 
+                                  withFont:dateFont];
                 }
                 
                 
