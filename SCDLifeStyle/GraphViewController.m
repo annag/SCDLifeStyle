@@ -13,7 +13,7 @@
 #import "Day.h"
 
 
-#define SPAN_DAYS 30 //num days to show on graph at zoom level 1.0
+#define SPAN_DAYS 35 //num days to show on graph at zoom level 1.0
 
 @interface GraphViewController ()
 
