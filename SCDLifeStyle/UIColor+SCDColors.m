@@ -15,14 +15,14 @@
 
 
 + (id) colorWithHex:(unsigned int)hex{
-	return [UIColor colorWithHex:hex alpha:1];
+	return [UIColor colorWithHex:hex alpha:1.0f];
 }
 
 + (id) colorWithHex:(unsigned int)hex alpha:(CGFloat)alpha{
 	
-	return [UIColor colorWithRed:((float)((hex & 0xFF0000) >> 16)) / 255.0
-                           green:((float)((hex & 0xFF00) >> 8)) / 255.0
-                            blue:((float)(hex & 0xFF)) / 255.0
+	return [UIColor colorWithRed:((float)((hex & 0xFF0000) >> 16)) / 255.0f
+                           green:((float)((hex & 0xFF00) >> 8)) / 255.0f
+                            blue:((float)(hex & 0xFF)) / 255.0f
                            alpha:alpha];
 	
 }
@@ -32,70 +32,76 @@
 	int r = arc4random() % 255;
 	int g = arc4random() % 255;
 	int b = arc4random() % 255;
-	return [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1];
+	return [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:1.0f];
 	
 }
 + (UIColor *) stress5Color //dark purple
 {
-    return [UIColor colorWithRed:37/255.0 green:21/255.0 blue:92/255.0 alpha:1];
+    return [UIColor colorWithRed:37.0f/255.0f green:21.0f/255.0f blue:92.0f/255.0f alpha:1.0f];
 }
 + (UIColor *) stress4Color //dark purple
 {
-	return [UIColor colorWithRed:62/255.0 green:17/255.0 blue:137/255.0 alpha:1];
+	return [UIColor colorWithRed:62.0f/255.0f green:17.0f/255.0f blue:137.0f/255.0f alpha:1.0f];
 }
 + (UIColor *) stress3Color //middle dark purple
 {
-	return [UIColor colorWithRed:113/255.0 green:82/255.0 blue:192/255.0 alpha:1];
+	return [UIColor colorWithRed:113.0f/255.0f green:82.0f/255.0f blue:192.0f/255.0f alpha:1.0f];
 }
 + (UIColor *) stress2Color //middle light purple
 {
-	return [UIColor colorWithRed:171/255.0 green:115/255.0 blue:242/255.0 alpha:1];
+	return [UIColor colorWithRed:171.0f/255.0f green:115.0f/255.0f blue:242.0f/255.0f alpha:1.0f];
 }
 + (UIColor *) stress1Color //light purple
 {
-	return [UIColor colorWithRed:189/255.0 green:161/255.0 blue:238/255.0 alpha:1];
+	return [UIColor colorWithRed:189.0f/255.0f green:161.0f/255.0f blue:238.0f/255.0f alpha:1.0f];
 }
 
 + (UIColor *) sleep5Color //dark teel
 {	
-	return [UIColor colorWithRed:13/255.0 green:75/255.0 blue:86/255.0 alpha:1];
+	return [UIColor colorWithRed:13.0f/255.0f green:75.0f/255.0f blue:86.0f/255.0f alpha:1.0f];
 }
 + (UIColor *) sleep4Color //dark teel
 {
-	return [UIColor colorWithRed:10/255.0 green:66/255.0 blue:76/255.0 alpha:1];
+	return [UIColor colorWithRed:10.0f/255.0f green:66.0f/255.0f blue:76.0f/255.0f alpha:1.0f];
 }
 + (UIColor *) sleep3Color //middle dark teel
 {
-	return [UIColor colorWithRed:1/255.0 green:108/255.0 blue:137/255.0 alpha:1];
+	return [UIColor colorWithRed:1.0f/255.0f green:108.0f/255.0f blue:137.0f/255.0f alpha:1.0f];
 }
 + (UIColor *) sleep2Color //middle light teel
 {
-	return [UIColor colorWithRed:30/255.0 green:151/255.0 blue:183/255.0 alpha:1];
+	return [UIColor colorWithRed:30.0f/255.0f green:151.0f/255.0f blue:183.0f/255.0f alpha:1.0f];
 }
 + (UIColor *) sleep1Color //light teel
 {
-	return [UIColor colorWithRed:34/255.0 green:191/255.0 blue:232/255.0 alpha:1];
+	return [UIColor colorWithRed:34/255.0f green:191/255.0f blue:232/255.0f alpha:1.0f];
 }
 
 + (UIColor *) excer4Color //dark green
 {
-	return [UIColor colorWithRed:0/255.0 green:107/255.0 blue:41/255.0 alpha:1];
+	return [UIColor colorWithRed:0/255.0f green:107/255.0f blue:41/255.0f alpha:1.0f];
 }
 + (UIColor *) excer3Color //middle dark green
 {
-	return [UIColor colorWithRed:1/255.0 green:148/255.0 blue:56/255.0 alpha:1];
+	return [UIColor colorWithRed:1/255.0f green:148/255.0f blue:56/255.0f alpha:1.0f];
 }
 + (UIColor *) excer2Color //middle light green
 {
-	return [UIColor colorWithRed:70/255.0 green:185/255.0 blue:117/255.0 alpha:1];
+	return [UIColor colorWithRed:70.0f/255.0f green:185.0f/255.0f blue:117.0f/255.0f alpha:1.0f];
 }
 + (UIColor *) excer1Color //light green
 {
-	return [UIColor colorWithRed:155/255.0 green:222/255.0 blue:153/255.0 alpha:1];
+	return [UIColor colorWithRed:155.0f/255.0f green:222.0f/255.0f blue:153.0f/255.0f alpha:1.0f];
 }
 
-+ (UIColor *) challangeColor{
-    return [UIColor colorWithRed:255/255.0 green:234/255.0 blue:0/255.0 alpha:1];
++ (UIColor *) challengeColor //yellow alpha
+{
+    return [UIColor colorWithRed:255.0f/255.0f green:234.0f/255.0f blue:0/255.0f alpha:.35f];
+}
+
++ (UIColor *) challengeStrokeColor //yellow
+{
+    return [UIColor colorWithRed:255.0f/255.0f green:234.0f/255.0f blue:0.0f/255.0f alpha:1.0f];
 }
 
 

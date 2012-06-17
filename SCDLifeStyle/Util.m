@@ -127,6 +127,32 @@ static Util *instance = nil;
     return [NSArray array];
 }
 
+- (void) updateChallenges
+{
+    NSDate *today = [NSDate date];
+    NSArray *challenges = [self getChallenges];
+    BOOL modified = NO;
+    for (Challenge *challenge in challenges) 
+    {
+        if (!challenge.finished.boolValue) 
+        {
+            int days = [challenge.start_date daysBetweenDate:today];
+            if (days >= challenge.duration.intValue) {
+                challenge.finished = [NSNumber numberWithBool:YES];
+                modified = YES;
+            }
+
+        }
+    }
+    if (modified) {
+        NSError *error = nil;
+        [self.managedObjectContext save:&error];
+        if (error != nil) {
+            Alert(@"Error saving challenges after updating", @"Challenges");
+        }
+    }
+}
+
 ///******************************************************************************///
 // Challenge requests
 ///******************************************************************************///
@@ -138,7 +164,7 @@ static Util *instance = nil;
 
 - (int)getDaysRemainingForChallenge:(Challenge*)challenge{
 
-    return [challenge.start_date daysBetweenDate:challenge.end_date];
+    return challenge.duration.intValue - [self getCurrentDayForChallenge:challenge];
 }
 
 - (int)getCurrentDayForChallenge:(Challenge*)challenge{

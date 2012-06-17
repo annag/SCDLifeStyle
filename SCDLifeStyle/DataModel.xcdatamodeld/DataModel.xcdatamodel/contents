@@ -4,6 +4,7 @@
         <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="duration" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="end_date" optional="YES" attributeType="Date" defaultDateTimeInterval="0" defaultValueString="nil" syncable="YES"/>
+        <attribute name="finished" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="start_date" optional="YES" attributeType="Date" defaultDateTimeInterval="0" defaultValueString="nil" syncable="YES"/>
         <attribute name="started" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
@@ -27,9 +28,9 @@
         <attribute name="type" optional="YES" attributeType="Integer 16" minValueString="0" maxValueString="6" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Day" positionX="2403" positionY="1881" width="128" height="150"/>
-        <element name="Stool" positionX="2385" positionY="2208" width="137" height="90"/>
         <element name="Challenge" positionX="358" positionY="345" width="128" height="150"/>
+        <element name="Day" positionX="2403" positionY="1881" width="128" height="150"/>
         <element name="Note" positionX="601" positionY="369" width="128" height="75"/>
+        <element name="Stool" positionX="2385" positionY="2208" width="137" height="90"/>
     </elements>
 </model>

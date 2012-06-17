@@ -32,6 +32,7 @@
 //public
 - (Day*) getDayFromDate:(NSDate*)date;
 - (NSArray*) getChallenges;
+- (void) updateChallenges; //check if any challenge has finished
 
 // Challenge requests
 - (NSDate*) endDateForChallenge:(Challenge*)challenge;
