@@ -31,8 +31,10 @@
     
 }
 
-- (void)viewDidAppear:(BOOL)animated{
+- (void)viewDidAppear:(BOOL)animated
+{
     [super viewDidAppear:animated];
+    [[Util instance] updateChallenges];
     self.dataArray = [[Util instance] getChallenges];
     [self.tableView reloadData];
 

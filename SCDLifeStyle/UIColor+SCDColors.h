@@ -45,5 +45,7 @@
 + (UIColor *) excer2Color; //middle light green      //A little
 + (UIColor *) excer1Color; //light green             //Zero
 
-+ (UIColor *) challangeColor; //yellow
++ (UIColor *) challengeColor; //yellow alpha
++ (UIColor *) challengeStrokeColor; //yellow
+
 @end

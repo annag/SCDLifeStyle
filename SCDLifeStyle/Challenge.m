@@ -2,7 +2,7 @@
 //  Challenge.m
 //  SCDLifeStyle
 //
-//  Created by Juan Fluxa on 5/30/12.
+//  Created by Juan Fluxa on 6/17/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
@@ -12,12 +12,13 @@
 
 @implementation Challenge
 
-@dynamic name;
 @dynamic desc;
 @dynamic duration;
-@dynamic start_date;
 @dynamic end_date;
+@dynamic name;
+@dynamic start_date;
 @dynamic started;
+@dynamic finished;
 @dynamic note;
 
 @end

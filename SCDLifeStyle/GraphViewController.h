@@ -19,5 +19,8 @@
 - (IBAction)onClose:(id)sender;
 - (IBAction)onGraphSelect:(id)sender;
 - (IBAction)onZoomSelect:(id)sender;
+- (IBAction)onPrevious:(id)sender;
+- (IBAction)onNext:(id)sender;
+- (IBAction)onChallenge:(id)sender;
 
 @end

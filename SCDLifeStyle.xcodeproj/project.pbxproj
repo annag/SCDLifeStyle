@@ -166,7 +166,6 @@
 		BF88D39E1589E2DF00146507 /* UIButtonDict.m in Sources */ = {isa = PBXBuildFile; fileRef = BF88D39D1589E2DF00146507 /* UIButtonDict.m */; };
 		BFAF1A1D15760E9A008F6211 /* Day.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAF1A1C15760E9A008F6211 /* Day.m */; };
 		BFAF1A2015760E9B008F6211 /* Stool.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAF1A1F15760E9B008F6211 /* Stool.m */; };
-		BFAF1A2315760E9B008F6211 /* Challenge.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAF1A2215760E9B008F6211 /* Challenge.m */; };
 		BFAF1A2615760E9B008F6211 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAF1A2515760E9B008F6211 /* Note.m */; };
 		BFAF1A29157618BA008F6211 /* AddChallengeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAF1A28157618BA008F6211 /* AddChallengeViewController.m */; };
 		BFAF1A34157638DB008F6211 /* ChallengeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAF1A33157638DB008F6211 /* ChallengeCell.m */; };
@@ -175,6 +174,7 @@
 		BFE74DD4157712790047A83E /* ChallengeNote.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE74DD3157712790047A83E /* ChallengeNote.m */; };
 		BFE74DD7157715880047A83E /* ChallengeSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE74DD6157715880047A83E /* ChallengeSegment.m */; };
 		BFE74DDA15771EAE0047A83E /* UIColor+SCDColors.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE74DD915771EAE0047A83E /* UIColor+SCDColors.m */; };
+		BFF8C6DE158DB50900BF8DDB /* Challenge.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF8C6DD158DB50900BF8DDB /* Challenge.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -382,8 +382,6 @@
 		BFAF1A1C15760E9A008F6211 /* Day.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Day.m; sourceTree = "<group>"; };
 		BFAF1A1E15760E9B008F6211 /* Stool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stool.h; sourceTree = "<group>"; };
 		BFAF1A1F15760E9B008F6211 /* Stool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stool.m; sourceTree = "<group>"; };
-		BFAF1A2115760E9B008F6211 /* Challenge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Challenge.h; sourceTree = "<group>"; };
-		BFAF1A2215760E9B008F6211 /* Challenge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Challenge.m; sourceTree = "<group>"; };
 		BFAF1A2415760E9B008F6211 /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
 		BFAF1A2515760E9B008F6211 /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
 		BFAF1A27157618BA008F6211 /* AddChallengeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddChallengeViewController.h; sourceTree = "<group>"; };
@@ -400,6 +398,8 @@
 		BFE74DD6157715880047A83E /* ChallengeSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChallengeSegment.m; sourceTree = "<group>"; };
 		BFE74DD815771EAE0047A83E /* UIColor+SCDColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SCDColors.h"; sourceTree = "<group>"; };
 		BFE74DD915771EAE0047A83E /* UIColor+SCDColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SCDColors.m"; sourceTree = "<group>"; };
+		BFF8C6DC158DB50900BF8DDB /* Challenge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Challenge.h; sourceTree = "<group>"; };
+		BFF8C6DD158DB50900BF8DDB /* Challenge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Challenge.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -648,10 +648,10 @@
 			isa = PBXGroup;
 			children = (
 				BF21AFAD1567BC0400B86DAE /* DataModel.xcdatamodeld */,
+				BFF8C6DC158DB50900BF8DDB /* Challenge.h */,
+				BFF8C6DD158DB50900BF8DDB /* Challenge.m */,
 				BFAF1A2415760E9B008F6211 /* Note.h */,
 				BFAF1A2515760E9B008F6211 /* Note.m */,
-				BFAF1A2115760E9B008F6211 /* Challenge.h */,
-				BFAF1A2215760E9B008F6211 /* Challenge.m */,
 				BFAF1A1E15760E9B008F6211 /* Stool.h */,
 				BFAF1A1F15760E9B008F6211 /* Stool.m */,
 				BFAF1A1B15760E9A008F6211 /* Day.h */,
@@ -943,7 +943,6 @@
 				BF21C4941573D2F700C5F65D /* TrackViewController.m in Sources */,
 				BFAF1A1D15760E9A008F6211 /* Day.m in Sources */,
 				BFAF1A2015760E9B008F6211 /* Stool.m in Sources */,
-				BFAF1A2315760E9B008F6211 /* Challenge.m in Sources */,
 				BFAF1A2615760E9B008F6211 /* Note.m in Sources */,
 				BFAF1A29157618BA008F6211 /* AddChallengeViewController.m in Sources */,
 				BFAF1A34157638DB008F6211 /* ChallengeCell.m in Sources */,
@@ -958,6 +957,7 @@
 				BF3C9C051589ABFB00EAA4F3 /* GraphView.m in Sources */,
 				BF88D39E1589E2DF00146507 /* UIButtonDict.m in Sources */,
 				954569B2158C7E4900ECFA10 /* BarPercentageView.m in Sources */,
+				BFF8C6DE158DB50900BF8DDB /* Challenge.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

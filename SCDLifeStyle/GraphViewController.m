@@ -13,12 +13,15 @@
 #import "Day.h"
 
 
-#define SPAN_DAYS 30 //num days to show on graph at zoom level 1.0
+#define SPAN_DAYS 38 //num days to show on graph at zoom level 1.0
 
 @interface GraphViewController ()
 
 @property(nonatomic,strong) NSNumber *zoomLevel;
 @property(nonatomic,strong) NSNumber *selectedGraph;
+@property(nonatomic,strong) NSDate *startFromDate;
+@property(nonatomic,assign) BOOL showChallenges;
+
 
 @end
 
@@ -27,6 +30,8 @@
 @synthesize graphView, zoomMinusButton, zoomPlusButton;
 @synthesize zoomLevel;
 @synthesize selectedGraph;
+@synthesize startFromDate;
+@synthesize showChallenges;
 
 
 
@@ -37,6 +42,8 @@
     self.selectedGraph = [NSNumber numberWithInt:0];
     self.zoomLevel = [NSNumber numberWithFloat:1.0f];
     self.zoomMinusButton.selected = YES;
+    self.startFromDate = [NSDate date];
+    self.showChallenges = NO;
     //self.zoomMinusButton.enabled = NO;
     
     [self updateGraphData];
@@ -78,18 +85,50 @@
 
 }
 
+- (IBAction)onPrevious:(id)sender
+{
+    self.startFromDate = [self.startFromDate dateByAddingDays:-[self getSpanDays]];
+    [self updateGraphData];
+}
+
+- (IBAction)onNext:(id)sender
+{
+    if ([self.startFromDate isToday]) 
+    {
+        return;
+    }
+    
+    self.startFromDate = [self.startFromDate dateByAddingDays:[self getSpanDays]];
+    [self updateGraphData];
+}
+
+- (IBAction)onChallenge:(id)sender
+{
+    self.showChallenges = !((UIButton*)sender).selected;
+    [(UIButton*)sender setSelected:self.showChallenges];
+    [self updateGraphData];
+}
+               
+- (int) getSpanDays
+{
+    return SPAN_DAYS/self.zoomLevel.floatValue;
+}
+                          
 #pragma mark render graph
 - (void) updateGraphData
 {
     
-    int spanDays = SPAN_DAYS/self.zoomLevel.floatValue;
+    int spanDays = [self getSpanDays];
     
     NSMutableArray *dateArray = [NSMutableArray array];
     NSMutableArray *daysArray = [NSMutableArray array];
+    NSMutableArray *chArray = [NSMutableArray array];
     
+    NSArray *activeChallenges = [[Util instance] getActiveChallengesFromDate:[self.startFromDate dateByAddingDays:-spanDays] 
+                                                                             toDate:self.startFromDate];
     for (int i=0; i<spanDays; i++) 
     {
-        NSDate *d = [NSDate date];
+        NSDate *d = self.startFromDate;
         
         d = [d dateByAddingDays:-i];
         
@@ -105,11 +144,27 @@
         {
             [daysArray addObject:[NSNull null]];
         }
+        
+        //challenges
+        if (self.showChallenges) 
+        {
+            BOOL dayHasChallenge = NO;
+            for (Challenge *challenge in activeChallenges) 
+            {
+                if ([d isBetweenDate:challenge.start_date andDate:challenge.end_date]) 
+                {
+                    dayHasChallenge = YES;
+                }
+            }
+            [chArray addObject:[NSNumber numberWithBool:dayHasChallenge]];
+        }
+        
     }
     
     NSArray *dataArray = [NSArray arrayWithObjects:
                           dateArray, 
-                          daysArray, 
+                          daysArray,
+                          chArray,
                           self.zoomLevel, 
                           self.selectedGraph, 
                           nil];

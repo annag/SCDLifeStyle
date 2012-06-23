@@ -32,6 +32,8 @@
 //public
 - (Day*) getDayFromDate:(NSDate*)date;
 - (NSArray*) getChallenges;
+- (NSArray*) getActiveChallengesFromDate:(NSDate*)fromDate toDate:(NSDate*)toDate;
+- (void) updateChallenges; //check if any challenge has finished
 
 // Challenge requests
 - (NSDate*) endDateForChallenge:(Challenge*)challenge;
@@ -44,7 +46,6 @@
 - (float)getAverageStoolTypeOfLast14Days;
 - (float)getAverageStoolTypeOfChallenge:(Challenge*)challenge;
 
-- (BOOL)challengeDidFinish:(Challenge*)challenge;
 
 // Home view requests
 - (float) getTodaysStressPercentage;

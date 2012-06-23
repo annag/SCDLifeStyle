@@ -66,8 +66,16 @@
     {
         //started
         
-        int daysRemaining = [[Util instance] getDaysRemainingForChallenge:self.challenge];
-        chh.labelB.text = [NSString stringWithFormat:@"-%d days remaining-",daysRemaining];
+        if (self.challenge.finished.boolValue) 
+        {
+            chh.labelB.text = @"-finished-";
+        }
+        else 
+        {
+            int daysRemaining = [[Util instance] getDaysRemainingForChallenge:self.challenge];
+            chh.labelB.text = [NSString stringWithFormat:@"-%d days remaining-",daysRemaining];
+        }
+        
         
         //about - average
         float stoolAvg = [[Util instance] getAverageStoolFrequencyOfLast14Days];

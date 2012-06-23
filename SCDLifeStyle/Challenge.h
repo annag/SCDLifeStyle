@@ -2,7 +2,7 @@
 //  Challenge.h
 //  SCDLifeStyle
 //
-//  Created by Juan Fluxa on 5/30/12.
+//  Created by Juan Fluxa on 6/17/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
@@ -13,12 +13,13 @@
 
 @interface Challenge : NSManagedObject
 
-@property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSString * desc;
 @property (nonatomic, retain) NSNumber * duration;
-@property (nonatomic, retain) NSDate * start_date;
 @property (nonatomic, retain) NSDate * end_date;
+@property (nonatomic, retain) NSString * name;
+@property (nonatomic, retain) NSDate * start_date;
 @property (nonatomic, retain) NSNumber * started;
+@property (nonatomic, retain) NSNumber * finished;
 @property (nonatomic, retain) NSSet *note;
 @end
 

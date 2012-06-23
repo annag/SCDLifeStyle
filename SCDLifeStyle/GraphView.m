@@ -17,9 +17,11 @@
 #define BAR_W 10
 #define BAR_GAP 1
 
-#define MARGIN_X 28
-#define SHOW_DATE_EACH 9 //days
-#define DATE_LINE_H 180.0f
+#define MARGIN_X 30
+#define DATE_LINE_EACH 7 //days
+#define DATE_LINE_H1 140.0f
+#define DATE_LINE_H2 210.0f
+#define CHALLENGE_H 220.0f
 
 
 @implementation GraphView
@@ -47,13 +49,17 @@
         
         NSArray *dates = [self.data objectAtIndex:0];
         NSArray *days = [self.data objectAtIndex:1];
-        NSNumber *zoom = [self.data objectAtIndex:2];
-        NSNumber *type = [self.data objectAtIndex:3];
+        NSArray *ch = [self.data objectAtIndex:2];
+        NSNumber *zoom = [self.data objectAtIndex:3];
+        NSNumber *type = [self.data objectAtIndex:4];
+        
+        BOOL showChallenges = [ch count] > 0;
     
-        float posX = self.frame.size.width - MARGIN_X*zoom.floatValue;
-        float posY = self.frame.size.height;
         float barW = BAR_W*zoom.floatValue;
         float barGap = BAR_GAP*zoom.floatValue;
+        float posX = self.frame.size.width - MARGIN_X - barW;
+        float posY = self.frame.size.height;
+
         int graphType = type.intValue;
 
         int c = [dates count];
@@ -65,27 +71,36 @@
             CGContextRef c = UIGraphicsGetCurrentContext();
             
             //date
-            if (i == 0 || i%SHOW_DATE_EACH == 0) 
+            if (date.dateInformation.weekday == 1 || date.dateInformation.day == 1) 
             {
+                NSString *dateString = nil;
+                if (date.dateInformation.day == 1) 
+                {
+                    dateString = [NSString stringWithFormat:@"%d %@", date.dateInformation.day, [date monthString]];
+                }
+                
+                float lineH = (dateString == nil) ? DATE_LINE_H1 : DATE_LINE_H2;
+                
+                //draw line
                 CGContextBeginPath(c);
                 CGContextSetLineWidth(c, 1.0f);
                 CGContextSetStrokeColorWithColor(c, [UIColor whiteColor].CGColor);
                 CGContextMoveToPoint(c, posX+barW+barGap, posY);
-                CGContextAddLineToPoint(c, posX+barW+barGap, self.frame.size.height-DATE_LINE_H);
+                CGContextAddLineToPoint(c, posX+barW+barGap, self.frame.size.height-lineH);
                 CGContextClosePath(c);
                 CGContextDrawPath(c, kCGPathStroke);
                 
-                NSString *dateString;
-                if ([date isToday]) {
-                    dateString = @"Today";
-                }
-                else {
-                    dateString = [NSString stringWithFormat:@"%d %@", date.dateInformation.day, [date monthString]];
+                //draw date
+                if (dateString != nil) 
+                {
+                    UIFont *dateFont = [UIFont fontWithName:@"Helvetica" size:17];
+                    CGSize dateSize = [dateString sizeWithFont:dateFont];
+                    CGContextSetFillColorWithColor(c, [UIColor whiteColor].CGColor);
+                    [dateString drawInRect:CGRectMake(posX-dateSize.width, 10, 100, 50) 
+                                  withFont:dateFont];
                 }
                 
-                CGContextSetFillColorWithColor(c, [UIColor whiteColor].CGColor);
-                [dateString drawInRect:CGRectMake(posX-40, 10, 100, 50) 
-                              withFont:[UIFont fontWithName:@"Helvetica" size:16]];
+                
             }
             
             //GRAPH
@@ -130,7 +145,17 @@
                 
             }
             
-            
+            //challenges
+            if (showChallenges) 
+            {
+                NSNumber *challenge = [ch objectAtIndex:i];
+                if (challenge.boolValue) 
+                {
+                    CGContextSetFillColorWithColor(c, [UIColor challengeColor].CGColor);
+                    CGContextFillRect(c, CGRectMake(posX, posY, barW+barGap, -CHALLENGE_H));
+                }
+            }
+
             posX -= barW + barGap;
         }
     }
