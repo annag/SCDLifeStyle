@@ -148,7 +148,7 @@ static Util *instance = nil;
     BOOL modified = NO;
     for (Challenge *challenge in challenges) 
     {
-        if (!challenge.finished.boolValue) 
+        if (challenge.started.boolValue && !challenge.finished.boolValue) 
         {
             int days = [challenge.start_date daysBetweenDate:today];
             if (days >= challenge.duration.intValue) {
@@ -186,7 +186,12 @@ static Util *instance = nil;
      return [challenge.start_date daysBetweenDate:[NSDate date]];
 }
 
-- (float)getAverageStoolFrequencyOfLast14Days{ // in days
+- (float)getAverageStoolFrequencyOfLast14Days{ 
+    return [self getAverageStoolFrequencyOfLast14DaysFrom:[NSDate date]];
+}
+
+- (float)getAverageStoolFrequencyOfLast14DaysFrom:(NSDate*)fromDate
+{ // in days
 
     //check if data has been entered for how many days 
     //if >7 
@@ -199,9 +204,7 @@ static Util *instance = nil;
     //get most days in database
     for (int i=0; i<14; i++) 
     {
-        NSDate *d = [NSDate date];
-        
-        d = [d dateByAddingDays:-i];
+        NSDate *d = [fromDate dateByAddingDays:-i];
         
         Day *day = [self getDayFromDate:d];
         

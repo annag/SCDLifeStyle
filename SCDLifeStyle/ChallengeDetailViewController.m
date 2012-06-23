@@ -65,20 +65,20 @@
     if ([self.challenge.started boolValue]) 
     {
         //started
-        
+        float stoolAvg;
         if (self.challenge.finished.boolValue) 
         {
             chh.labelB.text = @"-finished-";
+            stoolAvg = [[Util instance] getAverageStoolFrequencyOfLast14DaysFrom:self.challenge.end_date];
         }
         else 
         {
             int daysRemaining = [[Util instance] getDaysRemainingForChallenge:self.challenge];
             chh.labelB.text = [NSString stringWithFormat:@"-%d days remaining-",daysRemaining];
+            stoolAvg = [[Util instance] getAverageStoolFrequencyOfLast14Days]; //from today
         }
         
-        
         //about - average
-        float stoolAvg = [[Util instance] getAverageStoolFrequencyOfLast14Days];
         ChallengeNote *aboutAvg = [[[NSBundle mainBundle] loadNibNamed:@"ChallengeNote" owner:self options:nil] objectAtIndex:0];
         [aboutAvg clean];
         aboutAvg.titleLabel.text = @"Average stool last 14 days";
@@ -172,6 +172,7 @@
     self.challenge.start_date = [NSDate date];
     self.challenge.started = [NSNumber numberWithBool:YES];
     self.challenge.end_date = [[Util instance] endDateForChallenge:self.challenge];
+    self.challenge.finished = [NSNumber numberWithBool:NO];
     NSError *error = nil;
     [self.managedObjectContext save:&error];
     if (error == nil) 
