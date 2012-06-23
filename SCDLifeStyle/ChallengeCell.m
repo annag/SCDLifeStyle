@@ -10,8 +10,6 @@
 
 @implementation ChallengeCell
 
-@synthesize title;
-
-
+@synthesize title,subTitle;
 
 @end

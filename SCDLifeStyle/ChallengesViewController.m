@@ -11,6 +11,7 @@
 #import "ChallengeCell.h"
 #import "Challenge.h"
 #import "ChallengeDetailViewController.h"
+#import "Util.h"
 
 @interface ChallengesViewController () <UITableViewDataSource,UITableViewDelegate>
 
@@ -60,6 +61,25 @@
     Challenge *challenge = [self.dataArray objectAtIndex:indexPath.row];
     ChallengeCell *cell = (ChallengeCell*)[self.tableView dequeueReusableCellWithIdentifier:@"ChallengeCell"];
     cell.title.text = challenge.name;
+    
+    if (challenge.started.boolValue) 
+    {
+        if (challenge.finished.boolValue) 
+        {
+            cell.subTitle.text = @"Completed.";
+        }
+        else 
+        {
+            int daysRemaining = [[Util instance] getDaysRemainingForChallenge:challenge];
+            cell.subTitle.text = [NSString stringWithFormat:@"Active: %d days to go.",daysRemaining];
+        }
+
+    }
+    else 
+    {
+        cell.subTitle.text = @"Not Started.";
+    }
+    
     cell.tag = indexPath.row;
     
     return cell;
@@ -74,6 +94,26 @@
 {
     Challenge *challenge = [self.dataArray objectAtIndex:indexPath.row];
     [self performSegueWithIdentifier:@"ChallengeDetail" sender:challenge];
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    // Return YES if you want the specified item to be editable.
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) 
+    {
+        Challenge *challenge = [self.dataArray objectAtIndex:indexPath.row];
+        [self.managedObjectContext deleteObject:challenge];
+        NSError *error = nil;
+        [self.managedObjectContext save:&error];
+        if (error != nil) {
+            Alert(@"Error deleting challenge", @"Challenge");
+        }
+        self.dataArray = [[Util instance] getChallenges];
+        [self.tableView reloadData];
+    }    
 }
 
 @end
