@@ -163,6 +163,8 @@
 		BF21C5471573E0BA00C5F65D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF21C5461573E0BA00C5F65D /* QuartzCore.framework */; };
 		BF25CFA315787E5500BB01D6 /* Icon@2.png in Resources */ = {isa = PBXBuildFile; fileRef = BF25CFA215787E5500BB01D6 /* Icon@2.png */; };
 		BF25CFA515787E5800BB01D6 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BF25CFA415787E5800BB01D6 /* Icon.png */; };
+		BF375C8F15958EA7009799DE /* ChallengeTime.m in Sources */ = {isa = PBXBuildFile; fileRef = BF375C8E15958EA6009799DE /* ChallengeTime.m */; };
+		BF375C9115958ED6009799DE /* ChallengeTime.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF375C9015958ED6009799DE /* ChallengeTime.xib */; };
 		BF3C9C051589ABFB00EAA4F3 /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3C9C041589ABFB00EAA4F3 /* GraphView.m */; };
 		BF4D5CFC1575F46400076C9A /* libTapkuLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF21C5481573E0CD00C5F65D /* libTapkuLibrary.a */; };
 		BF88D39E1589E2DF00146507 /* UIButtonDict.m in Sources */ = {isa = PBXBuildFile; fileRef = BF88D39D1589E2DF00146507 /* UIButtonDict.m */; };
@@ -378,6 +380,9 @@
 		BF21C5481573E0CD00C5F65D /* libTapkuLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTapkuLibrary.a; path = TapkuLibrary/src/libTapkuLibrary.a; sourceTree = "<group>"; };
 		BF25CFA215787E5500BB01D6 /* Icon@2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2.png"; sourceTree = "<group>"; };
 		BF25CFA415787E5800BB01D6 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		BF375C8D15958EA6009799DE /* ChallengeTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChallengeTime.h; sourceTree = "<group>"; };
+		BF375C8E15958EA6009799DE /* ChallengeTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChallengeTime.m; sourceTree = "<group>"; };
+		BF375C9015958ED6009799DE /* ChallengeTime.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChallengeTime.xib; sourceTree = "<group>"; };
 		BF3C9C031589ABFB00EAA4F3 /* GraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphView.h; sourceTree = "<group>"; };
 		BF3C9C041589ABFB00EAA4F3 /* GraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphView.m; sourceTree = "<group>"; };
 		BF88D39C1589E2DF00146507 /* UIButtonDict.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIButtonDict.h; sourceTree = "<group>"; };
@@ -705,6 +710,9 @@
 				BFE74DD3157712790047A83E /* ChallengeNote.m */,
 				9585B3AD1573D780006260DC /* ChallengeNote.xib */,
 				958371131575EAD600553A73 /* ChallengeNoteBottom.xib */,
+				BF375C8D15958EA6009799DE /* ChallengeTime.h */,
+				BF375C8E15958EA6009799DE /* ChallengeTime.m */,
+				BF375C9015958ED6009799DE /* ChallengeTime.xib */,
 				BFAF1A32157638DB008F6211 /* ChallengeCell.h */,
 				BFAF1A33157638DB008F6211 /* ChallengeCell.m */,
 				BF3C9C031589ABFB00EAA4F3 /* GraphView.h */,
@@ -936,6 +944,7 @@
 				954569B4158C7EDB00ECFA10 /* BarPercentageView.xib in Resources */,
 				9592465D15958EE400CE464A /* time-cell.png in Resources */,
 				9592465E15958EE400CE464A /* time-cell@2x.png in Resources */,
+				BF375C9115958ED6009799DE /* ChallengeTime.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -974,6 +983,7 @@
 				BF88D39E1589E2DF00146507 /* UIButtonDict.m in Sources */,
 				954569B2158C7E4900ECFA10 /* BarPercentageView.m in Sources */,
 				BFF8C6DE158DB50900BF8DDB /* Challenge.m in Sources */,
+				BF375C8F15958EA7009799DE /* ChallengeTime.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
