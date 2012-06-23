@@ -147,6 +147,8 @@
 		95DA5AE11595C61800232A9A /* trend_up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95DA5AD91595C61800232A9A /* trend_up@2x.png */; };
 		95DA5AE21595C61800232A9A /* trends_tile.png in Resources */ = {isa = PBXBuildFile; fileRef = 95DA5ADA1595C61800232A9A /* trends_tile.png */; };
 		95DA5AE31595C61800232A9A /* trends_tile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95DA5ADB1595C61800232A9A /* trends_tile@2x.png */; };
+		95DA5AE61595C8B300232A9A /* graph_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 95DA5AE41595C8B300232A9A /* graph_icon.png */; };
+		95DA5AE71595C8B300232A9A /* graph_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95DA5AE51595C8B300232A9A /* graph_icon@2x.png */; };
 		BF009CBA1576676F003700FB /* GraphTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF009CB91576676F003700FB /* GraphTabViewController.m */; };
 		BF009CBD15766797003700FB /* GraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF009CBC15766797003700FB /* GraphViewController.m */; };
 		BF16EA8115725117000F2B2C /* StoolView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF16EA8015725117000F2B2C /* StoolView.m */; };
@@ -359,6 +361,8 @@
 		95DA5AD91595C61800232A9A /* trend_up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trend_up@2x.png"; sourceTree = "<group>"; };
 		95DA5ADA1595C61800232A9A /* trends_tile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trends_tile.png; sourceTree = "<group>"; };
 		95DA5ADB1595C61800232A9A /* trends_tile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trends_tile@2x.png"; sourceTree = "<group>"; };
+		95DA5AE41595C8B300232A9A /* graph_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = graph_icon.png; sourceTree = "<group>"; };
+		95DA5AE51595C8B300232A9A /* graph_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "graph_icon@2x.png"; sourceTree = "<group>"; };
 		BF009CB81576676F003700FB /* GraphTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphTabViewController.h; sourceTree = "<group>"; };
 		BF009CB91576676F003700FB /* GraphTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphTabViewController.m; sourceTree = "<group>"; };
 		BF009CBB15766797003700FB /* GraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphViewController.h; sourceTree = "<group>"; };
@@ -601,6 +605,8 @@
 		95DA5AD31595C60400232A9A /* graph_listview */ = {
 			isa = PBXGroup;
 			children = (
+				95DA5AE41595C8B300232A9A /* graph_icon.png */,
+				95DA5AE51595C8B300232A9A /* graph_icon@2x.png */,
 				95DA5AD41595C61800232A9A /* trend_even.png */,
 				95DA5AD51595C61800232A9A /* trend_even@2x.png */,
 				95DA5AD61595C61800232A9A /* trend_down.png */,
@@ -994,6 +1000,8 @@
 				95DA5AE11595C61800232A9A /* trend_up@2x.png in Resources */,
 				95DA5AE21595C61800232A9A /* trends_tile.png in Resources */,
 				95DA5AE31595C61800232A9A /* trends_tile@2x.png in Resources */,
+				95DA5AE61595C8B300232A9A /* graph_icon.png in Resources */,
+				95DA5AE71595C8B300232A9A /* graph_icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
