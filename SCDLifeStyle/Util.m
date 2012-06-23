@@ -100,6 +100,27 @@ static Util *instance = nil;
     return dayId;
 }
 
++ (NSString *)ordinalString:(NSNumber *)rank
+{
+    NSString *suffix = nil;
+    int rankInt = [rank intValue];
+    int ones = rankInt % 10;
+    int tens = floor(rankInt / 10);
+    tens = tens % 10;
+    if (tens == 1) {
+        suffix = @"th";
+    } else {
+        switch (ones) {
+            case 1 : suffix = @"st"; break;
+            case 2 : suffix = @"nd"; break;
+            case 3 : suffix = @"rd"; break;
+            default : suffix = @"th";
+        }
+    }
+    NSString *rankString = [NSString stringWithFormat:@"%@%@", rank, suffix];
+    return rankString;
+}
+
 //public
 - (Day*) getDayFromDate:(NSDate *)date
 {
@@ -185,6 +206,7 @@ static Util *instance = nil;
 
      return [challenge.start_date daysBetweenDate:[NSDate date]];
 }
+
 
 - (float)getAverageStoolFrequencyOfLast14Days{ 
     return [self getAverageStoolFrequencyOfLast14DaysFrom:[NSDate date]];

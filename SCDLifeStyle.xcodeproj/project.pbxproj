@@ -166,6 +166,8 @@
 		BF375C8F15958EA7009799DE /* ChallengeTime.m in Sources */ = {isa = PBXBuildFile; fileRef = BF375C8E15958EA6009799DE /* ChallengeTime.m */; };
 		BF375C9115958ED6009799DE /* ChallengeTime.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF375C9015958ED6009799DE /* ChallengeTime.xib */; };
 		BF3C9C051589ABFB00EAA4F3 /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3C9C041589ABFB00EAA4F3 /* GraphView.m */; };
+		BF44FDE8159591B70097163E /* ChallengeDescription.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF44FDE7159591B70097163E /* ChallengeDescription.xib */; };
+		BF44FDEB159596280097163E /* ChallengeDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = BF44FDEA159596280097163E /* ChallengeDescription.m */; };
 		BF4D5CFC1575F46400076C9A /* libTapkuLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF21C5481573E0CD00C5F65D /* libTapkuLibrary.a */; };
 		BF88D39E1589E2DF00146507 /* UIButtonDict.m in Sources */ = {isa = PBXBuildFile; fileRef = BF88D39D1589E2DF00146507 /* UIButtonDict.m */; };
 		BFAF1A1D15760E9A008F6211 /* Day.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAF1A1C15760E9A008F6211 /* Day.m */; };
@@ -385,6 +387,9 @@
 		BF375C9015958ED6009799DE /* ChallengeTime.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChallengeTime.xib; sourceTree = "<group>"; };
 		BF3C9C031589ABFB00EAA4F3 /* GraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphView.h; sourceTree = "<group>"; };
 		BF3C9C041589ABFB00EAA4F3 /* GraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphView.m; sourceTree = "<group>"; };
+		BF44FDE7159591B70097163E /* ChallengeDescription.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChallengeDescription.xib; sourceTree = "<group>"; };
+		BF44FDE9159596280097163E /* ChallengeDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChallengeDescription.h; sourceTree = "<group>"; };
+		BF44FDEA159596280097163E /* ChallengeDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChallengeDescription.m; sourceTree = "<group>"; };
 		BF88D39C1589E2DF00146507 /* UIButtonDict.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIButtonDict.h; sourceTree = "<group>"; };
 		BF88D39D1589E2DF00146507 /* UIButtonDict.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIButtonDict.m; sourceTree = "<group>"; };
 		BFAF1A1B15760E9A008F6211 /* Day.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Day.h; sourceTree = "<group>"; };
@@ -713,11 +718,14 @@
 				BF375C8D15958EA6009799DE /* ChallengeTime.h */,
 				BF375C8E15958EA6009799DE /* ChallengeTime.m */,
 				BF375C9015958ED6009799DE /* ChallengeTime.xib */,
+				BF44FDE9159596280097163E /* ChallengeDescription.h */,
+				BF44FDEA159596280097163E /* ChallengeDescription.m */,
+				BF44FDE7159591B70097163E /* ChallengeDescription.xib */,
 				BFAF1A32157638DB008F6211 /* ChallengeCell.h */,
+				BF88D39C1589E2DF00146507 /* UIButtonDict.h */,
 				BFAF1A33157638DB008F6211 /* ChallengeCell.m */,
 				BF3C9C031589ABFB00EAA4F3 /* GraphView.h */,
 				BF3C9C041589ABFB00EAA4F3 /* GraphView.m */,
-				BF88D39C1589E2DF00146507 /* UIButtonDict.h */,
 				BF88D39D1589E2DF00146507 /* UIButtonDict.m */,
 				954569B0158C7E4900ECFA10 /* BarPercentageView.h */,
 				954569B1158C7E4900ECFA10 /* BarPercentageView.m */,
@@ -945,6 +953,7 @@
 				9592465D15958EE400CE464A /* time-cell.png in Resources */,
 				9592465E15958EE400CE464A /* time-cell@2x.png in Resources */,
 				BF375C9115958ED6009799DE /* ChallengeTime.xib in Resources */,
+				BF44FDE8159591B70097163E /* ChallengeDescription.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -984,6 +993,7 @@
 				954569B2158C7E4900ECFA10 /* BarPercentageView.m in Sources */,
 				BFF8C6DE158DB50900BF8DDB /* Challenge.m in Sources */,
 				BF375C8F15958EA7009799DE /* ChallengeTime.m in Sources */,
+				BF44FDEB159596280097163E /* ChallengeDescription.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

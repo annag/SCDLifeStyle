@@ -1,19 +1,20 @@
 //
-//  ChallengeTime.m
+//  ChallengeDescription.m
 //  SCDLifeStyle
 //
 //  Created by Juan Fluxa on 6/23/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "ChallengeTime.h"
+#import "ChallengeDescription.h"
 
-@implementation ChallengeTime
+@implementation ChallengeDescription
 
-@synthesize infoLabel;
+@synthesize titleLabel,infoLabel,nodataLabel;
 
 - (void) clean
 {
+    [self.titleLabel setText:@""];
     [self.infoLabel setText:@""];
 }
 

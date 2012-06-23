@@ -25,6 +25,7 @@
 + (NSString*) dayIdToday;
 + (NSString*) todayPretty;
 + (NSString*) timePretty:(NSDate*)date;
++ (NSString *)ordinalString:(NSNumber *)rank;
 
 //properties
 @property(nonatomic,strong) NSManagedObjectContext *managedObjectContext;

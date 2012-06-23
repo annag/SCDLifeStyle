@@ -10,6 +10,8 @@
 #import "ChallengeHeader.h"
 #import "ChallengeSegment.h"
 #import "ChallengeNote.h"
+#import "ChallengeDescription.h"
+#import "ChallengeTime.h"
 #import "Util.h"
 #import "Note.h"
 #import "NSDate+SCDCategory.h"
@@ -57,46 +59,66 @@
     posY = [self addSubView:aboutSegment withPosY:posY];
     
     //about - duration
-    ChallengeNote *aboutDuration = [[[NSBundle mainBundle] loadNibNamed:@"ChallengeNote" owner:self options:nil] objectAtIndex:0];
-    [aboutDuration clean];
-    aboutDuration.titleLabel.text = [NSString stringWithFormat:@"Duration: %d Days",[self.challenge.duration intValue]];
-    posY = [self addSubView:aboutDuration withPosY:posY];
+    ChallengeTime *aboutTime = [[[NSBundle mainBundle] loadNibNamed:@"ChallengeTime" owner:self options:nil] objectAtIndex:0];
+    [aboutTime clean];
+    aboutTime.infoLabel.text = [NSString stringWithFormat:@"%d Days",[self.challenge.duration intValue]];
+    posY = [self addSubView:aboutTime withPosY:posY];
     
     if ([self.challenge.started boolValue]) 
     {
         //started
-        float stoolAvg;
+        aboutTime.infoLabel.text = [NSString stringWithFormat:@"%d Days (%d %@ - %d %@)",
+                                    [self.challenge.duration intValue],
+                                    self.challenge.start_date.dateInformation.day,
+                                    [self.challenge.start_date monthString],
+                                    self.challenge.end_date.dateInformation.day,
+                                    [self.challenge.end_date monthString]
+                                    ];
+        
         if (self.challenge.finished.boolValue) 
         {
-            chh.labelB.text = @"-finished-";
-            stoolAvg = [[Util instance] getAverageStoolFrequencyOfLast14DaysFrom:self.challenge.end_date];
+            chh.labelB.text = @"-Completed-";
         }
         else 
         {
             int daysRemaining = [[Util instance] getDaysRemainingForChallenge:self.challenge];
             chh.labelB.text = [NSString stringWithFormat:@"-%d days remaining-",daysRemaining];
-            stoolAvg = [[Util instance] getAverageStoolFrequencyOfLast14Days]; //from today
         }
         
         //about - average
-        ChallengeNote *aboutAvg = [[[NSBundle mainBundle] loadNibNamed:@"ChallengeNote" owner:self options:nil] objectAtIndex:0];
+        float stoolAvg = [[Util instance] getAverageStoolFrequencyOfLast14DaysFrom:self.challenge.start_date];
+        
+        ChallengeDescription *aboutAvg = [[[NSBundle mainBundle] loadNibNamed:@"ChallengeDescription" 
+                                                                        owner:self 
+                                                                      options:nil] objectAtIndex:0];
         [aboutAvg clean];
-        aboutAvg.titleLabel.text = @"Average stool last 14 days";
-        aboutAvg.textLabel.text = (stoolAvg >= 0.0f) ? [NSString stringWithFormat:@"- every %.2f days",stoolAvg] : @"not enough data";
+        aboutAvg.titleLabel.text = @"Average stool before challenge";
+        if (stoolAvg >= 0.0f) 
+        {
+            aboutAvg.infoLabel.text = [NSString stringWithFormat:@"- every %.2f days",stoolAvg];
+        }
+        else 
+        {
+            aboutAvg.nodataLabel.hidden = NO;
+        }
+       
         posY = [self addSubView:aboutAvg withPosY:posY];
         
         //about - description
-        ChallengeNote *aboutDesc = [[[NSBundle mainBundle] loadNibNamed:@"ChallengeNoteBottom" owner:self options:nil] objectAtIndex:0];
-        [aboutDesc clean];
-        aboutDesc.textLabel.text = self.challenge.desc;
+        ChallengeDescription *aboutDesc = [[[NSBundle mainBundle] loadNibNamed:@"ChallengeDescription" 
+                                                                         owner:self 
+                                                                       options:nil] objectAtIndex:0];
+        aboutDesc.titleLabel.text = @"Description:";
+        aboutDesc.infoLabel.text = self.challenge.desc;
         posY = [self addSubView:aboutDesc withPosY:posY];
         
-        posY += 10;
         //segment - during
         if ([self.challenge.note count] > 0) 
         {
             //segment
-            ChallengeSegment *duringSegment = [[[NSBundle mainBundle] loadNibNamed:@"ChallengeSegment" owner:self options:nil] objectAtIndex:0];
+            ChallengeSegment *duringSegment = [[[NSBundle mainBundle] loadNibNamed:@"ChallengeSegment" 
+                                                                             owner:self 
+                                                                           options:nil] objectAtIndex:0];
             duringSegment.titleLabel.text = @"DURING";
             posY = [self addSubView:duringSegment withPosY:posY];
             
@@ -114,11 +136,42 @@
                 [duringNote clean];
                 int daysNote = [self.challenge.start_date daysBetweenDate:note.added];
                 duringNote.textLabel.text = note.text;
-                duringNote.timeLabel.text = [NSString stringWithFormat:@"%d days",daysNote];
+                duringNote.timeLabel.text = [NSString stringWithFormat:@"%@ day",[Util ordinalString:[NSNumber numberWithInt:(daysNote+1)]]];
                 posY = [self addSubView:duringNote withPosY:posY];
                 
             }
             
+            
+        }
+        
+        //after
+        if (self.challenge.finished.boolValue) 
+        {
+            //segment
+            ChallengeSegment *afterSegment = [[[NSBundle mainBundle] loadNibNamed:@"ChallengeSegment" 
+                                                                             owner:self 
+                                                                           options:nil] objectAtIndex:0];
+            afterSegment.titleLabel.text = @"AFTER";
+            posY = [self addSubView:afterSegment withPosY:posY];
+            
+            //avg stool between
+            float stoolAvg = [[Util instance] getAverageStoolFrequencyOfChallenge:self.challenge];
+            ChallengeDescription *aboutAvg = [[[NSBundle mainBundle] loadNibNamed:@"ChallengeDescription" 
+                                                                            owner:self 
+                                                                          options:nil] objectAtIndex:0];
+            [aboutAvg clean];
+            aboutAvg.titleLabel.text = @"Average stool after challenge";
+            if (stoolAvg >= 0.0f) 
+            {
+                aboutAvg.infoLabel.text = [NSString stringWithFormat:@"- every %.2f days",stoolAvg];
+            }
+            else 
+            {
+                aboutAvg.nodataLabel.hidden = NO;
+            }
+            
+            posY = [self addSubView:aboutAvg withPosY:posY];
+
             
         }
         
@@ -136,9 +189,11 @@
         
         
         //about - description
-        ChallengeNote *aboutDesc = [[[NSBundle mainBundle] loadNibNamed:@"ChallengeNoteBottom" owner:self options:nil] objectAtIndex:0];
-        [aboutDesc clean];
-        aboutDesc.textLabel.text = self.challenge.desc;
+        ChallengeDescription *aboutDesc = [[[NSBundle mainBundle] loadNibNamed:@"ChallengeDescription" 
+                                                                         owner:self 
+                                                                       options:nil] objectAtIndex:0];
+        aboutDesc.titleLabel.text = @"Description:";
+        aboutDesc.infoLabel.text = self.challenge.desc;
         posY = [self addSubView:aboutDesc withPosY:posY];
         
         [self.actionButton setTitle:@"START TODAY" forState:UIControlStateNormal];
