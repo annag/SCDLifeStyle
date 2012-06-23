@@ -571,6 +571,47 @@ static Util *instance = nil;
             return [UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:1];
     }
     
+    +(NSString*) getLabelFor:(int)type andValue:(NSNumber*)value
+    {
+        
+        switch(type){
+            case SLEEP_TYPE:
+                if([value intValue]  == 4){        //very good
+                    return @"very poor";
+                }else if([value intValue]  == 3){  //good
+                    return @"Poor";
+                }else if([value intValue]  == 2){  //soso
+                    return  @"so-so";
+                }else if([value intValue]  == 1){  //poor
+                    return  @"good";
+                }else if([value intValue]  == 0){  //very poor
+                    return  @"very good";
+                }
+            case STRESS_TYPE:
+                if([value intValue]  == 4){        //very relaxed
+                    return @"not at all";
+                }else if([value intValue]  == 3){  //relaxed
+                    return @"a little";
+                }else if([value intValue]  == 2){  //gloomy
+                    return @"quite";
+                }else if([value intValue]  == 1){  //stressed
+                    return @"very";
+                }else if([value intValue]  == 0){  //very stressed
+                    return @"extremely";
+                }
+            case EXERCISE_TYPE:
+                if([value intValue]  == 3){        //more!
+                    return @"zero";
+                }else if([value intValue]  == 2){  //daily goal
+                    return @"a little";
+                }else if([value intValue]  == 1){  //a little
+                    return @"daily goal";
+                }else if([value intValue]  == 0){   //none
+                    return @"more";
+                }
+            default:
+                return [UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:1];
+        }
 }
 
 @end
