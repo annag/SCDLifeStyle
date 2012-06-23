@@ -148,7 +148,7 @@ static Util *instance = nil;
     BOOL modified = NO;
     for (Challenge *challenge in challenges) 
     {
-        if (!challenge.finished.boolValue) 
+        if (challenge.started.boolValue && !challenge.finished.boolValue) 
         {
             int days = [challenge.start_date daysBetweenDate:today];
             if (days >= challenge.duration.intValue) {

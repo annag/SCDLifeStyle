@@ -172,6 +172,7 @@
     self.challenge.start_date = [NSDate date];
     self.challenge.started = [NSNumber numberWithBool:YES];
     self.challenge.end_date = [[Util instance] endDateForChallenge:self.challenge];
+    self.challenge.finished = [NSNumber numberWithBool:NO];
     NSError *error = nil;
     [self.managedObjectContext save:&error];
     if (error == nil) 
