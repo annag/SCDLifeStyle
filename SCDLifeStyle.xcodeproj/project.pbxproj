@@ -75,6 +75,8 @@
 		954569AD158A0AFC00ECFA10 /* next_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 954569A9158A0AFC00ECFA10 /* next_btn@2x.png */; };
 		954569AE158A0AFC00ECFA10 /* previous_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 954569AA158A0AFC00ECFA10 /* previous_btn.png */; };
 		954569AF158A0AFC00ECFA10 /* previous_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 954569AB158A0AFC00ECFA10 /* previous_btn@2x.png */; };
+		954569B2158C7E4900ECFA10 /* BarPercentageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 954569B1158C7E4900ECFA10 /* BarPercentageView.m */; };
+		954569B4158C7EDB00ECFA10 /* BarPercentageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 954569B3158C7EDB00ECFA10 /* BarPercentageView.xib */; };
 		958371141575EAD600553A73 /* ChallengeNoteBottom.xib in Resources */ = {isa = PBXBuildFile; fileRef = 958371131575EAD600553A73 /* ChallengeNoteBottom.xib */; };
 		958371171575EB3D00553A73 /* cell_bottom_chall.png in Resources */ = {isa = PBXBuildFile; fileRef = 958371151575EB3D00553A73 /* cell_bottom_chall.png */; };
 		958371181575EB3D00553A73 /* cell_bottom_chall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 958371161575EB3D00553A73 /* cell_bottom_chall@2x.png */; };
@@ -269,6 +271,9 @@
 		954569A9158A0AFC00ECFA10 /* next_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "next_btn@2x.png"; sourceTree = "<group>"; };
 		954569AA158A0AFC00ECFA10 /* previous_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = previous_btn.png; sourceTree = "<group>"; };
 		954569AB158A0AFC00ECFA10 /* previous_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "previous_btn@2x.png"; sourceTree = "<group>"; };
+		954569B0158C7E4900ECFA10 /* BarPercentageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarPercentageView.h; sourceTree = "<group>"; };
+		954569B1158C7E4900ECFA10 /* BarPercentageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarPercentageView.m; sourceTree = "<group>"; };
+		954569B3158C7EDB00ECFA10 /* BarPercentageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BarPercentageView.xib; sourceTree = "<group>"; };
 		958371131575EAD600553A73 /* ChallengeNoteBottom.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChallengeNoteBottom.xib; sourceTree = "<group>"; };
 		958371151575EB3D00553A73 /* cell_bottom_chall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_bottom_chall.png; sourceTree = "<group>"; };
 		958371161575EB3D00553A73 /* cell_bottom_chall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cell_bottom_chall@2x.png"; sourceTree = "<group>"; };
@@ -692,6 +697,9 @@
 				BF3C9C041589ABFB00EAA4F3 /* GraphView.m */,
 				BF88D39C1589E2DF00146507 /* UIButtonDict.h */,
 				BF88D39D1589E2DF00146507 /* UIButtonDict.m */,
+				954569B0158C7E4900ECFA10 /* BarPercentageView.h */,
+				954569B1158C7E4900ECFA10 /* BarPercentageView.m */,
+				954569B3158C7EDB00ECFA10 /* BarPercentageView.xib */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -911,6 +919,7 @@
 				954569AD158A0AFC00ECFA10 /* next_btn@2x.png in Resources */,
 				954569AE158A0AFC00ECFA10 /* previous_btn.png in Resources */,
 				954569AF158A0AFC00ECFA10 /* previous_btn@2x.png in Resources */,
+				954569B4158C7EDB00ECFA10 /* BarPercentageView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -948,6 +957,7 @@
 				954237241577398900CE1551 /* NSDate+SCDCategory.m in Sources */,
 				BF3C9C051589ABFB00EAA4F3 /* GraphView.m in Sources */,
 				BF88D39E1589E2DF00146507 /* UIButtonDict.m in Sources */,
+				954569B2158C7E4900ECFA10 /* BarPercentageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

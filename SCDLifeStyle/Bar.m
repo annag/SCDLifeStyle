@@ -28,6 +28,7 @@
     {
         self.Y = self.frame.origin.y;
         self.H = self.frame.size.height;
+        _percent = -1.0f;
 
     }
     return self;

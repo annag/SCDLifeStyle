@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "Util.h"
 
 
 
@@ -23,20 +24,37 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
+    [self updateBars];
+     
+}
+
+- (void) viewDidAppear:(BOOL)animated{
+
+    [super viewDidAppear:animated];
+    if (animated) {
+        [self updateBars];
+    }
+}
+
+- (void)updateBars{
+
     [self.relaxedBar setTopPiece:self.top1];
-    [self.relaxedBar setPercent:0.5f];
+    float percentage1 = [[Util instance] getTodaysStressPercentage];
+    [self.relaxedBar setPercent:percentage1];
     
     
     [self.stoolBar setTopPiece:self.top2];
-    [self.stoolBar setPercent:.1f];
+    float percentage2 = [[Util instance] getTodaysStoolPercentage];
+    [self.stoolBar setPercent:percentage2];
     
     [self.activityBar setTopPiece:self.top3];
-    [self.activityBar setPercent:.7f];
+    float percentage3 = [[Util instance] getTodaysExcersisePercentage];
+    [self.activityBar setPercent:percentage3];
     
     [self.sleepBar setTopPiece:self.top4];
-    [self.sleepBar setPercent:.4f];
-     
+    float percentage4 = [[Util instance] getTodaysSleepPercentage];
+    [self.sleepBar setPercent:percentage4];
 }
 
 - (IBAction)onAddDay:(id)sender

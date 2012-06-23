@@ -9,7 +9,7 @@
 #import "Util.h"
 #import "NSDate+SCDCategory.h"
 
-#define noOfStressValues 5
+#define noOfStressValues 4.0f
 
 #define SLEEP_HEIGHT_5  330/2
 #define SLEEP_HEIGHT_4  254/2
@@ -309,42 +309,52 @@ static Util *instance = nil;
 
     //get todays data
     Day *todayData = [self getDayFromDate:[NSDate date]];
-    if(todayData == nil && todayData.stress == nil) return 0;
-    int stress = todayData.stress.intValue;
+    if(todayData == nil && todayData.stress == nil) return 0.0f;
     
-    //calculate percentage
-    return 1  - (stress+1)/noOfStressValues; 
+    int stress = todayData.stress.intValue;
+    if(stress == 0 && todayData.stress == nil) return 0.0f;
+    float stress_percentage = stress/noOfStressValues;
+    float percentage = 1  -  stress_percentage;
+
+    return percentage;
 }
 
 - (float) getTodaysSleepPercentage{
 
     //get todays data
     Day *todayData      = [self getDayFromDate:[NSDate date]];
-    if(todayData == nil || todayData.sleep_length == nil || todayData.sleep_quality == nil) return 0;
+    if(todayData == nil || todayData.sleep_length == nil || todayData.sleep_quality == nil) return 0.0f;
     
      //calculate percentage
     float sleeplength     = [self mapSleepLength:todayData.sleep_length.intValue];
     float sleepquality    = [self mapSleepQuality:todayData.sleep_quality.intValue];
-    float sleepValue = sleepquality + sleeplength + 3;
-    return sleepValue/9;
+    if(sleeplength == 0.0f && sleepquality == 0.0f)return 0.0f;
+    float sleepValue = (sleepquality + sleeplength)/2;
+    return sleepValue;
 }
 
 - (float)mapSleepLength:(int) sleeplength{
     
     //Sleep length:    -2, -1,-1 ,0,+1 ,+1
-    if(sleeplength == 0) return -2;
-    if (sleeplength == 1) return -1;
-    if (sleeplength == 2) return -1;
-    if (sleeplength == 3) return 0;
-    if (sleeplength == 4) return +1;
-    if (sleeplength == 5) return +1;
+    if(sleeplength == 0)  return 0.0f;
+    if (sleeplength == 1) return 0.15f;
+    if (sleeplength == 2) return 0.4f;
+    if (sleeplength == 3) return 0.8f;
+    if (sleeplength == 4) return 1.0f;
+    if (sleeplength == 5) return 1.0f;
     
     return 0;
     
 }
 - (float)mapSleepQuality:(int) sleepquality{
     //Sleep quality: 1, 2, 3, 4, 5
-    return sleepquality + 1;
+    
+    if(sleepquality == 0) return  0.0f;
+    if (sleepquality == 1) return 0.15f;
+    if (sleepquality == 2) return 0.6f;
+    if (sleepquality == 3) return 0.8f;
+    if (sleepquality == 4) return 1.0f;
+    return 0;
 }
 
 - (float) getTodaysExcersisePercentage{
@@ -355,8 +365,10 @@ static Util *instance = nil;
     
     //calculate percentage
     float activity = todayData.excercise.floatValue;
-    if(activity == 3) return 1; //the daily goal
-    return activity/4;
+    if(activity == 3.0f) return 1.0f; //more
+    else if(activity == 2.0f) return 0.85f; //the daily goal
+    else if(activity == 0.0f) return 0.0f; //the daily goal
+    return (activity+1)/4;
 }
 
 - (float) getTodaysStoolPercentage{
@@ -367,7 +379,16 @@ static Util *instance = nil;
     
     int stooltypesum = 0;
     for (Stool *stool in todayData.stool) {
-        stooltypesum += stool.type.intValue;
+        
+        if (stool.type.intValue == 6 || stool.type.intValue == 0) {
+            stooltypesum += 0;
+        }else if(stool.type.intValue == 5 || stool.type.intValue == 1) {
+            stooltypesum += 33;
+        }else if(stool.type.intValue == 4 || stool.type.intValue == 2) {
+            stooltypesum += 66;
+        }else if(stool.type.intValue == 3) {
+            stooltypesum += 100;
+        }
     }
     //calculate percentage
     /*
@@ -376,16 +397,14 @@ static Util *instance = nil;
      3, 5: 66 %
      2, 6: 33%
      1, 7: 0%
+     
+     case: 1 + 7 = bad
+     
+     
      */
+    if(todayData.stool.count == 0) return 0.0f;
     float averageStoolToday = stooltypesum/todayData.stool.count;
-    if(averageStoolToday >= 0 && averageStoolToday <= 1) return 0;
-    if(averageStoolToday <= 2.9) return 0.33;
-    if(averageStoolToday <= 3.5) return 0.66;
-    if(averageStoolToday <= 4.8) return 1;
-    if(averageStoolToday <= 5.5) return 0.66;
-    if(averageStoolToday <= 6) return 0.33;
-    if(averageStoolToday <= 7) return 0;
-    return 0;
+    return averageStoolToday/100.0f;
 }
 
 //GRAPH FUNCTIONS
