@@ -41,6 +41,7 @@
 - (int)getCurrentDayForChallenge:(Challenge*)challenge;
 
 - (float)getAverageStoolFrequencyOfLast14Days;
+- (float)getAverageStoolFrequencyOfLast14DaysFrom:(NSDate*)fromDate;
 - (float)getAverageStoolFrequencyOfChallenge:(Challenge*)challenge;
 
 - (float)getAverageStoolTypeOfLast14Days;
