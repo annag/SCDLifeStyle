@@ -675,7 +675,7 @@
                                 <rect key="frame" x="10" y="97" width="301" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="next"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="alphabet" returnKeyType="next"/>
                                 <connections>
                                     <outlet property="delegate" destination="a1e-xN-0UR" id="5fI-Q3-xGp"/>
                                 </connections>

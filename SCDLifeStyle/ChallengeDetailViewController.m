@@ -126,19 +126,27 @@
             int noteCount = 0;
             for (Note *note in self.challenge.note) 
             {
-                noteCount++;
-                NSString *nibName = @"ChallengeNote";
-                if (noteCount >= [self.challenge.note count]) {
-                    nibName = @"ChallengeNoteBottom";
+                //NSLog(@"added: %@ - end: %@", [note.added description], [self.challenge.end_date description]);
+                //NSLog(@"added: %d", [note.added compare:self.challenge.end_date]);
+                
+                if ([note.added compare:self.challenge.end_date] == NSOrderedAscending) 
+                {
+                    noteCount++;
+                    NSString *nibName = @"ChallengeNote";
+                    /*
+                    if (noteCount >= [self.challenge.note count]) {
+                        nibName = @"ChallengeNoteBottom";
+                    }
+                    */
+                    
+                    ChallengeNote *duringNote = [[[NSBundle mainBundle] loadNibNamed:nibName owner:self options:nil] objectAtIndex:0];
+                    [duringNote clean];
+                    int daysNote = [self.challenge.start_date daysBetweenDate:note.added];
+                    duringNote.infoLabel.text = note.text;
+                    duringNote.timeLabel.text = [NSString stringWithFormat:@"%@ day",[Util ordinalString:[NSNumber numberWithInt:(daysNote+1)]]];
+                    posY = [self addSubView:duringNote withPosY:posY];
                 }
-                
-                ChallengeNote *duringNote = [[[NSBundle mainBundle] loadNibNamed:nibName owner:self options:nil] objectAtIndex:0];
-                [duringNote clean];
-                int daysNote = [self.challenge.start_date daysBetweenDate:note.added];
-                duringNote.textLabel.text = note.text;
-                duringNote.timeLabel.text = [NSString stringWithFormat:@"%@ day",[Util ordinalString:[NSNumber numberWithInt:(daysNote+1)]]];
-                posY = [self addSubView:duringNote withPosY:posY];
-                
+                                
             }
             
             
@@ -171,6 +179,26 @@
             }
             
             posY = [self addSubView:aboutAvg withPosY:posY];
+            
+            //notes
+            int noteCount = 0;
+            for (Note *note in self.challenge.note) 
+            {
+                if ([note.added compare:self.challenge.end_date] == NSOrderedDescending || 
+                    [note.added compare:self.challenge.end_date] == NSOrderedSame) 
+                {
+                    noteCount++;
+                    ChallengeNote *afterNote = [[[NSBundle mainBundle] loadNibNamed:@"ChallengeNote" 
+                                                                              owner:self 
+                                                                            options:nil] objectAtIndex:0];
+                    [afterNote clean];
+                    afterNote.infoLabel.text = note.text;
+                    afterNote.timeLabel.hidden = YES;
+                    
+                    posY = [self addSubView:afterNote withPosY:posY];
+                }
+                
+            }
 
             
         }
