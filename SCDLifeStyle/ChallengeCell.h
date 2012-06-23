@@ -12,4 +12,6 @@
 
 
 @property(nonatomic,strong) IBOutlet UILabel *title;
+@property(nonatomic,strong) IBOutlet UILabel *subTitle;
+
 @end

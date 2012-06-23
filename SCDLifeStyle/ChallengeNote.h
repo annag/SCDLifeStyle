@@ -10,8 +10,7 @@
 
 @interface ChallengeNote : UIView
 
-@property(nonatomic,strong) IBOutlet UILabel *titleLabel;
-@property(nonatomic,strong) IBOutlet UILabel *textLabel;
+@property(nonatomic,strong) IBOutlet UILabel *infoLabel;
 @property(nonatomic,strong) IBOutlet UILabel *timeLabel;
 
 - (void) clean;

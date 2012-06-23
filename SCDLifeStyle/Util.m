@@ -164,15 +164,14 @@ static Util *instance = nil;
 
 - (void) updateChallenges
 {
-    NSDate *today = [NSDate date];
     NSArray *challenges = [self getChallenges];
     BOOL modified = NO;
     for (Challenge *challenge in challenges) 
     {
         if (challenge.started.boolValue && !challenge.finished.boolValue) 
         {
-            int days = [challenge.start_date daysBetweenDate:today];
-            if (days >= challenge.duration.intValue) {
+            NSComparisonResult r = [challenge.end_date compare:[NSDate date]];
+            if (r == NSOrderedAscending) {
                 challenge.finished = [NSNumber numberWithBool:YES];
                 modified = YES;
             }

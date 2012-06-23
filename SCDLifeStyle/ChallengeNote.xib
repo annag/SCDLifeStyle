@@ -82,7 +82,7 @@
 							<int key="NSfFlags">16</int>
 						</object>
 					</object>
-					<object class="IBUILabel" id="737565975">
+					<object class="IBUILabel" id="652677013">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{6, 0}, {288, 66}}</string>
@@ -141,6 +141,14 @@
 					</object>
 					<int key="connectionID">11</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">infoLabel</string>
+						<reference key="source" ref="191373211"/>
+						<reference key="destination" ref="652677013"/>
+					</object>
+					<int key="connectionID">13</int>
+				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<array key="orderedObjects">
@@ -156,7 +164,7 @@
 						<array class="NSMutableArray" key="children">
 							<reference ref="551884304"/>
 							<reference ref="62370386"/>
-							<reference ref="737565975"/>
+							<reference ref="652677013"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -183,7 +191,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">12</int>
-						<reference key="object" ref="737565975"/>
+						<reference key="object" ref="652677013"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 				</array>
@@ -202,7 +210,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">12</int>
+			<int key="maxID">13</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -210,21 +218,16 @@
 					<string key="className">ChallengeNote</string>
 					<string key="superclassName">UIView</string>
 					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="textLabel">UILabel</string>
+						<string key="infoLabel">UILabel</string>
 						<string key="timeLabel">UILabel</string>
-						<string key="titleLabel">UILabel</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<object class="IBToOneOutletInfo" key="textLabel">
-							<string key="name">textLabel</string>
+						<object class="IBToOneOutletInfo" key="infoLabel">
+							<string key="name">infoLabel</string>
 							<string key="candidateClassName">UILabel</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="timeLabel">
 							<string key="name">timeLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="titleLabel">
-							<string key="name">titleLabel</string>
 							<string key="candidateClassName">UILabel</string>
 						</object>
 					</dictionary>

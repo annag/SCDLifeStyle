@@ -16,7 +16,7 @@
 
 @implementation ChallengeNote
 
-@synthesize timeLabel,titleLabel,textLabel;
+@synthesize timeLabel,infoLabel;
 
 - (id) initWithCoder:(NSCoder *)aDecoder
 {
@@ -30,8 +30,7 @@
 
 - (void) clean
 {
-    [self.titleLabel setText:@""];
-    [self.textLabel setText:@""];
+    [self.infoLabel setText:@""];
     [self.timeLabel setText:@""];
 }
 

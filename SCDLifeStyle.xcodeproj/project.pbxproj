@@ -77,7 +77,6 @@
 		954569AF158A0AFC00ECFA10 /* previous_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 954569AB158A0AFC00ECFA10 /* previous_btn@2x.png */; };
 		954569B2158C7E4900ECFA10 /* BarPercentageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 954569B1158C7E4900ECFA10 /* BarPercentageView.m */; };
 		954569B4158C7EDB00ECFA10 /* BarPercentageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 954569B3158C7EDB00ECFA10 /* BarPercentageView.xib */; };
-		958371141575EAD600553A73 /* ChallengeNoteBottom.xib in Resources */ = {isa = PBXBuildFile; fileRef = 958371131575EAD600553A73 /* ChallengeNoteBottom.xib */; };
 		958371171575EB3D00553A73 /* cell_bottom_chall.png in Resources */ = {isa = PBXBuildFile; fileRef = 958371151575EB3D00553A73 /* cell_bottom_chall.png */; };
 		958371181575EB3D00553A73 /* cell_bottom_chall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 958371161575EB3D00553A73 /* cell_bottom_chall@2x.png */; };
 		9585B3AB1573D5F7006260DC /* ChallengeSegment.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9585B3AA1573D5F7006260DC /* ChallengeSegment.xib */; };
@@ -290,7 +289,6 @@
 		954569B0158C7E4900ECFA10 /* BarPercentageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarPercentageView.h; sourceTree = "<group>"; };
 		954569B1158C7E4900ECFA10 /* BarPercentageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarPercentageView.m; sourceTree = "<group>"; };
 		954569B3158C7EDB00ECFA10 /* BarPercentageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BarPercentageView.xib; sourceTree = "<group>"; };
-		958371131575EAD600553A73 /* ChallengeNoteBottom.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChallengeNoteBottom.xib; sourceTree = "<group>"; };
 		958371151575EB3D00553A73 /* cell_bottom_chall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_bottom_chall.png; sourceTree = "<group>"; };
 		958371161575EB3D00553A73 /* cell_bottom_chall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cell_bottom_chall@2x.png"; sourceTree = "<group>"; };
 		9585B3AA1573D5F7006260DC /* ChallengeSegment.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChallengeSegment.xib; sourceTree = "<group>"; };
@@ -752,7 +750,6 @@
 				BFE74DD2157712790047A83E /* ChallengeNote.h */,
 				BFE74DD3157712790047A83E /* ChallengeNote.m */,
 				9585B3AD1573D780006260DC /* ChallengeNote.xib */,
-				958371131575EAD600553A73 /* ChallengeNoteBottom.xib */,
 				BF375C8D15958EA6009799DE /* ChallengeTime.h */,
 				BF375C8E15958EA6009799DE /* ChallengeTime.m */,
 				BF375C9015958ED6009799DE /* ChallengeTime.xib */,
@@ -946,7 +943,6 @@
 				BF21C53B1573E07600C5F65D /* TapkuLibrary.bundle in Resources */,
 				950775571575E379000D7F0B /* submit_btn.png in Resources */,
 				950775581575E379000D7F0B /* submit_btn@2x.png in Resources */,
-				958371141575EAD600553A73 /* ChallengeNoteBottom.xib in Resources */,
 				958371171575EB3D00553A73 /* cell_bottom_chall.png in Resources */,
 				958371181575EB3D00553A73 /* cell_bottom_chall@2x.png in Resources */,
 				954236EC1576699100CE1551 /* plus_sel.png in Resources */,
