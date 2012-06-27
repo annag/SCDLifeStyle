@@ -16,6 +16,9 @@
 @property(nonatomic,strong) IBOutlet UIButtonDict *zoomMinusButton;
 @property(nonatomic,strong) IBOutlet UIButtonDict *zoomPlusButton;
 @property(nonatomic,strong) IBOutlet UIButton *nextButton;
+@property(nonatomic,strong) IBOutlet UIButton *graphTypeAButton;
+@property(nonatomic,strong) IBOutlet UIButton *graphTypeBButton;
+@property(nonatomic,strong) IBOutlet UIButton *graphTypeCButton;
 
 - (IBAction)onClose:(id)sender;
 - (IBAction)onGraphSelect:(id)sender;

@@ -27,7 +27,7 @@
 
 @implementation GraphViewController
 
-@synthesize graphView, zoomMinusButton, zoomPlusButton, nextButton;
+@synthesize graphView, zoomMinusButton, zoomPlusButton, nextButton, graphTypeAButton, graphTypeBButton, graphTypeCButton;
 @synthesize zoomLevel;
 @synthesize selectedGraph;
 @synthesize startFromDate;
@@ -40,6 +40,8 @@
     [super viewDidLoad];
 	
     self.selectedGraph = [NSNumber numberWithInt:0];
+    self.graphTypeAButton.selected = YES;
+    
     self.zoomLevel = [NSNumber numberWithFloat:1.0f];
     self.zoomMinusButton.selected = YES;
     self.startFromDate = [NSDate date];
@@ -63,9 +65,16 @@
 
 - (IBAction)onGraphSelect:(id)sender;
 {
+    //unsel all
+    self.graphTypeAButton.selected = NO;
+    self.graphTypeBButton.selected = NO;
+    self.graphTypeCButton.selected = NO;
+    
     UIButtonDict *bt = sender;
     self.selectedGraph = [bt.dict objectForKey:@"graph_type"];
     [self updateGraphData];
+    
+    bt.selected = YES;
 }
 
 - (IBAction)onZoomSelect:(id)sender

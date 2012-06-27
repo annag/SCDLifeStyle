@@ -375,6 +375,9 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="graphTypeAButton" destination="iRW-AN-pWt" id="LlT-Vr-X8g"/>
+                        <outlet property="graphTypeBButton" destination="ANy-2u-TU2" id="6HZ-Y1-gUG"/>
+                        <outlet property="graphTypeCButton" destination="u5x-6l-hal" id="2fb-i3-XaY"/>
                         <outlet property="graphView" destination="4jK-3h-Lfl" id="JdI-Et-iIa"/>
                         <outlet property="nextButton" destination="NYs-39-a27" id="nYi-M3-tAu"/>
                         <outlet property="zoomMinusButton" destination="7SE-fI-6C7" id="QZm-9s-qqC"/>
@@ -1151,6 +1154,9 @@
                 <relationship kind="action" name="onNext:"/>
                 <relationship kind="action" name="onPrevious:"/>
                 <relationship kind="action" name="onZoomSelect:"/>
+                <relationship kind="outlet" name="graphTypeAButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="graphTypeBButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="graphTypeCButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="graphView" candidateClass="GraphView"/>
                 <relationship kind="outlet" name="nextButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="zoomMinusButton" candidateClass="UIButtonDict"/>
