@@ -13,6 +13,8 @@
 @property(nonatomic,strong) IBOutlet UITextField *nameTF;
 @property(nonatomic,strong) IBOutlet UITextView *descTV;
 @property(nonatomic,strong) IBOutlet UITextField *durationTF;
+@property(nonatomic,strong) IBOutlet UIPickerView *durationPicker;
+
 
 - (IBAction)onAddChallenge:(id)sender;
 - (IBAction)onCancel:(id)sender;

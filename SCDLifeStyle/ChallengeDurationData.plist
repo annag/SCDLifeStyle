@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+    <dict>
+		<key>value</key>
+		<integer>0</integer>
+		<key>label</key>
+		<string>- Pick a duration time -</string>
+	</dict>
+	<dict>
+		<key>value</key>
+		<integer>4</integer>
+		<key>label</key>
+		<string>4 Days</string>
+	</dict>
+	<dict>
+		<key>value</key>
+		<integer>7</integer>
+		<key>label</key>
+		<string>1 Week</string>
+	</dict>
+	<dict>
+		<key>value</key>
+		<integer>10</integer>
+		<key>label</key>
+		<string>10 Days</string>
+	</dict>
+	<dict>
+		<key>value</key>
+		<integer>14</integer>
+		<key>label</key>
+		<string>2 Weeks</string>
+	</dict>
+	<dict>
+		<key>value</key>
+		<integer>21</integer>
+		<key>label</key>
+		<string>3 Weeks</string>
+	</dict>
+	<dict>
+		<key>value</key>
+		<integer>30</integer>
+		<key>label</key>
+		<string>1 Month</string>
+	</dict>
+</array>
+</plist>
