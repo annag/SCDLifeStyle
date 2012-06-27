@@ -79,6 +79,9 @@
 
 - (void) calendarMonthView:(TKCalendarMonthView*)monthView didSelectDate:(NSDate*)date
 {
+    if ([date compare:[NSDate date]] == NSOrderedDescending) {
+        return;
+    }
     [self performSegueWithIdentifier:@"AddDay" sender:date];
 }
 
