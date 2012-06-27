@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="PaS-OG-Vcz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="PaS-OG-Vcz">
     <dependencies>
-        <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller - Home-->
+        <!--Main View Controller - Today-->
         <scene sceneID="5">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
@@ -129,7 +128,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.94048852940000005" blue="0.1918529457" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="RpH-1g-HIb"/>
+                    <tabBarItem key="tabBarItem" title="Today" image="145-persondot.png" id="RpH-1g-HIb"/>
                     <navigationItem key="navigationItem" id="psl-wO-h5O"/>
                     <connections>
                         <outlet property="activityBar" destination="EUm-D5-pSm" id="lp1-BG-i5q"/>
@@ -150,7 +149,7 @@
             </objects>
             <point key="canvasLocation" x="2078" y="-355"/>
         </scene>
-        <!--Graph Tab View Controller - Graph-->
+        <!--Graph Tab View Controller - Trends-->
         <scene sceneID="fgK-wW-XNU">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rm5-4u-f0D" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -169,7 +168,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Graph" id="Zr3-Vu-Dce"/>
+                    <tabBarItem key="tabBarItem" title="Trends" image="17-bar-chart.png" id="Zr3-Vu-Dce"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <segue destination="bWT-cU-kFw" kind="modal" identifier="Graph" id="4bV-PB-7Os"/>
@@ -410,7 +409,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Track" id="ALm-BM-CLQ"/>
+                    <tabBarItem key="tabBarItem" title="Track" image="83-calendar.png" id="ALm-BM-CLQ"/>
                     <connections>
                         <segue destination="7ce-p8-cRQ" kind="modal" identifier="AddDay" id="3G6-e2-Wg9"/>
                     </connections>
@@ -620,7 +619,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Challenges" id="vfI-WS-grO"/>
+                    <tabBarItem key="tabBarItem" title="Challenges" image="108-badge.png" id="vfI-WS-grO"/>
                     <navigationItem key="navigationItem" id="GHO-y0-JU5"/>
                     <connections>
                         <outlet property="tableView" destination="iSX-gw-ZyQ" id="ERH-Og-fH6"/>
@@ -1035,6 +1034,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="108-badge.png" width="21" height="26"/>
+        <image name="145-persondot.png" width="24" height="26"/>
+        <image name="17-bar-chart.png" width="29" height="24"/>
+        <image name="83-calendar.png" width="23" height="25"/>
         <image name="active0.png" width="87" height="32"/>
         <image name="active1.png" width="87" height="32"/>
         <image name="active2.png" width="87" height="32"/>
@@ -1207,6 +1210,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="1HY-tn-wee"/>
+        <segue reference="3G6-e2-Wg9"/>
     </inferredMetricsTieBreakers>
 </document>
