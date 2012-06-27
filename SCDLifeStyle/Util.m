@@ -36,6 +36,9 @@
 #define STOOL_POS_2  54/2
 #define STOOL_POS_1  0
 
+#define STOOL_TREND_BETTER 2
+#define STOOL_TREND_SAME 1
+#define STOOL_TREND_WORSE 0
 
 static Util *instance = nil;
 
@@ -295,7 +298,12 @@ static Util *instance = nil;
     return daysSum/timeBetweenPoops.count;
 }
 
-- (float)getAverageStoolTypeOfLast14Days{
+- (float)getAverageStoolTypeOfLast14Days
+{
+    return [self getAverageStoolTypeOfLast14DaysFrom:[NSDate date]];
+}
+
+- (float)getAverageStoolTypeOfLast14DaysFrom:(NSDate*)fromDate{
 
     //check if data has been entered for how many days 
     //if >7 
@@ -307,7 +315,7 @@ static Util *instance = nil;
     //get most days in database
     for (int i=0; i<14; i++) 
     {
-        NSDate *d = [NSDate date];
+        NSDate *d = [fromDate dateByAddingDays:-i];
         
         d = [d dateByAddingDays:-i];
         
@@ -368,10 +376,10 @@ static Util *instance = nil;
 
     //get todays data
     Day *todayData = [self getDayFromDate:[NSDate date]];
-    if(todayData == nil && todayData.stress == nil) return 0.0f;
+    if(todayData == nil || todayData.stress == nil) return 0.0f;
     
     int stress = todayData.stress.intValue;
-    if(stress == 0 && todayData.stress == nil) return 0.0f;
+    if(todayData.stress == nil) return 0.0f;
     float stress_percentage = stress/noOfStressValues;
     float percentage = 1  -  stress_percentage;
 
@@ -420,7 +428,7 @@ static Util *instance = nil;
 
     //get todays data
     Day *todayData      = [self getDayFromDate:[NSDate date]];
-    if(todayData == nil && todayData.excercise == nil) return 0;
+    if(todayData == nil || todayData.excercise == nil) return 0;
     
     //calculate percentage
     float activity = todayData.excercise.floatValue;
@@ -485,6 +493,7 @@ static Util *instance = nil;
                 return SLEEP_HEIGHT_1;
             }
         case STRESS_TYPE:
+            
             if([value intValue]  == 4){        //very relaxed
                 return STRESS_HEIGHT_5;
             }else if([value intValue]  == 3){  //relaxed
@@ -527,7 +536,99 @@ static Util *instance = nil;
     }
     
 }
++(NSString*)getLabelFor:(int)type
+{
+    Day *todayData = [[Util instance] getDayFromDate:[NSDate date]];
+    
+    switch(type){
+        case SLEEP_TYPE:
+        {
+            if(todayData == nil || todayData.sleep_quality == nil) return @"";
+            
+            int sleepLValue = todayData.sleep_length.intValue;
+            int sleepQValue = todayData.sleep_quality.intValue;
+            NSString *sleeplength = @"";
+            
+            if(sleepLValue == 4){        //very good
+                sleeplength = @"+9";
+            }else if(sleepLValue == 3){  //good
+                 sleeplength = @"8";
+            }else if(sleepLValue == 2){  //soso
+                 sleeplength = @"7";
+            }else if(sleepLValue == 1){  //poor
+                 sleeplength =  @"6";
+            }else if(sleepLValue == 0){  //very poor
+                 sleeplength =  @"<5";
+            }
+            
+            
+            if(sleepQValue == 4){        //very good
+                return [NSString stringWithFormat:@"%@ hrs very good",sleeplength];
+            }else if(sleepQValue == 3){  //good
+                return [NSString stringWithFormat:@"%@ hrs good",sleeplength];
+            }else if(sleepQValue == 2){  //soso
+                return  [NSString stringWithFormat:@"%@ hrs so-so",sleeplength];
+            }else if(sleepQValue == 1){  //poor
+                return  [NSString stringWithFormat:@"%@ hrs poor",sleeplength];
+            }else if(sleepQValue == 0){  //very poor
+                return  [NSString stringWithFormat:@"%@ hrs very poor",sleeplength];
+            }
+        }
+        case STRESS_TYPE:
+        {
+            if(todayData == nil || todayData.stress == nil) return @"";
+            
+            int stressValue = todayData.stress.intValue;
+            
+            if(stressValue  == 4){        //very stressed 
+                return @"extremely";
+            }else if(stressValue  == 3){  //stressed 
+                return @"very";
+            }else if(stressValue  == 2){  //gloomy
+                return @"quite";
+            }else if(stressValue  == 1){  //relaxed
+                return @"a little";
+            }else if(stressValue  == 0){  //very relaxed
+                return @"not at all";
+            }
+        }
+        case EXERCISE_TYPE:
+        {
+            if(todayData == nil || todayData.excercise == nil) return @"";
+            
+            int activityValue = todayData.excercise.intValue;
+            
+            if(activityValue == 3){        //more!
+                return @"more!";
+            }else if(activityValue == 2){  //daily goal
+                return @"daily goal";
+            }else if(activityValue == 1){  //a little
+                return @"a little";
+            }else if(activityValue == 0){   //none
+                return @"zero";
+            }
+        }
+        case STOOL_TYPE:
+        {
+            if(todayData == nil || todayData.stool == nil) return @"";
+            
+            NSSet *stoolValues = todayData.stool;
+            int stoolnr = [stoolValues count];
 
+            int allstoolvalues = 0;
+            
+            for (Stool *stool in stoolValues) {
+                allstoolvalues += [[stool type] intValue];
+            }
+            if(allstoolvalues == 0 || stoolnr == 0) return @"";
+            int averageStoolvalue = (int)round(allstoolvalues/stoolnr);
+     
+            return  [NSString stringWithFormat:@"%d/%d",averageStoolvalue, stoolnr];
+        }
+        default:
+            return @"";
+    }
+}
 + (UIColor *)getColorFor:(int)type andValue:(NSNumber*)value
 {
     
@@ -545,6 +646,7 @@ static Util *instance = nil;
                 return  [UIColor sleep1Color];
             }
         case STRESS_TYPE:
+            
             if([value intValue]  == 4){        //very relaxed
                 return [UIColor stress5Color];
             }else if([value intValue]  == 3){  //relaxed
@@ -570,47 +672,89 @@ static Util *instance = nil;
             return [UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:1];
     }
     
-    +(NSString*) getLabelFor:(int)type andValue:(NSNumber*)value
-    {
-        
-        switch(type){
-            case SLEEP_TYPE:
-                if([value intValue]  == 4){        //very good
-                    return @"very poor";
-                }else if([value intValue]  == 3){  //good
-                    return @"Poor";
-                }else if([value intValue]  == 2){  //soso
-                    return  @"so-so";
-                }else if([value intValue]  == 1){  //poor
-                    return  @"good";
-                }else if([value intValue]  == 0){  //very poor
-                    return  @"very good";
-                }
-            case STRESS_TYPE:
-                if([value intValue]  == 4){        //very relaxed
-                    return @"not at all";
-                }else if([value intValue]  == 3){  //relaxed
-                    return @"a little";
-                }else if([value intValue]  == 2){  //gloomy
-                    return @"quite";
-                }else if([value intValue]  == 1){  //stressed
-                    return @"very";
-                }else if([value intValue]  == 0){  //very stressed
-                    return @"extremely";
-                }
-            case EXERCISE_TYPE:
-                if([value intValue]  == 3){        //more!
-                    return @"zero";
-                }else if([value intValue]  == 2){  //daily goal
-                    return @"a little";
-                }else if([value intValue]  == 1){  //a little
-                    return @"daily goal";
-                }else if([value intValue]  == 0){   //none
-                    return @"more";
-                }
-            default:
-                return [UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:1];
-        }
-}
 
+}
+  
+
++(int)getStoolTrendfor2WeeksStarting:(NSDate*)startDate{
+    
+    //14 days
+    //get average stooltype
+    float avType1 = [[Util instance] getAverageStoolTypeOfLast14DaysFrom:startDate];
+    //get average stooltime
+    float avFreq1 = [[Util instance] getAverageStoolFrequencyOfLast14DaysFrom:startDate];
+    
+    //14 days before
+    //get average stooltype
+    float avType2 = [[Util instance] getAverageStoolTypeOfLast14DaysFrom:[startDate dateByAddingDays:-14]];
+    //get average stooltime
+    float avFreq2 = [[Util instance] getAverageStoolFrequencyOfLast14DaysFrom:[startDate dateByAddingDays:-14]];
+    
+    
+    
+    if(avType1 == avType2){ //same
+        
+    }else if(avType1 > avType2){
+        if (avType1 <= 4){ //constipation
+                //better
+        }else if(avType1 > 4){ //diarreah
+            //worse
+        }
+    }else if(avType1 < avType2){
+        if (avType1 >= 4){ //diarreah
+            //better
+        }else if(avType1 < 4){ //constipated
+            //worse
+        }
+    }
+    
+  /*  if(avFreq1 == avFreq2) {//same
+    }else if (avFreq1 > 3){ // diarreah
+        if (avFreq1 < avType2){ //better (less diarreah)
+        }else if(avType1 > avType2){// worse (more diarreah)
+        }
+    }else if(avType1 < 4){
+                    if (avType1 < avType2) //better 
+                        if(avType1 > avType2)// worse
+                            }*/
+    
+    return 55;
+    
+}
++(int)getPercentageTrackedfor2WeeksStarting:(NSDate*)startDate{
+
+    int daysTracked    = 0;
+    
+    //get most days in database
+    for (int i=0; i<14; i++) 
+    {
+        NSDate *d = [startDate dateByAddingDays:-i];
+        
+        d = [d dateByAddingDays:-i];
+        
+        Day *day = [[Util instance] getDayFromDate:d];
+        
+        if (day != nil)   daysTracked ++;
+    }
+    
+    return round(daysTracked/14);
+
+}
++ (void)resizeFontForLabel:(UILabel*)aLabel maxSize:(int)maxSize minSize:(int)minSize { 
+    // use font from provided label so we don't lose color, style, etc
+    UIFont *font = aLabel.font;
+    
+    // start with maxSize and keep reducing until it doesn't clip
+    for(int i = maxSize; i >= minSize; i--) {
+        font = [font fontWithSize:i];
+        CGSize constraintSize = CGSizeMake(aLabel.frame.size.width, MAXFLOAT);
+        
+        // This step checks how tall the label would be with the desired font.
+        CGSize labelSize = [aLabel.text sizeWithFont:font constrainedToSize:constraintSize lineBreakMode:UILineBreakModeWordWrap];
+        if(labelSize.height <= aLabel.frame.size.height)
+            break;
+    }
+    // Set the UILabel's font to the newly adjusted font.
+    aLabel.font = font;
+}
 @end

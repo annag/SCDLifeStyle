@@ -8,6 +8,8 @@
 
 #import "Bar.h"
 
+#define BASE_PERCENT 0.15f
+
 @interface Bar ()
 
 @property(nonatomic,assign) float Y;
@@ -38,7 +40,9 @@
 {
     if (percent != _percent) 
     {
-        _percent = percent;
+        
+        _percent = BASE_PERCENT + (1.0f-BASE_PERCENT) * percent;
+        
         [self animatePercent];
     }
 }

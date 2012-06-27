@@ -46,6 +46,7 @@
 - (float)getAverageStoolFrequencyOfChallenge:(Challenge*)challenge;
 
 - (float)getAverageStoolTypeOfLast14Days;
+- (float)getAverageStoolTypeOfLast14DaysFrom:(NSDate*)fromDate;
 - (float)getAverageStoolTypeOfChallenge:(Challenge*)challenge;
 
 
@@ -59,4 +60,7 @@
 //graph utils
 + (int)getHeightFor:(int)type andValue:(NSNumber*)value;
 + (UIColor *)getColorFor:(int)type andValue:(NSNumber*)value;
+
++(NSString*) getLabelFor:(int)type;
++ (void)resizeFontForLabel:(UILabel*)aLabel maxSize:(int)maxSize minSize:(int)minSize;
 @end

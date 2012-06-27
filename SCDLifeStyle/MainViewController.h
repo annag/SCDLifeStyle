@@ -21,6 +21,11 @@
 @property(nonatomic,strong) IBOutlet Bar *activityBar;
 @property(nonatomic,strong) IBOutlet Bar *sleepBar;
 
+@property(nonatomic,strong) IBOutlet UILabel *relaxedLabel;
+@property(nonatomic,strong) IBOutlet UILabel *stoolLabel;
+@property(nonatomic,strong) IBOutlet UILabel *activityLabel;
+@property(nonatomic,strong) IBOutlet UILabel *sleepLabel;
+
 - (IBAction)onAddDay:(id)sender;
 
 @end

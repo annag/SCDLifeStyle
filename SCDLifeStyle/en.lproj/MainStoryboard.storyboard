@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="PaS-OG-Vcz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="PaS-OG-Vcz">
     <dependencies>
         <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
@@ -67,63 +67,56 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="a little" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Jsb-MI-AGH">
-                                <rect key="frame" x="29" y="312" width="55" height="21"/>
+                                <rect key="frame" x="30" y="314" width="54" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="stressed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="2OE-AP-UPW">
-                                <rect key="frame" x="29" y="326" width="50" height="21"/>
+                                <rect key="frame" x="30" y="327" width="54" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="12"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="type/times" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="0Le-hS-eVA">
-                                <rect key="frame" x="96" y="326" width="60" height="21"/>
+                                <rect key="frame" x="97" y="327" width="54" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="activity" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="qtn-yt-8ao">
-                                <rect key="frame" x="160" y="326" width="55" height="21"/>
+                                <rect key="frame" x="162" y="327" width="54" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="12"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="sleep" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Kex-Fp-I2x">
-                                <rect key="frame" x="234" y="326" width="55" height="21"/>
+                                <rect key="frame" x="234" y="327" width="54" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="12"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="7/1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Oyb-YD-hSI">
-                                <rect key="frame" x="96" y="312" width="55" height="21"/>
+                                <rect key="frame" x="97" y="314" width="54" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="a little" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="O1s-lV-I7b">
-                                <rect key="frame" x="160" y="312" width="55" height="21"/>
+                                <rect key="frame" x="162" y="314" width="54" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="8 hrs" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="tc7-WK-NNz">
-                                <rect key="frame" x="233" y="295" width="55" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text=" poorly" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="diX-NT-lTh">
-                                <rect key="frame" x="230" y="311" width="59" height="23"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="8 hr poorly" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" id="diX-NT-lTh">
+                                <rect key="frame" x="234" y="293" width="54" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -140,9 +133,13 @@
                     <navigationItem key="navigationItem" id="psl-wO-h5O"/>
                     <connections>
                         <outlet property="activityBar" destination="EUm-D5-pSm" id="lp1-BG-i5q"/>
+                        <outlet property="activityLabel" destination="O1s-lV-I7b" id="3El-hy-91G"/>
                         <outlet property="relaxedBar" destination="Tpo-Aj-itz" id="bjx-hd-iYX"/>
+                        <outlet property="relaxedLabel" destination="Jsb-MI-AGH" id="7zr-KZ-hEf"/>
                         <outlet property="sleepBar" destination="KTb-lN-vYO" id="Y58-iz-6zy"/>
+                        <outlet property="sleepLabel" destination="diX-NT-lTh" id="rpE-L4-dZh"/>
                         <outlet property="stoolBar" destination="gVY-e4-QRS" id="mkH-Od-jH5"/>
+                        <outlet property="stoolLabel" destination="Oyb-YD-hSI" id="XDA-52-GYP"/>
                         <outlet property="top1" destination="IXC-6D-k7F" id="8WG-D7-cmO"/>
                         <outlet property="top2" destination="0Lr-aN-xsU" id="5Ma-qP-Pna"/>
                         <outlet property="top3" destination="Wno-UI-Fow" id="6tq-ho-GRx"/>
@@ -1163,9 +1160,13 @@
             <relationships>
                 <relationship kind="action" name="onAddDay:"/>
                 <relationship kind="outlet" name="activityBar" candidateClass="Bar"/>
+                <relationship kind="outlet" name="activityLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="relaxedBar" candidateClass="Bar"/>
+                <relationship kind="outlet" name="relaxedLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="sleepBar" candidateClass="Bar"/>
+                <relationship kind="outlet" name="sleepLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="stoolBar" candidateClass="Bar"/>
+                <relationship kind="outlet" name="stoolLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="top1" candidateClass="UIView"/>
                 <relationship kind="outlet" name="top2" candidateClass="UIView"/>
                 <relationship kind="outlet" name="top3" candidateClass="UIView"/>

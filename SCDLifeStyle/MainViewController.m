@@ -20,6 +20,7 @@
 
 @synthesize top1,top2,top3,top4;
 @synthesize relaxedBar,stoolBar,activityBar,sleepBar;
+@synthesize relaxedLabel, stoolLabel, activityLabel, sleepLabel;
 
 - (void)viewDidLoad
 {
@@ -32,6 +33,7 @@
 - (void) viewDidAppear:(BOOL)animated{
 
     [super viewDidAppear:animated];
+    
     if (animated) {
         [self updateBars];
     }
@@ -55,6 +57,12 @@
     [self.sleepBar setTopPiece:self.top4];
     float percentage4 = [[Util instance] getTodaysSleepPercentage];
     [self.sleepBar setPercent:percentage4];
+    
+    self.sleepLabel.text    = [Util getLabelFor:SLEEP_TYPE];
+    [Util resizeFontForLabel:self.sleepLabel maxSize:15 minSize:10];
+    self.stoolLabel.text    = [Util getLabelFor:STOOL_TYPE];
+    self.activityLabel.text = [Util getLabelFor:EXERCISE_TYPE];
+    self.relaxedLabel.text  = [Util getLabelFor:STRESS_TYPE];
 }
 
 - (IBAction)onAddDay:(id)sender
