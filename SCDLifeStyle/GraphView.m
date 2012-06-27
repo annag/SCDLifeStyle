@@ -139,7 +139,7 @@
                 for (Stool *stool in day.stool) 
                 {
                     int stoolPosY = [Util getHeightFor:STOOL_TYPE andValue:stool.type];
-                    [pooDot drawAtPoint:CGPointMake(posX, stoolPosY)];
+                    [pooDot drawAtPoint:CGPointMake(posX, stoolPosY+52)];
                     
                 }
                 

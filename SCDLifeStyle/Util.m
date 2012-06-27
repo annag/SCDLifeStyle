@@ -29,11 +29,11 @@
 #define EXCER_HEIGHT_1  30/2
 
 #define STOOL_POS_7  330/2
-#define STOOL_POS_6  274/2
-#define STOOL_POS_5  220/2
-#define STOOL_POS_4  164/2
-#define STOOL_POS_3  110/2
-#define STOOL_POS_2  54/2
+#define STOOL_POS_6  280/2
+#define STOOL_POS_5  226/2
+#define STOOL_POS_4  170/2
+#define STOOL_POS_3  116/2
+#define STOOL_POS_2  60/2
 #define STOOL_POS_1  0
 
 #define STOOL_TREND_BETTER 2
