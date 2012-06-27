@@ -27,7 +27,7 @@
 
 @implementation GraphViewController
 
-@synthesize graphView, zoomMinusButton, zoomPlusButton;
+@synthesize graphView, zoomMinusButton, zoomPlusButton, nextButton;
 @synthesize zoomLevel;
 @synthesize selectedGraph;
 @synthesize startFromDate;
@@ -100,6 +100,8 @@
     
     self.startFromDate = [self.startFromDate dateByAddingDays:[self getSpanDays]];
     [self updateGraphData];
+    
+    
 }
 
 - (IBAction)onChallenge:(id)sender
@@ -171,7 +173,14 @@
     
     [self.graphView setData:dataArray];
     
-
+    //UI
+    if ([self.startFromDate isToday]) 
+    {
+        self.nextButton.hidden = YES;
+    }
+    else {
+        self.nextButton.hidden = NO;
+    }
     
 }
 
