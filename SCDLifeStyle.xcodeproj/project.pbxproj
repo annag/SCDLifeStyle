@@ -192,6 +192,7 @@
 		BFAF1A2615760E9B008F6211 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAF1A2515760E9B008F6211 /* Note.m */; };
 		BFAF1A29157618BA008F6211 /* AddChallengeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAF1A28157618BA008F6211 /* AddChallengeViewController.m */; };
 		BFAF1A34157638DB008F6211 /* ChallengeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAF1A33157638DB008F6211 /* ChallengeCell.m */; };
+		BFB7B84A159B4E2D005255D3 /* ChallengeDurationData.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFB7B849159B4E2D005255D3 /* ChallengeDurationData.plist */; };
 		BFE74DCE1577107B0047A83E /* ChallengeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE74DCD1577107B0047A83E /* ChallengeDetailViewController.m */; };
 		BFE74DD1157711F60047A83E /* ChallengeHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE74DD0157711F60047A83E /* ChallengeHeader.m */; };
 		BFE74DD4157712790047A83E /* ChallengeNote.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE74DD3157712790047A83E /* ChallengeNote.m */; };
@@ -436,6 +437,7 @@
 		BFAF1A28157618BA008F6211 /* AddChallengeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddChallengeViewController.m; sourceTree = "<group>"; };
 		BFAF1A32157638DB008F6211 /* ChallengeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChallengeCell.h; sourceTree = "<group>"; };
 		BFAF1A33157638DB008F6211 /* ChallengeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChallengeCell.m; sourceTree = "<group>"; };
+		BFB7B849159B4E2D005255D3 /* ChallengeDurationData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ChallengeDurationData.plist; sourceTree = "<group>"; };
 		BFE74DCC1577107B0047A83E /* ChallengeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChallengeDetailViewController.h; sourceTree = "<group>"; };
 		BFE74DCD1577107B0047A83E /* ChallengeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChallengeDetailViewController.m; sourceTree = "<group>"; };
 		BFE74DCF157711F60047A83E /* ChallengeHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChallengeHeader.h; sourceTree = "<group>"; };
@@ -740,6 +742,7 @@
 				BFAF1A1F15760E9B008F6211 /* Stool.m */,
 				BFAF1A1B15760E9A008F6211 /* Day.h */,
 				BFAF1A1C15760E9A008F6211 /* Day.m */,
+				BFB7B849159B4E2D005255D3 /* ChallengeDurationData.plist */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -1030,6 +1033,7 @@
 				95FFAD00159B5708003666F5 /* 108-badge@2x.png in Resources */,
 				95FFAD03159B5867003666F5 /* 145-persondot.png in Resources */,
 				95FFAD04159B5867003666F5 /* 145-persondot@2x.png in Resources */,
+				BFB7B84A159B4E2D005255D3 /* ChallengeDurationData.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

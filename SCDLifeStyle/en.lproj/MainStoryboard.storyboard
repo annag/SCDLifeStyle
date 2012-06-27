@@ -729,11 +729,20 @@
                                     <outlet property="delegate" destination="a1e-xN-0UR" id="Gw6-qt-DgJ"/>
                                 </connections>
                             </textView>
+                            <pickerView contentMode="scaleToFill" id="dS1-G9-ji7">
+                                <rect key="frame" x="0.0" y="480" width="320" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="a1e-xN-0UR" id="U6N-iu-eWQ"/>
+                                    <outlet property="delegate" destination="a1e-xN-0UR" id="EXe-JK-2le"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="descTV" destination="ovC-xf-wKs" id="eNx-kh-N4c"/>
+                        <outlet property="durationPicker" destination="dS1-G9-ji7" id="aLk-Zc-UI9"/>
                         <outlet property="durationTF" destination="XJI-lL-jVv" id="egd-ak-tfq"/>
                         <outlet property="nameTF" destination="MMg-f5-CAL" id="buP-Vt-a8Z"/>
                     </connections>
@@ -1081,6 +1090,7 @@
                 <relationship kind="action" name="onAddChallenge:"/>
                 <relationship kind="action" name="onCancel:"/>
                 <relationship kind="outlet" name="descTV" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="durationPicker" candidateClass="UIPickerView"/>
                 <relationship kind="outlet" name="durationTF" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="nameTF" candidateClass="UITextField"/>
             </relationships>
