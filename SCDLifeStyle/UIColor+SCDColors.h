@@ -48,4 +48,6 @@
 + (UIColor *) challengeColor; //yellow alpha
 + (UIColor *) challengeStrokeColor; //yellow
 
++ (UIColor *) graphLineBg; //light blue
+
 @end

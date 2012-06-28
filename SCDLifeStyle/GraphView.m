@@ -20,7 +20,7 @@
 #define MARGIN_X 30
 #define DATE_LINE_EACH 7 //days
 #define DATE_LINE_SHORT 140.0f
-#define DATE_LINE_LONG 200.0f
+#define DATE_LINE_LONG 190.0f
 #define CHALLENGE_H 220.0f
 
 
@@ -121,12 +121,18 @@
                     NSString *dateString = [NSString stringWithFormat:@"Monday %d %@", date.dateInformation.day, [date monthString]];
                     float lineH = DATE_LINE_LONG;
                     
+                    float linePosX = posX+barW+barGap/2;
+                    //draw bg line
+                    UIColor *color = [UIColor graphLineBg];
+                    CGContextSetFillColorWithColor(c, color.CGColor);
+                    CGContextFillRect(c, CGRectMake(linePosX-3.0f, posY, 6.0f, -lineH-8.0f));
+                    
                     //draw line
                     CGContextBeginPath(c);
                     CGContextSetLineWidth(c, 1.0f);
                     CGContextSetStrokeColorWithColor(c, [UIColor whiteColor].CGColor);
-                    CGContextMoveToPoint(c, posX+barW+barGap, posY);
-                    CGContextAddLineToPoint(c, posX+barW+barGap, self.frame.size.height-lineH);
+                    CGContextMoveToPoint(c,linePosX, posY);
+                    CGContextAddLineToPoint(c, linePosX, self.frame.size.height-lineH);
                     CGContextClosePath(c);
                     CGContextDrawPath(c, kCGPathStroke);
                     
@@ -134,7 +140,7 @@
                     UIFont *dateFont = [UIFont fontWithName:@"Helvetica" size:14];
                     CGSize dateSize = [dateString sizeWithFont:dateFont];
                     CGContextSetFillColorWithColor(c, [UIColor whiteColor].CGColor);
-                    [dateString drawInRect:CGRectMake(posX-dateSize.width/2+20, 5, dateSize.width, dateSize.width) 
+                    [dateString drawInRect:CGRectMake(linePosX-dateSize.width/2, 5, dateSize.width, dateSize.width) 
                                   withFont:dateFont];
 
                     

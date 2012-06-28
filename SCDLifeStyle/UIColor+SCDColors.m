@@ -104,6 +104,9 @@
     return [UIColor colorWithRed:255.0f/255.0f green:234.0f/255.0f blue:0.0f/255.0f alpha:1.0f];
 }
 
-
++ (UIColor *) graphLineBg //light blue
+{
+    return [UIColor colorWithRed:3.0f/255.0f green:109.0f/255.0f blue:179.0f/255.0f alpha:0.5f];
+}
 
 @end
