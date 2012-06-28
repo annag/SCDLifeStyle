@@ -16,14 +16,14 @@
 #import "Note.h"
 #import "NSDate+SCDCategory.h"
 
-@interface ChallengeDetailViewController ()
+@interface ChallengeDetailViewController ()<UIAlertViewDelegate>
 
 @end
 
 @implementation ChallengeDetailViewController
 
 @synthesize challenge;
-@synthesize scrollView,actionButton,container,noteTV;
+@synthesize scrollView,actionButton,container,noteTV,cancelButton;
 
 - (void)viewDidLoad
 {
@@ -41,6 +41,58 @@
 {
     [self dismissModalViewControllerAnimated:YES];
 }
+
+
+- (IBAction)onCancelChallenge:(id)sender
+{
+    UIAlertView *alertview = [[UIAlertView alloc] initWithTitle:@"Alert" 
+                                                        message:@"Are you sure you wanna cancel this challenge?" 
+                                                       delegate:self 
+                                              cancelButtonTitle:@"NO WAY" 
+                                              otherButtonTitles:@"PRETTY SURE", nil];
+    [alertview show];
+}
+
+//UIAlertViewDelegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    switch (buttonIndex) 
+    {
+        case 0:
+        {
+            //do nothing
+            break;
+        }   
+        case 1:
+        {
+            //copy challenge
+            Challenge *newCh = [NSEntityDescription insertNewObjectForEntityForName:@"Challenge" 
+                                                                 inManagedObjectContext:self.managedObjectContext];
+            newCh.name = self.challenge.name;
+            newCh.desc = self.challenge.desc;
+            newCh.duration = self.challenge.duration;
+            newCh.started = [NSNumber numberWithBool:NO];
+            newCh.finished = [NSNumber numberWithBool:NO];
+            
+            //delete old
+            [self.managedObjectContext deleteObject:self.challenge];
+            
+            //save
+            NSError *error = nil;
+            [self.managedObjectContext save:&error];
+            
+            if (error != nil) 
+            {
+                Alert(@"Add Challenge",@"Error adding Challenge");
+            }
+            
+            [self dismissModalViewControllerAnimated:YES];
+
+            break;
+        }
+    }
+}
+
 
 - (void) render
 {
@@ -67,6 +119,7 @@
     if ([self.challenge.started boolValue]) 
     {
         //started
+        self.cancelButton.hidden = NO;
         aboutTime.infoLabel.text = [NSString stringWithFormat:@"%d Days (%d %@ - %d %@)",
                                     [self.challenge.duration intValue],
                                     self.challenge.start_date.dateInformation.day,
@@ -213,6 +266,7 @@
     else 
     {
         //not started
+        self.cancelButton.hidden = YES;
         chh.labelB.text = @"-not started-";
         
         
@@ -252,19 +306,39 @@
 
 - (void) actionStartToday:(id)sender
 {
-    self.challenge.start_date = [NSDate date];
-    self.challenge.started = [NSNumber numberWithBool:YES];
-    self.challenge.end_date = [[Util instance] endDateForChallenge:self.challenge];
-    self.challenge.finished = [NSNumber numberWithBool:NO];
-    NSError *error = nil;
-    [self.managedObjectContext save:&error];
-    if (error == nil) 
+    bool hasActiveChallenge = NO;
+    NSString *alertString = @"The challenge \"%@\" is already active";
+    NSArray *challenges = [[Util instance] getChallenges];
+    for (Challenge *ch in challenges) {
+        if (ch.started.boolValue && !ch.finished.boolValue) {
+            hasActiveChallenge = YES;
+            alertString = [NSString stringWithFormat:alertString,ch.name];
+            break;
+        }
+    }
+    
+    if (!hasActiveChallenge) 
     {
-        [self render];
+        self.challenge.start_date = [NSDate date];
+        self.challenge.started = [NSNumber numberWithBool:YES];
+        self.challenge.end_date = [[Util instance] endDateForChallenge:self.challenge];
+        self.challenge.finished = [NSNumber numberWithBool:NO];
+        NSError *error = nil;
+        [self.managedObjectContext save:&error];
+        if (error == nil) 
+        {
+            [self render];
+        }
+        else {
+            Alert(@"Challenge", @"Error saving challenge state");
+        }
+
     }
-    else {
-        Alert(@"Error saving challenge state", @"Challenge");
+    else 
+    {
+        Alert(@"Can not start this challenge", alertString);
     }
+    
 }
 
 - (void) actionAddNote:(id)sender
@@ -309,7 +383,7 @@
         [self.managedObjectContext save:&error];
         
         if (error != nil) {
-            Alert(@"Error adding note", @"Challenge Note");
+            Alert(@"Challenge Note",@"Error adding note");
         }
         else 
         {

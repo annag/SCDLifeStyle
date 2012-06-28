@@ -52,15 +52,18 @@
         NSError *error = nil;
         [self.managedObjectContext save:&error];
         
-        if (error == nil) {
+        if (error == nil) 
+        {
             [self dismissModalViewControllerAnimated:YES];
         }
-        else {
-            Alert(@"Error adding Challenge", @"Add Challenge");
+        else 
+        {
+            Alert(@"Add Challenge",@"Error adding Challenge");
         }
     }
-    else {
-        Alert(@"fill out all the fields", @"Add Challenge");
+    else 
+    {
+        Alert(@"Add Challenge",@"fill out all the fields");
     }
 }
 
