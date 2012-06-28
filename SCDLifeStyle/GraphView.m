@@ -80,13 +80,25 @@
                     
                     NSString *dateString;
                     float lineH;
+                    float linePosX = posX+barW+barGap/2;
+                    float datePosY = 5.0f;
                     
                     if (date.dateInformation.day == 1) 
                     {
                         dateString = [NSString stringWithFormat:@"%d %@", date.dateInformation.day, [date monthString]];
                         lineH = DATE_LINE_LONG;
+                        
+                        if ([date isToday]) {
+                            dateString = @"Today";
+                        }
+                        
+                        //draw bg line
+                        UIColor *color = [UIColor graphLineBg];
+                        CGContextSetFillColorWithColor(c, color.CGColor);
+                        CGContextFillRect(c, CGRectMake(linePosX-3.0f, posY, 6.0f, -lineH-8.0f));
+                        
                     }
-                    else 
+                    else
                     {
                         lineH = DATE_LINE_SHORT;
                     }
@@ -95,18 +107,18 @@
                     CGContextBeginPath(c);
                     CGContextSetLineWidth(c, 1.0f);
                     CGContextSetStrokeColorWithColor(c, [UIColor whiteColor].CGColor);
-                    CGContextMoveToPoint(c, posX+barW+barGap, posY);
-                    CGContextAddLineToPoint(c, posX+barW+barGap, self.frame.size.height-lineH);
+                    CGContextMoveToPoint(c, linePosX, posY);
+                    CGContextAddLineToPoint(c, linePosX, self.frame.size.height-lineH);
                     CGContextClosePath(c);
                     CGContextDrawPath(c, kCGPathStroke);
                     
                     //draw date
                     if (dateString != nil) 
                     {
-                        UIFont *dateFont = [UIFont fontWithName:@"Helvetica" size:17];
+                        UIFont *dateFont = [UIFont fontWithName:@"Helvetica" size:14];
                         CGSize dateSize = [dateString sizeWithFont:dateFont];
                         CGContextSetFillColorWithColor(c, [UIColor whiteColor].CGColor);
-                        [dateString drawInRect:CGRectMake(posX-dateSize.width, 10, 100, 50) 
+                        [dateString drawInRect:CGRectMake(linePosX-dateSize.width/2, datePosY, dateSize.width, dateSize.height) 
                                       withFont:dateFont];
                     }
                     
@@ -120,8 +132,8 @@
                 {
                     NSString *dateString = [NSString stringWithFormat:@"Monday %d %@", date.dateInformation.day, [date monthString]];
                     float lineH = DATE_LINE_LONG;
-                    
                     float linePosX = posX+barW+barGap/2;
+                    
                     //draw bg line
                     UIColor *color = [UIColor graphLineBg];
                     CGContextSetFillColorWithColor(c, color.CGColor);
