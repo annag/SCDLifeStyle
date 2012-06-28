@@ -60,7 +60,7 @@
         float posX = self.frame.size.width - MARGIN_X - barW;
         float posY = self.frame.size.height;
         
-        float todayPinPos;
+        float todayPinPos = -1.0f;
 
         int graphType = type.intValue;
 
@@ -201,13 +201,16 @@
                     CGContextFillRect(c, CGRectMake(posX, posY, barW+barGap, -CHALLENGE_H));
                 }
             }
-            
-            //today pin
-            UIImage *todayPin = [UIImage imageNamed:@"graph_stool.png"];
-            [todayPin drawAtPoint:CGPointMake(todayPinPos+barW/2+barGap/2, 200)];
-
+    
             posX -= barW + barGap;
         }
+        
+        //today pin
+        if (todayPinPos >= 0.0f) {
+            UIImage *todayPin = [UIImage imageNamed:@"today_marker.png"];
+            [todayPin drawAtPoint:CGPointMake(todayPinPos-16.0f/zoom.floatValue, 180)];
+        }
+        
     }
 }
 

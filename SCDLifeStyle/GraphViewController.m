@@ -96,7 +96,7 @@
 
 - (IBAction)onPrevious:(id)sender
 {
-    self.startFromDate = [self.startFromDate dateByAddingDays:-[self getSpanDays]];
+    self.startFromDate = [self.startFromDate dateByAddingDays:-7];
     [self updateGraphData];
 }
 
@@ -107,7 +107,7 @@
         return;
     }
     
-    self.startFromDate = [self.startFromDate dateByAddingDays:[self getSpanDays]];
+    self.startFromDate = [self.startFromDate dateByAddingDays:7];
     [self updateGraphData];
     
     
