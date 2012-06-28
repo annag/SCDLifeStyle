@@ -135,6 +135,11 @@
     NSMutableArray *daysArray = [NSMutableArray array];
     NSMutableArray *chArray = [NSMutableArray array];
     
+    //get date range
+    //Sunday[1] - Saturday[7] -> Monday = 2
+    int special[7] = {3,2,1,0,6,5,4};
+    self.startFromDate = [self.startFromDate dateByAddingDays:special[self.startFromDate.dateInformation.weekday-1]];
+    
     NSArray *activeChallenges = [[Util instance] getActiveChallengesFromDate:[self.startFromDate dateByAddingDays:-spanDays] 
                                                                              toDate:self.startFromDate];
     for (int i=0; i<spanDays; i++) 

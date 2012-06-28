@@ -19,8 +19,8 @@
 
 #define MARGIN_X 30
 #define DATE_LINE_EACH 7 //days
-#define DATE_LINE_H1 140.0f
-#define DATE_LINE_H2 210.0f
+#define DATE_LINE_SHORT 140.0f
+#define DATE_LINE_LONG 200.0f
 #define CHALLENGE_H 220.0f
 
 
@@ -59,6 +59,8 @@
         float barGap = BAR_GAP*zoom.floatValue;
         float posX = self.frame.size.width - MARGIN_X - barW;
         float posY = self.frame.size.height;
+        
+        float todayPinPos;
 
         int graphType = type.intValue;
 
@@ -71,38 +73,76 @@
             CGContextRef c = UIGraphicsGetCurrentContext();
             
             //date
-            if (date.dateInformation.weekday == 1 || date.dateInformation.day == 1) 
+            if (zoom.floatValue == 1.0f) //normal
             {
-                NSString *dateString = nil;
-                if (date.dateInformation.day == 1) 
+                if (date.dateInformation.weekday == 2 || date.dateInformation.day == 1) 
                 {
-                    dateString = [NSString stringWithFormat:@"%d %@", date.dateInformation.day, [date monthString]];
+                    
+                    NSString *dateString;
+                    float lineH;
+                    
+                    if (date.dateInformation.day == 1) 
+                    {
+                        dateString = [NSString stringWithFormat:@"%d %@", date.dateInformation.day, [date monthString]];
+                        lineH = DATE_LINE_LONG;
+                    }
+                    else 
+                    {
+                        lineH = DATE_LINE_SHORT;
+                    }
+                    
+                    //draw line
+                    CGContextBeginPath(c);
+                    CGContextSetLineWidth(c, 1.0f);
+                    CGContextSetStrokeColorWithColor(c, [UIColor whiteColor].CGColor);
+                    CGContextMoveToPoint(c, posX+barW+barGap, posY);
+                    CGContextAddLineToPoint(c, posX+barW+barGap, self.frame.size.height-lineH);
+                    CGContextClosePath(c);
+                    CGContextDrawPath(c, kCGPathStroke);
+                    
+                    //draw date
+                    if (dateString != nil) 
+                    {
+                        UIFont *dateFont = [UIFont fontWithName:@"Helvetica" size:17];
+                        CGSize dateSize = [dateString sizeWithFont:dateFont];
+                        CGContextSetFillColorWithColor(c, [UIColor whiteColor].CGColor);
+                        [dateString drawInRect:CGRectMake(posX-dateSize.width, 10, 100, 50) 
+                                      withFont:dateFont];
+                    }
+                    
+                    
                 }
-                
-                float lineH = (dateString == nil) ? DATE_LINE_H1 : DATE_LINE_H2;
-                
-                //draw line
-                CGContextBeginPath(c);
-                CGContextSetLineWidth(c, 1.0f);
-                CGContextSetStrokeColorWithColor(c, [UIColor whiteColor].CGColor);
-                CGContextMoveToPoint(c, posX+barW+barGap, posY);
-                CGContextAddLineToPoint(c, posX+barW+barGap, self.frame.size.height-lineH);
-                CGContextClosePath(c);
-                CGContextDrawPath(c, kCGPathStroke);
-                
-                //draw date
-                if (dateString != nil) 
+
+            }
+            else //zoomed view
+            {
+                if (date.dateInformation.weekday == 2) 
                 {
-                    UIFont *dateFont = [UIFont fontWithName:@"Helvetica" size:17];
+                    NSString *dateString = [NSString stringWithFormat:@"Monday %d %@", date.dateInformation.day, [date monthString]];
+                    float lineH = DATE_LINE_LONG;
+                    
+                    //draw line
+                    CGContextBeginPath(c);
+                    CGContextSetLineWidth(c, 1.0f);
+                    CGContextSetStrokeColorWithColor(c, [UIColor whiteColor].CGColor);
+                    CGContextMoveToPoint(c, posX+barW+barGap, posY);
+                    CGContextAddLineToPoint(c, posX+barW+barGap, self.frame.size.height-lineH);
+                    CGContextClosePath(c);
+                    CGContextDrawPath(c, kCGPathStroke);
+                    
+                    //draw date
+                    UIFont *dateFont = [UIFont fontWithName:@"Helvetica" size:14];
                     CGSize dateSize = [dateString sizeWithFont:dateFont];
                     CGContextSetFillColorWithColor(c, [UIColor whiteColor].CGColor);
-                    [dateString drawInRect:CGRectMake(posX-dateSize.width, 10, 100, 50) 
+                    [dateString drawInRect:CGRectMake(posX-dateSize.width/2+20, 5, dateSize.width, dateSize.width) 
                                   withFont:dateFont];
+
+                    
+                    
                 }
-                
-                
+
             }
-            
+                        
             //GRAPH
             if (dayO != [NSNull null]) 
             {
@@ -143,6 +183,12 @@
                     
                 }
                 
+                //date pin pos
+                if ([date isToday]) 
+                {
+                    todayPinPos = posX;
+                }
+                
             }
             
             //challenges
@@ -155,6 +201,10 @@
                     CGContextFillRect(c, CGRectMake(posX, posY, barW+barGap, -CHALLENGE_H));
                 }
             }
+            
+            //today pin
+            UIImage *todayPin = [UIImage imageNamed:@"graph_stool.png"];
+            [todayPin drawAtPoint:CGPointMake(todayPinPos+barW/2+barGap/2, 200)];
 
             posX -= barW + barGap;
         }
