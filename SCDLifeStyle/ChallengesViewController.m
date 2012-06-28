@@ -109,7 +109,7 @@
         NSError *error = nil;
         [self.managedObjectContext save:&error];
         if (error != nil) {
-            Alert(@"Error deleting challenge", @"Challenge");
+            Alert(@"Challenge",@"Error deleting challenge");
         }
         self.dataArray = [[Util instance] getChallenges];
         [self.tableView reloadData];

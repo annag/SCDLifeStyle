@@ -457,7 +457,7 @@
                                             <action selector="onClose:" destination="54J-df-pcj" eventType="touchUpInside" id="8Co-F8-Tnw"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="sFP-Nf-UAc">
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="sFP-Nf-UAc">
                                         <rect key="frame" x="9" y="13" width="60" height="28"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -468,6 +468,9 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onCancelChallenge:" destination="54J-df-pcj" eventType="touchUpInside" id="2Li-mL-YyH"/>
+                                        </connections>
                                     </button>
                                     <scrollView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" id="yIx-Rw-nUD">
                                         <rect key="frame" x="10" y="56" width="300" height="370"/>
@@ -531,6 +534,7 @@
                     <navigationItem key="navigationItem" id="eoq-98-l9e"/>
                     <connections>
                         <outlet property="actionButton" destination="gbr-Ni-RSp" id="IH8-ic-qWZ"/>
+                        <outlet property="cancelButton" destination="sFP-Nf-UAc" id="7Oc-mX-9It"/>
                         <outlet property="container" destination="1sD-14-cKj" id="hnP-Fb-n7f"/>
                         <outlet property="noteTV" destination="sYa-Os-YeP" id="tPj-n1-gNr"/>
                         <outlet property="scrollView" destination="yIx-Rw-nUD" id="Dxl-PT-m5B"/>
@@ -1135,9 +1139,11 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ChallengeDetailViewController.h"/>
             <relationships>
                 <relationship kind="action" name="onAddNote:"/>
+                <relationship kind="action" name="onCancelChallenge:"/>
                 <relationship kind="action" name="onCancelNote:"/>
                 <relationship kind="action" name="onClose:"/>
                 <relationship kind="outlet" name="actionButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="cancelButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="container" candidateClass="UIView"/>
                 <relationship kind="outlet" name="noteTV" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>

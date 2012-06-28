@@ -185,7 +185,7 @@ static Util *instance = nil;
         NSError *error = nil;
         [self.managedObjectContext save:&error];
         if (error != nil) {
-            Alert(@"Error saving challenges after updating", @"Challenges");
+            Alert(@"Challenges",@"Error saving challenges after updating");
         }
     }
 }

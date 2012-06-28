@@ -17,11 +17,13 @@
 @property(nonatomic,strong) IBOutlet UIButton *actionButton;
 @property(nonatomic,strong) IBOutlet UIView *container;
 @property(nonatomic,strong) IBOutlet UITextView *noteTV;
-
+@property(nonatomic,strong) IBOutlet UIButton *cancelButton;
 
 - (IBAction)onClose:(id)sender;
 
 - (IBAction)onCancelNote:(id)sender;
 - (IBAction)onAddNote:(id)sender;
+
+- (IBAction)onCancelChallenge:(id)sender;
 
 @end
