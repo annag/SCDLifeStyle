@@ -379,9 +379,8 @@ static Util *instance = nil;
     if(todayData == nil || todayData.stress == nil) return 0.0f;
     
     int stress = todayData.stress.intValue;
-    if(todayData.stress == nil) return 0.0f;
     float stress_percentage = stress/noOfStressValues;
-    float percentage = 1  -  stress_percentage;
+    float percentage = stress_percentage;
 
     return percentage;
 }
@@ -580,15 +579,15 @@ static Util *instance = nil;
             
             int stressValue = todayData.stress.intValue;
             
-            if(stressValue  == 4){        //very stressed 
+            if(stressValue  == 0){        //very stressed 
                 return @"extremely";
-            }else if(stressValue  == 3){  //stressed 
+            }else if(stressValue  == 1){  //stressed 
                 return @"very";
             }else if(stressValue  == 2){  //gloomy
                 return @"quite";
-            }else if(stressValue  == 1){  //relaxed
+            }else if(stressValue  == 3){  //relaxed
                 return @"a little";
-            }else if(stressValue  == 0){  //very relaxed
+            }else if(stressValue  == 4){  //very relaxed
                 return @"not at all";
             }
         }

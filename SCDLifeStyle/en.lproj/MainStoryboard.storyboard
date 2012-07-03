@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="PaS-OG-Vcz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="PaS-OG-Vcz">
     <dependencies>
+        <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
     </dependencies>
@@ -121,10 +122,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view opaque="NO" contentMode="scaleToFill" id="Idb-3q-uhO" customClass="BarPercentageView">
-                                <rect key="frame" x="26" y="60" width="56" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.94048852940000005" blue="0.1918529457" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -158,15 +155,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Graph" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Lc2-hG-0XC">
-                                <rect key="frame" x="133" y="9" width="48" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Ad9-O9-6Vv">
+                                <rect key="frame" x="273" y="6" width="41" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="graph_icon.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Trends" image="17-bar-chart.png" id="Zr3-Vu-Dce"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
@@ -1054,6 +1056,7 @@
         <image name="challange_bg.png" width="320" height="480"/>
         <image name="challange_cell.png" width="320" height="63"/>
         <image name="graph_bg.png" width="490" height="320"/>
+        <image name="graph_icon.png" width="21" height="17"/>
         <image name="green_btn.png" width="63" height="43"/>
         <image name="green_btn_pressed.png" width="63" height="43"/>
         <image name="home_activity_bar.png" width="62" height="292"/>
@@ -1121,12 +1124,6 @@
         </class>
         <class className="Bar" superclassName="UIImageView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/Bar.h"/>
-        </class>
-        <class className="BarPercentageView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BarPercentageView.h"/>
-            <relationships>
-                <relationship kind="outlet" name="percentageLabel" candidateClass="UILabel"/>
-            </relationships>
         </class>
         <class className="BaseViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BaseViewController.h"/>
@@ -1216,6 +1213,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="3G6-e2-Wg9"/>
+        <segue reference="1HY-tn-wee"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -162,6 +162,8 @@
 		BF009CBD15766797003700FB /* GraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF009CBC15766797003700FB /* GraphViewController.m */; };
 		BF16EA8115725117000F2B2C /* StoolView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF16EA8015725117000F2B2C /* StoolView.m */; };
 		BF16EA841572512E000F2B2C /* StoolView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF16EA831572512E000F2B2C /* StoolView.xib */; };
+		BF1DC18515A33FDE0020FBC3 /* TrendBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1DC18415A33FDE0020FBC3 /* TrendBoxView.m */; };
+		BF1DC18715A33FF70020FBC3 /* TrendBoxView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF1DC18615A33FF70020FBC3 /* TrendBoxView.xib */; };
 		BF21AF8F1567B66A00B86DAE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF21AF8E1567B66A00B86DAE /* UIKit.framework */; };
 		BF21AF911567B66A00B86DAE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF21AF901567B66A00B86DAE /* Foundation.framework */; };
 		BF21AF931567B66A00B86DAE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF21AF921567B66A00B86DAE /* CoreGraphics.framework */; };
@@ -389,6 +391,9 @@
 		BF16EA7F15725117000F2B2C /* StoolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoolView.h; sourceTree = "<group>"; };
 		BF16EA8015725117000F2B2C /* StoolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoolView.m; sourceTree = "<group>"; };
 		BF16EA831572512E000F2B2C /* StoolView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoolView.xib; sourceTree = "<group>"; };
+		BF1DC18315A33FDE0020FBC3 /* TrendBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrendBoxView.h; sourceTree = "<group>"; };
+		BF1DC18415A33FDE0020FBC3 /* TrendBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrendBoxView.m; sourceTree = "<group>"; };
+		BF1DC18615A33FF70020FBC3 /* TrendBoxView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrendBoxView.xib; sourceTree = "<group>"; };
 		BF21AF8A1567B66A00B86DAE /* SCDLifeStyle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCDLifeStyle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF21AF8E1567B66A00B86DAE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BF21AF901567B66A00B86DAE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -798,6 +803,9 @@
 				954569B0158C7E4900ECFA10 /* BarPercentageView.h */,
 				954569B1158C7E4900ECFA10 /* BarPercentageView.m */,
 				954569B3158C7EDB00ECFA10 /* BarPercentageView.xib */,
+				BF1DC18315A33FDE0020FBC3 /* TrendBoxView.h */,
+				BF1DC18415A33FDE0020FBC3 /* TrendBoxView.m */,
+				BF1DC18615A33FF70020FBC3 /* TrendBoxView.xib */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -1042,6 +1050,7 @@
 				BFB7B84A159B4E2D005255D3 /* ChallengeDurationData.plist in Resources */,
 				95FFAD25159CAFA9003666F5 /* today_marker@2x.png in Resources */,
 				95FFAD26159CAFA9003666F5 /* today_marker.png in Resources */,
+				BF1DC18715A33FF70020FBC3 /* TrendBoxView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1082,6 +1091,7 @@
 				BFF8C6DE158DB50900BF8DDB /* Challenge.m in Sources */,
 				BF375C8F15958EA7009799DE /* ChallengeTime.m in Sources */,
 				BF44FDEB159596280097163E /* ChallengeDescription.m in Sources */,
+				BF1DC18515A33FDE0020FBC3 /* TrendBoxView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
